@@ -25,7 +25,7 @@
 
 html {
   background-color: #fff;
-  background-image: url(https://basehold.it/i/38/255/0/0/.1);
+  background-image: url(https://basehold.it/i/38/255/0/0/.06);
   background-size: 1px 38px;
   color: #555;
   margin: 0;
@@ -69,16 +69,41 @@ img {
   height: auto;
 }
 
+p {
+  margin-top: 38px;
+}
+
+li * {
+  margin: 0;
+}
+
+svg {
+  width: 40px;
+  height: 40px;
+}
+
+.svg-icon-small {
+  width: 14px;
+  height: 14px;
+}
+
 a {
-  color: steelblue;
-  /*font-weight: 300;*/
-  text-decoration-thickness: 1px;
-  text-underline-offset: .4em;
+  color: hsl(5, 65%, 40%);
+  text-decoration: none;
+  /*text-decoration-thickness: 1px;*/
+  /*text-underline-offset: .4em;*/
 }
 
 a:focus,
 a:hover {
-  color: deepskyblue;
+  /*color: deepskyblue;*/
+  color: #d75045;
+}
+
+main a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .4em;
 }
 
 .nh-txt-baseline-offset {
@@ -101,12 +126,18 @@ main {
 
 .sidebar {
   /*background-color: hsla(0, 0%, 80%, .25);*/
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 200px;
+  /*position: fixed;*/
   padding: 12px 38px 38px 38px;
+}
+
+@media only screen and (min-width: 1036px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+  }
 }
 
 .sidebar nav {
@@ -127,12 +158,21 @@ main {
 }
 
 .sidebar nav a:hover {
-  color: deepskyblue;
+  /*color: deepskyblue;*/
+  color: #d75045;
 }
 
 .nh-atom-logo {
   height: 38px;
 }
+
+@media only screen and (max-width: 1035px) {
+  main {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+}
+
 
 main > .content {
   /*overflow-y: scroll;*/
@@ -154,10 +194,6 @@ main .content .content-container {
 /*section {*/
 /*  margin-top: 0;*/
 /*}*/
-
-p {
-  margin-top: 38px;
-}
 
 h1 {
   font-family: "Times New Roman", Georgia, serif;
@@ -213,6 +249,83 @@ h2 {
   /*margin-bottom: -2px;*/
 }
 
+.nh-txt-date {
+  font-size: 16px;
+  line-height: 38px;
+  font-weight: 300;
+  letter-spacing: .04em;
+}
+
+main > .nh-txt-date {
+  margin-top: 76px;
+}
+
+.nh-txt-tag {
+  font-size: 14px;
+  line-height: 38px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+h1 + .nh-txt-tag {
+  margin-top: 0;
+}
+
 main img {
   margin-top: 38px;
+}
+
+main img.nh-img {
+  /*max-height: 1140px;*/
+  height: 494px;
+}
+
+footer {
+
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.org-footer {
+
+}
+
+.org-footer p {
+  /*font-size: 0.72727273rem;*/
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 38px;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+.nh-list-posts {
+  list-style: none;
+  margin-top: 38px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 38px;
+}
+
+.nh-list-posts * {
+  margin: 0;
+}
+
+.nh-list-posts li {
+
+}
+
+.nh-list-posts a {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  text-decoration: none;
+  color: #444;
+}
+
+.nh-list-posts a img {
+  height: 342px;
 }

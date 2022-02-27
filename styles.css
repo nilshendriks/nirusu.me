@@ -9,6 +9,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :lang(en) q, :lang(en) blockquote { quotes: "‘" "’" '“' '”'; }
@@ -73,6 +74,11 @@ p {
   margin-top: 38px;
 }
 
+main .content p {
+  /*max-width: 66ch;*/
+  max-width: 760px;
+}
+
 li * {
   margin: 0;
 }
@@ -115,13 +121,22 @@ main a {
 /*}*/
 
 main {
-  max-width: 760px;
-  margin: 0 auto;
+  /*width: 75%;*/
+  /*margin-left: 25%;*/
   padding-bottom: calc(2 * 38px);
+}
 
-  /*display: grid;*/
-  /*grid-template-columns: 1fr 4fr;*/
-  /*overflow: hidden;*/
+@media only screen and (min-width: 1036px) {
+  main {
+    width: 75%;
+    margin-left: 25%;
+    /*padding-bottom: calc(2 * 38px);*/
+  }
+}
+
+main > .content {
+  /*max-width: 760px;*/
+  /*margin: 0 auto;*/
 }
 
 .sidebar {
@@ -136,7 +151,8 @@ main {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 200px;
+    width: 25%;
+    /*width: 200px;*/
   }
 }
 
@@ -154,12 +170,13 @@ main {
   font-size: 16px;
   line-height: 38px;
   letter-spacing: 0.2em;
-  transition: color .3s ease;
+  transition: all .3s ease;
 }
 
 .sidebar nav a:hover {
   /*color: deepskyblue;*/
   color: #d75045;
+  text-indent: 1rem;
 }
 
 .nh-atom-logo {
@@ -237,16 +254,14 @@ h2 {
 
 /* GS/Question */
 .nh-txt-question {
-  /*font-family: Jost, sans-serif;*/
   font-weight: 300;
-  /*font-size: 16px;*/
   font-size: 19px;
   line-height: 38px;
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  /*margin-top: 40px;*/
-  /*margin-bottom: -2px;*/
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
 }
 
 .nh-txt-date {
@@ -256,7 +271,7 @@ h2 {
   letter-spacing: .04em;
 }
 
-main > .nh-txt-date {
+main .content > .nh-txt-date {
   margin-top: 76px;
 }
 
@@ -278,7 +293,12 @@ main img {
 
 main img.nh-img {
   /*max-height: 1140px;*/
-  height: 494px;
+  /*height: 494px;*/
+}
+
+main img.nh-post-hero {
+  max-height: calc(24 * 38px);
+  width: auto;
 }
 
 footer {
@@ -329,3 +349,79 @@ footer a {
 .nh-list-posts a img {
   height: 342px;
 }
+
+.nh-l-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 19px;
+  margin-top: 38px;
+  max-width: calc(20 * 38px);
+  /*max-height: calc(10 * 38px);*/
+}
+
+.nh-l-gallery * {
+  margin: 0;
+}
+
+.nh-l-grid-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px;
+  margin-top: 38px;
+}
+
+.nh-l-grid-photos * {
+  margin: 0;
+}
+
+.nh-l-grid-photos .nh-l-grid-photo {
+  border-radius: 19px;
+}
+
+.nh-l-grid-photos .nh-l-grid__item .photo-on,
+.nh-l-grid-photos .nh-l-grid__item .photo-off {
+  display: none;
+}
+
+.nh-l-grid-photos .nh-l-grid__item .photo-on + label {
+  font-size: 0;
+}
+
+/*.nh-l-grid-photos input[type="radio"] + label img {*/
+/*  border: 10px solid red;*/
+/*}*/
+
+/*.nh-l-grid-photos input[type="radio"]:checked + label img {*/
+/*  border: 10px solid green;*/
+/*}*/
+
+.nh-l-grid-photos .overlay {
+  display: none;
+}
+
+.nh-l-grid-photos .photo-on:checked ~ .overlay {
+  display: block;
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  /*width: 100vw;*/
+  /*height: 100vw;*/
+  z-index: 99;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.nh-l-grid-photos .photo-on:checked ~ .overlay img {
+  margin: 0 auto;
+}
+
+.nh-l-grid-photos .nh-l-grid__item .photo-off + label {
+  display: flex;
+  height: 100vh;
+  padding: 1rem;
+}
+
+/*.nh-l-grid-photos .overlay input[type="radio"]:checked {*/
+
+/*}*/

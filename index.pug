@@ -7,6 +7,28 @@ html(lang='en')
       .sidebar
         include includes/navigation.pug
       main(class='nh-txt-baseline-offset')
-        h1= title
-        //p this is the home page
+        //h1= title
+        .nh-l-grid-photos
+          //.nh-l-grid__item
+          //  input(type='radio' id='photo1on' name='photos' value='ph1' class='photo-on')
+          //  label(for='photo1on')
+          //    img(src='bente1.jpg' alt='portrait' loading='lazy' class='nh-l-grid-photo')
+          //  div(class='overlay')
+          //    input(type='radio' id='photo1off' name='photos' value='ph1off', class='photo-off')
+          //    label(for='photo1off')
+          //      img(src='bente1.jpg' alt='portrait' loading='lazy' class='nh-l-grid-photo')
+          .nh-l-grid__item
+            img(src='bente1.jpg' alt='portrait' loading='lazy' class='nh-l-grid-photo')
+          .nh-l-grid__item
+            img(src='bente2.jpg' alt='portrait' loading='lazy' class='nh-l-grid-photo')
+          .nh-l-grid__item
+            img(src='krissy-dance-1.jpg' alt='portrait' loading='lazy' class='nh-l-grid-photo')
+          .nh-l-grid__item
+            img(src='krissy-dance-2.jpg' alt='portrait' loading='lazy' class='nh-l-grid-photo')
+          .nh-l-grid__item
+            img(src='krissy-zodiac-1.jpg' alt='portrait' loading='lazy' class='nh-l-grid-photo')
+          .nh-l-grid__item
+            img(src='niki-fuji-1.jpg' alt='portrait' loading='lazy' class='nh-l-grid-photo')
+          .nh-l-grid__item
+            img(src='pa-1.jpg' alt='portrait' loading='lazy' class='nh-l-grid-photo')
         include includes/footer.pug

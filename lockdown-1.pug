@@ -2,22 +2,28 @@
 doctype html
 html(lang='en')
   include includes/head.pug
-  body
+  body(class='nh-txt-baseline-offset')
     .wrapper
       header
         include includes/navigation.pug
       main
         h1= title
-        p March 25, 2020
-        p shoots
-        h2 Biting The Bullet
-        p I’m fascinated by how the mind works. And I think I’ve learned that I’m perfectly capable of directing my mind to which way it should go
-        h2 Session One: Nils • Biting The Bullet
-        p.nh-txt-intro During the Corona Lockdown 2020 I came up with this personal mini project: Lockdown Portraits, showing real people – not models – and how they deal with all the ordeals that isolation brings with it. Accompanying the photos are 2 questions I asked each one of them and their answers. To start the project off I was up first.
-        p.nh-txt-question CAN YOU DESCRIBE TO WHAT EXTENT THE LOCKDOWN HAS AFFECTED YOUR LIFE AND HOW. BOTH ON A PERSONAL AND PROFESSIONAL LEVEL?
-        p.nh-txt-quote.
-          "Professionally it has put me back at home. Working remotely is something I’m quite familiar with as I’ve freelanced before for quite some time. Of course then I could go out and take my laptop to a cafe or co-work place, something which isn’t an option now.
-          On a personal level I’d say that for me it hasn’t had a big impact yet as I feel I’ve lived in a less strict sort of lockdown for close to a year now due to various reasons. On the other hand now it is much more strict of course and also more out of my control. Ironically that last part can also be very liberating as there’s no point in fighting it so you might as well just go with it. For me that comes down to forcing myself to come up with new ways of doing things, keeping busy, distracted sometimes even."
+        //h1.
+        //  A post title<br>
+        //  with a Second &<br>
+        //  a Third line
+        // p March 25, 2020
+        // p shoots
+        // h2 Biting The Bullet
+        // p I’m fascinated by how the mind works. And I think I’ve learned that I’m perfectly capable of directing my mind to which way it should go
+        // h2 Session One: Nils • Biting The Bullet
+        p.nh-txt-intro During the <em>Corona Lockdown 2020</em> I came up with this personal mini project: <em>Lockdown Portraits</em>, showing real people – not models – and how they deal with all the ordeals that isolation brings with it. Accompanying the photos are 2 questions I asked each one of them and their answers. To start the project off I was up first.
+        section
+          h2 Another title
+        p.nh-txt-question can you describe to what extent <br />the lockdown has affected your life and how?<br /> both on a personal and professional level?
+        //h1 Another title<br /> with 2 lines
+        p.nh-txt-quote <q>Professionally it has put me back at home. Working remotely is something I’m quite familiar with as I’ve freelanced before for quite some time. Of course then I could go out and take my laptop to a cafe or co-work place, something which isn’t an option now.</q>
+        p.nh-txt-quote <q>On a personal level I’d say that for me it hasn’t had a big impact yet as I feel I’ve lived in a less strict sort of lockdown for close to a year now due to various reasons. On the other hand now it is much more strict of course and also more out of my control. Ironically that last part can also be very liberating as there’s no point in fighting it so you might as well just go with it. For me that comes down to forcing myself to come up with new ways of doing things, keeping busy, distracted sometimes even.</q>
 
 
-      include includes/footer.pug
+      // include includes/footer.pug

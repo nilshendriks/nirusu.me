@@ -1,0 +1,15 @@
+- var title = "About me";
+doctype html
+html(lang='en')
+  include includes/head.pug
+  body
+    .wrapper
+      .sidebar
+        include includes/navigation.pug
+      main(class='nh-txt-baseline-offset')
+        h1= title
+        img(src='nils-about.jpg' alt='portrait of me, nils hendriks, 2020' loading='lazy' width='380' height='532')
+        p I have been taking photos as long as I can remember. And remembering brings back the smell of chemicals developing film at the attic. Now digital, I focus on photographing people. On the streets of wherever and in a pop-up studio.
+        p
+          a(href='https://www.instagram.com/nirususan') Follow me on Instagram
+        include includes/footer.pug

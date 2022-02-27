@@ -1,12 +1,12 @@
-- var title = "nirusu: work in progress";
+- var title = "work in progress";
 doctype html
 html(lang='en')
   include includes/head.pug
   body
     .wrapper
-      header
-        //include includes/navigation.pug
-      main
+      .sidebar
+        include includes/navigation.pug
+      main(class='nh-txt-baseline-offset')
         h1= title
-        p this is the home page
-      //include includes/footer.pug
+        //p this is the home page
+        include includes/footer.pug

@@ -370,9 +370,15 @@ footer a {
 
 .nh-l-grid-photos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 19px;
   margin-top: 38px;
+}
+
+@media only screen and (min-width: 1036px) {
+  .nh-l-grid-photos {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .nh-l-grid-photos * {

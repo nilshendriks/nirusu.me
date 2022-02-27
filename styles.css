@@ -271,6 +271,11 @@ h2 {
   letter-spacing: .04em;
 }
 
+.nh-txt-amp {
+  font-family: Baskerville, serif;
+  font-style: italic;
+}
+
 main .content > .nh-txt-date {
   margin-top: 76px;
 }

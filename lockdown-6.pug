@@ -1,0 +1,38 @@
+- var title = "Lockdown Portraits Session Six";
+doctype html
+html(lang='en')
+  include includes/head.pug
+  body
+    .wrapper
+      .sidebar
+        include includes/navigation.pug
+      main(class='nh-txt-baseline-offset')
+        .content
+          p.nh-txt-date May 13, 2020
+          h1= title
+          p.nh-txt-tag shoots
+          h2 Lucky • Jacqueline <span class='nh-txt-amp'>&amp;</span> Matt
+        img(src='pajacq-2.jpg' alt='portrait of jacq and dad, by nils hendriks, 2020' loading='lazy' class='nh-post-hero' width='1440', height='1440')
+        .content
+          //blockquote
+          //  p Lucky
+          p.nh-txt-intro.
+            During the Corona Lockdown 2020 I came up with this personal mini project: Lockdown Portraits, showing real people – not models – and how they deal with all the ordeals that isolation brings with it. Accompanying the photos are 2 questions I asked each one of them and their answers.
+
+          p.nh-txt-question can you describe to what extent <br />the lockdown has affected your life and how?<br /> both on a personal and professional level?
+          p.nh-txt-quote
+            q We are in the luxury position that we have little trouble. Thinking of parents with several children, 3-high, nursing home residents, the lonely and the needy. We have each other and have always been on our own. Our dog, Wouke, ensures that we can take to the streets 4 times a day without shame.
+            br
+            br
+            | As far as my work in health care is concerned, there was much confusion and contradiction in behavior around distance and proximity.
+
+          p.nh-txt-question if anything, what do you think <br />will you take away from all this.<br />any lessons learned?
+          p.nh-txt-quote
+            q I think we will never be so lighthearted in the event of a virus outbreak again.
+
+        .nh-l-gallery
+          img(src='pajacq-1.jpg' alt='portrait of jacq and dad, by nils hendriks, 2020' loading='lazy' class='xnh-img')
+          img(src='pajacq-3.jpg' alt='portrait of jacq and dad, by nils hendriks, 2020' loading='lazy' class='xnh-img')
+          img(src='pajacq-4.jpg' alt='portrait of jacq and dad, by nils hendriks, 2020' loading='lazy' class='xnh-img')
+
+        include includes/footer.pug

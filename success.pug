@@ -1,0 +1,15 @@
+- var title = "Thank You";
+doctype html
+html(lang='en')
+  include includes/head.pug
+  body
+    .wrapper
+      .sidebar
+        include includes/navigation.pug
+      main(class='nh-txt-baseline-offset')
+        .content
+          h1= title
+          p Your form has been submitted.
+          p I will respond as soon as possible
+
+        include includes/footer.pug

@@ -123,7 +123,8 @@ main a {
 main {
   /*width: 75%;*/
   /*margin-left: 25%;*/
-  padding-bottom: calc(2 * 38px);
+  /*padding-bottom: calc(2 * 38px);*/
+  padding-bottom: calc(1 * 38px);
 }
 
 @media only screen and (min-width: 1036px) {
@@ -180,7 +181,7 @@ main > .content {
 }
 
 .nh-atom-logo {
-  height: 38px;
+  /*height: 38px;*/
 }
 
 @media only screen and (max-width: 1035px) {
@@ -310,6 +311,7 @@ footer {
 
 }
 
+
 footer a {
   text-decoration: none;
 }
@@ -319,12 +321,24 @@ footer a {
 }
 
 .org-footer p {
+  display: flex;
   /*font-size: 0.72727273rem;*/
   font-size: 14px;
   font-weight: 300;
   line-height: 38px;
   text-transform: uppercase;
   letter-spacing: .2em;
+}
+
+.org-footer p + p {
+  margin-top: 0;
+}
+.org-footer a {
+  display: inline-flex;
+  align-items: center;
+}
+.org-footer a .svg-icon-small {
+  margin-right: 8px;
 }
 
 .nh-list-posts {
@@ -353,6 +367,7 @@ footer a {
 
 .nh-list-posts a img {
   height: 342px;
+  width: auto;
 }
 
 .nh-l-gallery {

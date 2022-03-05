@@ -47,10 +47,13 @@ body {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  /*grid-template-columns: 200px 1fr;*/
-  /*grid-template-columns: 1fr;*/
-  /*grid-template-rows: 76px 1fr;*/
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr 3fr;
+  }
 }
 
 q::before, blockquote p::before {
@@ -126,7 +129,6 @@ select {
 input[type="radio"] {
   /*box-sizing: content-box;*/
   display: inline-block;
-  width: auto;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -272,6 +274,10 @@ main > .content {
   /*height: 38px;*/
 }
 
+.nh-atom-logo img {
+  width: 100%;
+}
+
 @media only screen and (max-width: 1035px) {
   main {
     padding-left: 19px;
@@ -304,13 +310,9 @@ main .content .content-container {
 h1 {
   font-family: "Times New Roman", Georgia, serif;
   font-weight: 400;
-  font-size: 76px;
-  line-height: 76px;
+  font-size: 38px;
+  line-height: 38px;
   margin-top: 38px;
-  /*font-size: 48px;*/
-  /*line-height: 57px;*/
-  /*margin-top: 20px;*/
-  /*margin-bottom: -1px;*/
 }
 
 h1 + * {
@@ -324,13 +326,25 @@ main > h1:first-child {
 h2 {
   font-family: "Times New Roman", Georgia, serif;
   font-weight: 400;
-  font-size: 57px;
-  line-height: 76px;
+  font-size: 28px;
+  line-height: 38px;
   margin-top: 45px;
   margin-bottom: -7px;
   /*line-height: 57px;*/
   /*margin-top: 38px;*/
   /*margin-bottom: 38px;*/
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 76px;
+    line-height: 76px;
+  }
+
+  h2 {
+    font-size: 57px;
+    line-height: 76px;
+  }
 }
 
 .nh-txt-intro {
@@ -344,13 +358,20 @@ h2 {
 /* GS/Question */
 .nh-txt-question {
   font-weight: 300;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 38px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   /*margin-left: auto;*/
   /*margin-right: auto;*/
+}
+
+@media only screen and (min-width: 768px) {
+  .nh-txt-question {
+    font-size: 19px;
+    text-align: center;
+  }
 }
 
 .nh-txt-date {
@@ -410,12 +431,19 @@ footer a {
 
 .org-footer p {
   display: flex;
+  flex-direction: column;
   /*font-size: 0.72727273rem;*/
   font-size: 14px;
   font-weight: 300;
   line-height: 38px;
   text-transform: uppercase;
   letter-spacing: .2em;
+}
+
+@media only screen and (min-width: 768px) {
+  .org-footer p {
+    flex-direction: row;
+  }
 }
 
 .org-footer p + p {
@@ -447,16 +475,27 @@ footer a {
 
 .nh-list-posts a {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: normal;
   gap: 19px;
   text-decoration: none;
   color: #444;
 }
 
-.nh-list-posts a img {
-  height: 342px;
-  width: auto;
+@media only screen and (min-width: 768px) {
+  .nh-list-posts a {
+    flex-direction: row;
+    align-items: center;
+  }
 }
+
+@media only screen and (min-width: 768px) {
+  .nh-list-posts a img {
+    height: 342px;
+    width: auto;
+  }
+}
+
 
 .nh-l-gallery {
   display: grid;

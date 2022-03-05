@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="sidebar"><a href="index.html" title="Click to go back to the homepage"><img class="nh-atom-logo" src="nirusu-logo.svg" alt="logo image for nirusu" loading="eager" width="272" height="42"></a>
+      <div class="sidebar"><a class="nh-atom-logo" href="index.html" title="Click to go back to the homepage"><img class="nh-atom-logo-img" src="nirusu-logo.svg" alt="logo image for nirusu" loading="eager" width="272" height="42"></a>
         <nav><a href="index.html">Home</a>
           <!--a(href='portraits.html') portraits--><a href="blog.html">blog</a><a href="about.html">about</a><a href="contact.html">contact</a>
         </nav>
@@ -22,14 +22,14 @@
       <main class="nh-txt-baseline-offset">
         <!--h1= title-->
         <div class="nh-l-grid-photos">
-          <div class="nh-l-grid__item">
-            <div class="lightbox">
-              <input class="btn-radio photo-on" type="radio" id="photo1on" name="photos" value="ph1">
-              <input class="btn-radio photo-off" type="radio" id="photo1off" name="photos" value="ph1off">
-              <label class="lightbox__overlay" for="photo1on"><img class="nh-l-grid-photo" src="assets/images/yousuck-1.jpg" alt="portrait" loading="eager" width="1440" height="1440"><span>Close</span></label>
-              <label class="btn-close" for="photo1off"></label>
-            </div>
-          </div>
+          <!--.nh-l-grid__item-->
+          <!--  div(class='lightbox')-->
+          <!--    input(type='radio' id='photo1on' name='photos' value='ph1' class='btn-radio photo-on')-->
+          <!--    input(type='radio' id='photo1off' name='photos' value='ph1off', class='btn-radio photo-off')-->
+          <!--    label(for='photo1on', class='lightbox__overlay')-->
+          <!--      img(src='assets/images/yousuck-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')-->
+          <!--      span Close-->
+          <!--    label(for='photo1off', class='btn-close')-->
           <div class="nh-l-grid__item">
             <div class="lightbox">
               <input class="btn-radio photo-on" type="radio" id="photo2on" name="photos" value="ph2">

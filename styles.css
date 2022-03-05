@@ -214,6 +214,7 @@ main {
   /*margin-left: 25%;*/
   /*padding-bottom: calc(2 * 38px);*/
   padding-bottom: calc(1 * 38px);
+  padding-right: 38px;
   overflow-y: auto;
 }
 
@@ -253,7 +254,12 @@ main > .content {
   margin-top: 38px;
 }
 
-.sidebar nav a {
+.sidebar nav nav {
+  margin-top: 0;
+}
+
+.sidebar nav a,
+.sidebar nav summary {
   text-decoration: none;
   font-weight: 300;
   color: #444;
@@ -264,10 +270,48 @@ main > .content {
   transition: all .3s ease;
 }
 
-.sidebar nav a:hover {
+.sidebar nav a:hover,
+.sidebar nav details > summary:hover {
   /*color: deepskyblue;*/
   color: #d75045;
   text-indent: 1rem;
+}
+
+.sidebar nav details {
+  /* padding for the content to show */
+  /* padding: 1rem; */
+  /* non-standard! sets bgc on top to transparent, otherwise a flash */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sidebar nav summary:focus {
+  outline: 0;
+}
+
+.sidebar nav details > summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /*border-bottom: 1px solid #bbb;*/
+  cursor: pointer;
+}
+
+.sidebar nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.sidebar nav summary::after {
+  content: "+";
+}
+.sidebar nav details[open] summary:after {
+  content: "–";
+}
+
+.sidebar nav details nav a {
+  font-size: 14px;
+  text-transform: capitalize;
+  letter-spacing: 0.1em;
 }
 
 .nh-atom-logo {
@@ -581,6 +625,10 @@ footer a {
   top: 50%;
   max-width: 1000px;
   width: 86%;
+}
+
+.zodiac .lightbox .photo-on:checked ~ label img {
+  width: 36vmax;
 }
 
 .lightbox label img + span {

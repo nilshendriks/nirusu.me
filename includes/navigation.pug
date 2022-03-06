@@ -1,14 +1,27 @@
+a(href='#menuopen', class='menubutton')
+  svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+    line(x1='3', y1='12', x2='21', y2='12')
+    line(x1='3', y1='6', x2='21', y2='6')
+    line(x1='3', y1='18', x2='21', y2='18')
+
 a(href='index.html', title='Click to go back to the homepage', class='nh-atom-logo')
   img(src='nirusu-logo.svg' alt='logo image for nirusu' loading='eager' class='nh-atom-logo-img' width='272', height='42')
-nav
-  a(href='index.html') Home
-  //a(href='portraits.html') portraits
-  //a(href='portraits.html') portraits
-  details
-    summary Projects
-    nav
-      a(href='lockdown-portraits.html') lockdown portraits
-      a(href='zodiac-portraits.html') zodiac portraits
-  a(href='blog.html') blog
-  a(href='about.html') about
-  a(href='contact.html') contact
+
+aside(class='menu', id='menuopen')
+  nav
+    a(href='index.html') Home
+    //a(href='portraits.html') portraits
+    //a(href='portraits.html') portraits
+    details
+      summary Projects
+      nav
+        a(href='lockdown-portraits.html') lockdown portraits
+        a(href='zodiac-portraits.html') zodiac portraits
+    a(href='blog.html') blog
+    a(href='about.html') about
+    a(href='contact.html') contact
+  a(href='#', class='menubutton-close')
+    svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2', stroke-linecap='round', stroke-linejoin='round', class='feather feather-arrow-left-circle')
+      circle(cx='12', cy='12', r='10')
+      polyline(points='12 8 8 12 12 16')
+      line(x1='16', y1='12', x2='8', y2='12')

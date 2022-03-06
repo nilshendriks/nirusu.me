@@ -124,6 +124,7 @@ select {
   max-width: 760px;
   padding: 0 8px;
   outline: 0;
+  color: #444444;
 }
 
 input[type="radio"] {
@@ -185,6 +186,7 @@ button {
   padding: 19px 38px;
   border-radius: 50vh;
   border: 0;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-top: 38px;
@@ -218,11 +220,9 @@ main {
   overflow-y: auto;
 }
 
-@media only screen and (min-width: 1036px) {
+@media only screen and (max-width: 767px) {
   main {
-/*     width: 75%;
-    margin-left: 25%; */
-    /*padding-bottom: calc(2 * 38px);*/
+    padding-bottom: 3rem;
   }
 }
 
@@ -234,17 +234,15 @@ main > .content {
 .sidebar {
   /*background-color: hsla(0, 0%, 80%, .25);*/
   /*position: fixed;*/
-  padding: 12px 38px 38px 38px;
+  /*padding: 12px 38px 38px 38px;*/
+  padding: 12px 19px 38px;
 }
 
-@media only screen and (min-width: 1036px) {
+@media only screen and (max-width: 767px) {
   .sidebar {
-/*     position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 25%; */
-    /*width: 200px;*/
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
   }
 }
 
@@ -706,3 +704,68 @@ footer a {
 /*.nh-l-grid-photos .overlay input[type="radio"]:checked {*/
 
 /*}*/
+@media only screen and (max-width: 767px) {
+  .menubutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 2px solid hsl(5, 65%, 40%);
+    /*color: var(--var-global-color-highlight, purple);*/
+    color: hsl(5, 65%, 40%);
+    top: 60px;
+  }
+
+  .menubutton svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .menubutton[href="#menuopen"] {
+    /*position: fixed;*/
+  }
+
+  .menu {
+    visibility: hidden;
+    position: absolute;
+    left: calc(-90vw - 2rem);
+    top: 0;
+    z-index: 999;
+    /* border: 1px solid #000; */
+    background-color: #fff;
+    /*color: var(--var-global-color-highlight, purple);*/
+    border-radius: 0 8px 8px 0;
+    height: 100%;
+    /*width: calc(92vw - 2rem);*/
+    width: 100vw;
+    padding: 1rem;
+    /* width: 100px; */
+    transition: all 0.3s ease-in;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  :target {
+    /* opacity: 1; */
+    visibility: visible;
+    left: 0vw;
+  }
+
+  .menubutton-close,
+  .menubutton-close svg {
+    width: 40px;
+    height: 40px;
+    /*color: var(--var-global-color-highlight, purple);*/
+    color: #d75045;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menubutton,
+  .menubutton-close {
+    display: none;
+  }
+}

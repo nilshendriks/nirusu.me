@@ -28,11 +28,11 @@ html(lang='en')
             //button(type='submit', class='')
             //  span(class='')
             //    | Send Message
-            form(name='contact', method='POST', data-netlify='true', action="/success")
+            form(name='contact', method='POST', data-netlify='true', action="success.html")
               label Your Name:
-                input(type='text', name='name')
+                input(type='text', name='name', required='required')
               label Your Email:
-                input(type='email', name='email')
+                input(type='email', name='email', required='required')
               label(class='') What type of session are you looking for?
               //fieldset(class='group-radios')
               input#session-portrait(type='radio', class='', name='session', value='Portrait')

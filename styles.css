@@ -717,6 +717,7 @@ footer a {
     /*color: var(--var-global-color-highlight, purple);*/
     color: hsl(5, 65%, 40%);
     top: 60px;
+    flex: 0 0 auto;
   }
 
   .menubutton svg {

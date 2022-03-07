@@ -270,10 +270,13 @@ main > .content {
 
 .sidebar nav a:hover,
 .sidebar nav details > summary:hover {
-  /*color: deepskyblue;*/
   color: #d75045;
-  text-indent: 1rem;
+  /*text-indent: 1rem;*/
 }
+
+/*.sidebar nav details > summary:hover::after {*/
+/*  text-indent: 0;*/
+/*}*/
 
 .sidebar nav details {
   /* padding for the content to show */
@@ -289,8 +292,10 @@ main > .content {
 .sidebar nav details > summary {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  justify-content: flex-start;
   align-items: flex-start;
+  gap: 8px;
   /*border-bottom: 1px solid #bbb;*/
   cursor: pointer;
 }
@@ -563,6 +568,17 @@ footer a {
   .nh-l-grid-photos {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .nh-l-grid-photos.grid-dense {
+    grid-template-columns: repeat(auto-fill, minmax(22vw, 1fr));
+    grid-auto-flow: row dense;
+  }
+
+  .nh-l-grid-photos.grid-dense .portrait {
+    grid-row-end: span 2;
+    grid-column-end: span 2;
+  }
+
 }
 
 .nh-l-grid-photos * {

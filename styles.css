@@ -811,6 +811,12 @@ footer a {
   .sidebar nav {
     margin: 0;
   }
+
+  .sidebar nav a,
+  .sidebar nav summary {
+    font-size: calc(calc(22 / var(--font-size-root-px)) * 1rem);
+  }
+
   .menubutton {
     display: flex;
     justify-content: center;

@@ -1,137 +1,137 @@
 - var title = "Zodiac Portraits";
-doctype html
-html(lang='en')
-  include includes/head.pug
-  body
-    .wrapper
-      .sidebar
-        include includes/navigation.pug
-      main(class='nh-txt-baseline-offset')
-        h1= title
-        .content
-          p.nh-txt-intro <em>Lockdown Portrait</em> volunteer no3 Krissy Molly put up with me for several shoots and turned out to be quite a natural, and frankly a muse too. One of the results is the Zodiac Series.
-          //p Over the course of a few months during 2020 I did these shoots that resulted in 9 portraits.
-          //br
-          //| The stories and more shots are in the <a href="blog.html">blog section</a>.
-        .nh-l-grid-photos.zodiac
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo2on' name='photos' value='ph2' class='btn-radio photo-on')
-              input(type='radio' id='photo2off' name='photos' value='ph2off', class='btn-radio photo-off')
-              label(for='photo2on', class='lightbox__overlay')
-                img(src='assets/images/zodiac/1-aquarius.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
-                span Close
-              label(for='photo2off', class='btn-close')
-            p Aquarius
+//doctype html
+//html(lang='en')
+include includes/head.pug
+body
+  .wrapper
+    .sidebar
+      include includes/navigation.pug
+    main(class='nh-txt-baseline-offset')
+      h1= title
+      .content
+        p.nh-txt-intro <em>Lockdown Portrait</em> volunteer no3 Krissy Molly put up with me for several shoots and turned out to be quite a natural, and frankly a muse too. One of the results is the Zodiac Series.
+        //p Over the course of a few months during 2020 I did these shoots that resulted in 9 portraits.
+        //br
+        //| The stories and more shots are in the <a href="blog.html">blog section</a>.
+      .nh-l-grid-photos.zodiac
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo2on' name='photos' value='ph2' class='btn-radio photo-on')
+            input(type='radio' id='photo2off' name='photos' value='ph2off', class='btn-radio photo-off')
+            label(for='photo2on', class='lightbox__overlay')
+              img(src='assets/images/zodiac/1-aquarius.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
+              span Close
+            label(for='photo2off', class='btn-close')
+          p Aquarius
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo3on' name='photos' value='ph3' class='btn-radio photo-on')
-              input(type='radio' id='photo3off' name='photos' value='ph3off', class='btn-radio photo-off')
-              label(for='photo3on', class='lightbox__overlay')
-                img(src='assets/images/zodiac/2-pisces.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
-                span Close
-              label(for='photo3off', class='btn-close')
-            p Pisces
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo3on' name='photos' value='ph3' class='btn-radio photo-on')
+            input(type='radio' id='photo3off' name='photos' value='ph3off', class='btn-radio photo-off')
+            label(for='photo3on', class='lightbox__overlay')
+              img(src='assets/images/zodiac/2-pisces.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
+              span Close
+            label(for='photo3off', class='btn-close')
+          p Pisces
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo4on' name='photos' value='ph4' class='btn-radio photo-on')
-              input(type='radio' id='photo4off' name='photos' value='ph4off', class='btn-radio photo-off')
-              label(for='photo4on', class='lightbox__overlay')
-                img(src='assets/images/zodiac/placeholder.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
-                span Close
-              label(for='photo4off', class='btn-close')
-            p Aries - Coming soon
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo4on' name='photos' value='ph4' class='btn-radio photo-on')
+            input(type='radio' id='photo4off' name='photos' value='ph4off', class='btn-radio photo-off')
+            label(for='photo4on', class='lightbox__overlay')
+              img(src='assets/images/zodiac/placeholder.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
+              span Close
+            label(for='photo4off', class='btn-close')
+          p Aries - Coming soon
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo5on' name='photos' value='ph5' class='btn-radio photo-on')
-              input(type='radio' id='photo5off' name='photos' value='ph5off', class='btn-radio photo-off')
-              label(for='photo5on', class='lightbox__overlay')
-                img(src='assets/images/zodiac/4-taurus.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
-                span Close
-              label(for='photo5off', class='btn-close')
-            p Taurus
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo5on' name='photos' value='ph5' class='btn-radio photo-on')
+            input(type='radio' id='photo5off' name='photos' value='ph5off', class='btn-radio photo-off')
+            label(for='photo5on', class='lightbox__overlay')
+              img(src='assets/images/zodiac/4-taurus.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
+              span Close
+            label(for='photo5off', class='btn-close')
+          p Taurus
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo6on' name='photos' value='ph6' class='btn-radio photo-on')
-              input(type='radio' id='photo6off' name='photos' value='ph6off', class='btn-radio photo-off')
-              label(for='photo6on', class='lightbox__overlay')
-                img(src='assets/images/zodiac/5-gemini.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
-                span Close
-              label(for='photo6off', class='btn-close')
-            p Gemini
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo6on' name='photos' value='ph6' class='btn-radio photo-on')
+            input(type='radio' id='photo6off' name='photos' value='ph6off', class='btn-radio photo-off')
+            label(for='photo6on', class='lightbox__overlay')
+              img(src='assets/images/zodiac/5-gemini.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
+              span Close
+            label(for='photo6off', class='btn-close')
+          p Gemini
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo7on' name='photos' value='ph7' class='btn-radio photo-on')
-              input(type='radio' id='photo7off' name='photos' value='ph7off', class='btn-radio photo-off')
-              label(for='photo7on', class='lightbox__overlay')
-                img(src='assets/images/zodiac/6-cancer.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
-                span Close
-              label(for='photo7off', class='btn-close')
-            p Cancer
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo7on' name='photos' value='ph7' class='btn-radio photo-on')
+            input(type='radio' id='photo7off' name='photos' value='ph7off', class='btn-radio photo-off')
+            label(for='photo7on', class='lightbox__overlay')
+              img(src='assets/images/zodiac/6-cancer.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
+              span Close
+            label(for='photo7off', class='btn-close')
+          p Cancer
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo8on' name='photos' value='ph8' class='btn-radio photo-on')
-              input(type='radio' id='photo8off' name='photos' value='ph8off', class='btn-radio photo-off')
-              label(for='photo8on', class='lightbox__overlay')
-                img(src='assets/images/zodiac/7-leo.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
-                span Close
-              label(for='photo8off', class='btn-close')
-            p Leo
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo8on' name='photos' value='ph8' class='btn-radio photo-on')
+            input(type='radio' id='photo8off' name='photos' value='ph8off', class='btn-radio photo-off')
+            label(for='photo8on', class='lightbox__overlay')
+              img(src='assets/images/zodiac/7-leo.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
+              span Close
+            label(for='photo8off', class='btn-close')
+          p Leo
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo9on' name='photos' value='ph9' class='btn-radio photo-on')
-              input(type='radio' id='photo9off' name='photos' value='ph9off', class='btn-radio photo-off')
-              label(for='photo9on', class='lightbox__overlay')
-                img(src='assets/images/zodiac/8-virgo.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
-                span Close
-              label(for='photo9off', class='btn-close')
-            p Virgo
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo9on' name='photos' value='ph9' class='btn-radio photo-on')
+            input(type='radio' id='photo9off' name='photos' value='ph9off', class='btn-radio photo-off')
+            label(for='photo9on', class='lightbox__overlay')
+              img(src='assets/images/zodiac/8-virgo.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
+              span Close
+            label(for='photo9off', class='btn-close')
+          p Virgo
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo10on' name='photos' value='ph10' class='btn-radio photo-on')
-              input(type='radio' id='photo10off' name='photos' value='ph10off', class='btn-radio photo-off')
-              label(for='photo10on', class='lightbox__overlay')
-                img(src='assets/images/zodiac/9-libra.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
-                span Close
-              label(for='photo10off', class='btn-close')
-            p Libra
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo10on' name='photos' value='ph10' class='btn-radio photo-on')
+            input(type='radio' id='photo10off' name='photos' value='ph10off', class='btn-radio photo-off')
+            label(for='photo10on', class='lightbox__overlay')
+              img(src='assets/images/zodiac/9-libra.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
+              span Close
+            label(for='photo10off', class='btn-close')
+          p Libra
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo11on' name='photos' value='ph11' class='btn-radio photo-on')
-              input(type='radio' id='photo11off' name='photos' value='ph11off', class='btn-radio photo-off')
-              label(for='photo11on', class='lightbox__overlay')
-                img(src='assets/images/zodiac/10-scorpio.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
-                span Close
-              label(for='photo11off', class='btn-close')
-            p Scorpio
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo11on' name='photos' value='ph11' class='btn-radio photo-on')
+            input(type='radio' id='photo11off' name='photos' value='ph11off', class='btn-radio photo-off')
+            label(for='photo11on', class='lightbox__overlay')
+              img(src='assets/images/zodiac/10-scorpio.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
+              span Close
+            label(for='photo11off', class='btn-close')
+          p Scorpio
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo12on' name='photos' value='ph12' class='btn-radio photo-on')
-              input(type='radio' id='photo12off' name='photos' value='ph12off', class='btn-radio photo-off')
-              label(for='photo12on', class='lightbox__overlay')
-                img(src='assets/images/zodiac/11-sagitarius.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
-                span Close
-              label(for='photo12off', class='btn-close')
-            p Sagittarius
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo12on' name='photos' value='ph12' class='btn-radio photo-on')
+            input(type='radio' id='photo12off' name='photos' value='ph12off', class='btn-radio photo-off')
+            label(for='photo12on', class='lightbox__overlay')
+              img(src='assets/images/zodiac/11-sagitarius.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
+              span Close
+            label(for='photo12off', class='btn-close')
+          p Sagittarius
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo13on' name='photos' value='ph13' class='btn-radio photo-on')
-              input(type='radio' id='photo13off' name='photos' value='ph13off', class='btn-radio photo-off')
-              label(for='photo13on', class='lightbox__overlay')
-                img(src='assets/images/zodiac/12-capricorn.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
-                span Close
-              label(for='photo13off', class='btn-close')
-            p Capricorn
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo13on' name='photos' value='ph13' class='btn-radio photo-on')
+            input(type='radio' id='photo13off' name='photos' value='ph13off', class='btn-radio photo-off')
+            label(for='photo13on', class='lightbox__overlay')
+              img(src='assets/images/zodiac/12-capricorn.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='2258')
+              span Close
+            label(for='photo13off', class='btn-close')
+          p Capricorn
 
-        include includes/footer.pug
+      include includes/footer.pug

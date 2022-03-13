@@ -2,9 +2,57 @@
 
 :root {
   --lineheight-px: 38;
+  --font-size-root-px: 16;
   --font-size-body-px: 22;
-  --lineheight-unitless: calc(38 / 22);
+  --lineheight-unitless: calc(var(--lineheight-px) / var(--font-size-body-px));
+  --font-weight-body-text: 400;
+  --font-family-sans: Jost, sans-serif;
+  --font-family-serif: "Times New Roman", georgia, serif;
+  --font-family-headings: var(--font-family-serif);
+  --font-family-body-text: var(--font-family-sans);
+
+/* colors */
+  --color-primary: #A82F24;
+  --color-bg: #fff;
+  /*--color-bg-theme-light: #fff;*/
+  --color-fg: #555;
+  --color-link-default: var(--color-primary);
+  --color-link-hover: #d75045;
+  --color-nav-links: #444;
 }
+
+.theme-dark {
+  --color-bg-theme-dark: #000;
+  --color-fg-theme-dark: #fff;
+  --color-bg: var(--color-bg-theme-dark);
+  --color-fg: var(--color-fg-theme-dark);
+  --color-primary: #A82F24;
+  --color-link-default: var(--color-primary);
+  --color-link-hover: #d75045;
+  --color-nav-links: #fff;
+}
+
+.theme-jost {
+  --font-family-headings: var(--font-family-sans);
+  --font-family-body-text: var(--font-family-serif);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #222;
+    --color-fg: #fff;
+    /* orangered */
+    --color-primary: hsl(16deg 100% 50% / 100%);
+    /* darkorange */
+    --color-link-hover: hsl(33deg 100% 50% / 100%);
+    --color-nav-links: var(--color-primary, red);
+
+    -webkit-font-smoothing: antialiased;
+    --font-weight-body-text: 300;
+  }
+}
+
+[v-cloak] { display:none; }
 
 * {
   margin: 0;
@@ -25,21 +73,27 @@
 :lang(hu) q, :lang(hu) blockquote { quotes: "„" "“" '»' '«'; }
 
 html {
-  background-color: #fff;
+  background-color: var(--color-bg, #fff);
   background-image: url(https://basehold.it/i/38/255/0/0/.06);
   background-size: 1px 38px;
-  color: #555;
+  color: var(--color-fg, #000);
   margin: 0;
   padding: 0;
-  font-family: Jost, sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: calc(38 / 22);
+  /*font-family: Jost, sans-serif;*/
+  font-family: var(--font-family-body-text);
+  font-weight: var(--font-weight-body-text, 400);
+  font-size: 1rem;
+  line-height: calc(var(--lineheight-px) / var(--font-size-root-px));
+  transition: background-color 1s ease;
 }
 
 body {
+  /*background-color: var(--color-bg, #fff);*/
+  /*color: var(--color-fg, #000);*/
   margin: 0;
   padding: 0;
+  font-size: calc(22 / 16 * 1rem);
+  line-height: calc(38 / 22);
   overflow: hidden;
 }
 
@@ -98,7 +152,7 @@ svg {
 }
 
 a {
-  color: hsl(5, 65%, 40%);
+  color: var(--color-link-default, blue);
   text-decoration: none;
   /*text-decoration-thickness: 1px;*/
   /*text-underline-offset: .4em;*/
@@ -107,7 +161,7 @@ a {
 a:focus,
 a:hover {
   /*color: deepskyblue;*/
-  color: #d75045;
+  color: var(--color-link-hover);
 }
 
 /* forms */
@@ -116,7 +170,7 @@ input,
 textarea,
 select {
   display: block;
-  font-family: Jost, sans-serif;
+  font-family: var(--font-family-body-text);
   font-size: 20px;
   font-weight: 300;
   line-height: 38px;
@@ -124,7 +178,7 @@ select {
   max-width: 760px;
   padding: 0 8px;
   outline: 0;
-  color: #444444;
+  color: var(--color-fg);
 }
 
 input[type="radio"] {
@@ -260,17 +314,19 @@ main > .content {
 .sidebar nav summary {
   text-decoration: none;
   font-weight: 300;
-  color: #444;
+  color: var(--color-nav-links, #000);
   text-transform: uppercase;
-  font-size: 16px;
-  line-height: 38px;
+  /* 12px */
+  font-size: calc(calc(12 / var(--font-size-root-px)) * 1rem);
+  /*line-height: 38px;*/
+  line-height: calc(var(--lineheight-px) / 12);
   letter-spacing: 0.2em;
-  transition: all .3s ease;
+  transition: color .3s ease;
 }
 
 .sidebar nav a:hover,
 .sidebar nav details > summary:hover {
-  color: #d75045;
+  color: var(--color-link-hover);
   /*text-indent: 1rem;*/
 }
 
@@ -318,10 +374,12 @@ main > .content {
 }
 
 .nh-atom-logo {
-  /*height: 38px;*/
+  /*color: currentColor;*/
+  color: var(--color-fg);
 }
 
-.nh-atom-logo img {
+.nh-atom-logo img,
+.nh-atom-logo svg {
   width: 100%;
 }
 
@@ -355,7 +413,8 @@ main .content .content-container {
 /*}*/
 
 h1 {
-  font-family: "Times New Roman", Georgia, serif;
+  /*font-family: "Times New Roman", Georgia, serif;*/
+  font-family: var(--font-family-headings);
   font-weight: 400;
   font-size: 38px;
   line-height: 38px;
@@ -371,7 +430,8 @@ main > h1:first-child {
 }
 
 h2 {
-  font-family: "Times New Roman", Georgia, serif;
+  /*font-family: "Times New Roman", Georgia, serif;*/
+  font-family: var(--font-family-headings);
   font-weight: 400;
   font-size: 28px;
   line-height: 38px;
@@ -526,7 +586,11 @@ footer a {
   align-items: normal;
   gap: 19px;
   text-decoration: none;
-  color: #444;
+  color: var(--color-fg);
+}
+
+.nh-list-posts a:hover * {
+  color: var(--color-link-hover);
 }
 
 @media only screen and (min-width: 768px) {
@@ -578,6 +642,14 @@ footer a {
     grid-row-end: span 2;
     grid-column-end: span 2;
   }
+
+  /*.nh-l-grid-photos .lightbox {*/
+  /*  transition: transform .3s ease;*/
+  /*}*/
+
+  /*.nh-l-grid-photos .lightbox:hover {*/
+  /*  transform: rotate(3deg) scale(0.9);*/
+  /*}*/
 
 }
 
@@ -768,7 +840,7 @@ footer a {
   :target {
     /* opacity: 1; */
     visibility: visible;
-    left: 0vw;
+    left: 0;
   }
 
   .menubutton-close,
@@ -785,4 +857,13 @@ footer a {
   .menubutton-close {
     display: none;
   }
+}
+
+.lightswitch {}
+
+.lightswitch button {
+  color: currentcolor;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
 }

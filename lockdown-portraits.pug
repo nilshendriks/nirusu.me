@@ -1,121 +1,121 @@
 - var title = "Lockdown Portraits";
-doctype html
-html(lang='en')
-  include includes/head.pug
-  body
-    .wrapper
-      .sidebar
-        include includes/navigation.pug
-      main(class='nh-txt-baseline-offset')
-        h1= title
-        .content
-          p.nh-txt-intro During the <em>Corona Lockdown 2020</em> I came up with this personal mini project: <em>Lockdown Portraits</em>, showing real people – not models – and how they deal with all the ordeals that isolation brings with it. Accompanying the photos are 2 questions I asked each one of them and their answers.
-          p Over the course of a few months during 2020 I did these shoots that resulted in 9 portraits.
-          br
-          | The stories and more shots are in the <a href="blog.html">blog section</a>.
-        .nh-l-grid-photos
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo2on' name='photos' value='ph2' class='btn-radio photo-on')
-              input(type='radio' id='photo2off' name='photos' value='ph2off', class='btn-radio photo-off')
-              label(for='photo2on', class='lightbox__overlay')
-                img(src='nils1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='1500')
-                span Close
-              label(for='photo2off', class='btn-close')
+//doctype html
+//html(lang='en')
+include includes/head.pug
+body
+  .wrapper
+    .sidebar
+      include includes/navigation.pug
+    main(class='nh-txt-baseline-offset')
+      h1= title
+      .content
+        p.nh-txt-intro During the <em>Corona Lockdown 2020</em> I came up with this personal mini project: <em>Lockdown Portraits</em>, showing real people – not models – and how they deal with all the ordeals that isolation brings with it. Accompanying the photos are 2 questions I asked each one of them and their answers.
+        p Over the course of a few months during 2020 I did these shoots that resulted in 9 portraits.
+        br
+        | The stories and more shots are in the <a href="blog.html">blog section</a>.
+      .nh-l-grid-photos
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo2on' name='photos' value='ph2' class='btn-radio photo-on')
+            input(type='radio' id='photo2off' name='photos' value='ph2off', class='btn-radio photo-off')
+            label(for='photo2on', class='lightbox__overlay')
+              img(src='nils1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1500', height='1500')
+              span Close
+            label(for='photo2off', class='btn-close')
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo3on' name='photos' value='ph3' class='btn-radio photo-on')
-              input(type='radio' id='photo3off' name='photos' value='ph3off', class='btn-radio photo-off')
-              label(for='photo3on', class='lightbox__overlay')
-                img(src='niki1-sq.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1498', height='1498')
-                span Close
-              label(for='photo3off', class='btn-close')
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo3on' name='photos' value='ph3' class='btn-radio photo-on')
+            input(type='radio' id='photo3off' name='photos' value='ph3off', class='btn-radio photo-off')
+            label(for='photo3on', class='lightbox__overlay')
+              img(src='niki1-sq.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1498', height='1498')
+              span Close
+            label(for='photo3off', class='btn-close')
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo4on' name='photos' value='ph4' class='btn-radio photo-on')
-              input(type='radio' id='photo4off' name='photos' value='ph4off', class='btn-radio photo-off')
-              label(for='photo4on', class='lightbox__overlay')
-                img(src='krissy2-sq.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
-                span Close
-              label(for='photo4off', class='btn-close')
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo4on' name='photos' value='ph4' class='btn-radio photo-on')
+            input(type='radio' id='photo4off' name='photos' value='ph4off', class='btn-radio photo-off')
+            label(for='photo4on', class='lightbox__overlay')
+              img(src='krissy2-sq.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
+              span Close
+            label(for='photo4off', class='btn-close')
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo5on' name='photos' value='ph5' class='btn-radio photo-on')
-              input(type='radio' id='photo5off' name='photos' value='ph5off', class='btn-radio photo-off')
-              label(for='photo5on', class='lightbox__overlay')
-                img(src='remko-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
-                span Close
-              label(for='photo5off', class='btn-close')
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo5on' name='photos' value='ph5' class='btn-radio photo-on')
+            input(type='radio' id='photo5off' name='photos' value='ph5off', class='btn-radio photo-off')
+            label(for='photo5on', class='lightbox__overlay')
+              img(src='remko-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
+              span Close
+            label(for='photo5off', class='btn-close')
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo6on' name='photos' value='ph6' class='btn-radio photo-on')
-              input(type='radio' id='photo6off' name='photos' value='ph6off', class='btn-radio photo-off')
-              label(for='photo6on', class='lightbox__overlay')
-                img(src='thara-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
-                span Close
-              label(for='photo6off', class='btn-close')
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo6on' name='photos' value='ph6' class='btn-radio photo-on')
+            input(type='radio' id='photo6off' name='photos' value='ph6off', class='btn-radio photo-off')
+            label(for='photo6on', class='lightbox__overlay')
+              img(src='thara-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
+              span Close
+            label(for='photo6off', class='btn-close')
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo7on' name='photos' value='ph7' class='btn-radio photo-on')
-              input(type='radio' id='photo7off' name='photos' value='ph7off', class='btn-radio photo-off')
-              label(for='photo7on', class='lightbox__overlay')
-                img(src='pajacq-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
-                span Close
-              label(for='photo7off', class='btn-close')
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo7on' name='photos' value='ph7' class='btn-radio photo-on')
+            input(type='radio' id='photo7off' name='photos' value='ph7off', class='btn-radio photo-off')
+            label(for='photo7on', class='lightbox__overlay')
+              img(src='pajacq-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
+              span Close
+            label(for='photo7off', class='btn-close')
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo8on' name='photos' value='ph8' class='btn-radio photo-on')
-              input(type='radio' id='photo8off' name='photos' value='ph8off', class='btn-radio photo-off')
-              label(for='photo8on', class='lightbox__overlay')
-                img(src='ld7-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
-                span Close
-              label(for='photo8off', class='btn-close')
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo8on' name='photos' value='ph8' class='btn-radio photo-on')
+            input(type='radio' id='photo8off' name='photos' value='ph8off', class='btn-radio photo-off')
+            label(for='photo8on', class='lightbox__overlay')
+              img(src='ld7-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
+              span Close
+            label(for='photo8off', class='btn-close')
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo9on' name='photos' value='ph9' class='btn-radio photo-on')
-              input(type='radio' id='photo9off' name='photos' value='ph9off', class='btn-radio photo-off')
-              label(for='photo9on', class='lightbox__overlay')
-                img(src='barb-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
-                span Close
-              label(for='photo9off', class='btn-close')
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo9on' name='photos' value='ph9' class='btn-radio photo-on')
+            input(type='radio' id='photo9off' name='photos' value='ph9off', class='btn-radio photo-off')
+            label(for='photo9on', class='lightbox__overlay')
+              img(src='barb-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
+              span Close
+            label(for='photo9off', class='btn-close')
 
-          .nh-l-grid__item
-            div(class='lightbox')
-              input(type='radio' id='photo10on' name='photos' value='ph10' class='btn-radio photo-on')
-              input(type='radio' id='photo10off' name='photos' value='ph10off', class='btn-radio photo-off')
-              label(for='photo10on', class='lightbox__overlay')
-                img(src='bente-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
-                span Close
-              label(for='photo10off', class='btn-close')
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo10on' name='photos' value='ph10' class='btn-radio photo-on')
+            input(type='radio' id='photo10off' name='photos' value='ph10off', class='btn-radio photo-off')
+            label(for='photo10on', class='lightbox__overlay')
+              img(src='bente-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
+              span Close
+            label(for='photo10off', class='btn-close')
 
 
-          // .nh-l-grid__item
-          //  img(src='bente1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
-          // .nh-l-grid__item
-          //  img(src='bente2.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
-          // .nh-l-grid__item
-          //  img(src='assets/images/shed-jacq-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
-          // .nh-l-grid__item
-          //  img(src='assets/images/shed-pa-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
-          // .nh-l-grid__item
-          //  img(src='assets/images/yousuck-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
-          // .nh-l-grid__item
-          //  img(src='assets/images/thefool-sq.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
-          // .nh-l-grid__item
-          //  img(src='krissy-dance-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
-          //.nh-l-grid__item
-          //  img(src='krissy-dance-2.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
-          //.nh-l-grid__item
-          //  img(src='krissy-zodiac-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
-          //.nh-l-grid__item
-          //  img(src='niki-fuji-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
-          // .nh-l-grid__item
-          //  img(src='pa-1.jpg' alt='portrait' loading='lazy' class='nh-l-grid-photo', width='1000', height='1000')
-        include includes/footer.pug
+        // .nh-l-grid__item
+        //  img(src='bente1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
+        // .nh-l-grid__item
+        //  img(src='bente2.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
+        // .nh-l-grid__item
+        //  img(src='assets/images/shed-jacq-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
+        // .nh-l-grid__item
+        //  img(src='assets/images/shed-pa-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
+        // .nh-l-grid__item
+        //  img(src='assets/images/yousuck-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
+        // .nh-l-grid__item
+        //  img(src='assets/images/thefool-sq.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1440', height='1440')
+        // .nh-l-grid__item
+        //  img(src='krissy-dance-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
+        //.nh-l-grid__item
+        //  img(src='krissy-dance-2.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
+        //.nh-l-grid__item
+        //  img(src='krissy-zodiac-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
+        //.nh-l-grid__item
+        //  img(src='niki-fuji-1.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
+        // .nh-l-grid__item
+        //  img(src='pa-1.jpg' alt='portrait' loading='lazy' class='nh-l-grid-photo', width='1000', height='1000')
+      include includes/footer.pug

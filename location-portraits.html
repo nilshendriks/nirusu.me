@@ -17,12 +17,7 @@
 </html>
 <body>
   <div class="wrapper">
-    <div class="sidebar"><a class="menubutton" href="#menuopen">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg></a><a class="nh-atom-logo" href="index.html" title="Click to go back to the homepage">
+    <div class="sidebar"><a class="nh-atom-logo" href="index.html" title="Click to go back to the homepage">
         <!-- img(src='nirusu-logo.svg' alt='logo image for nirusu' loading='eager' class='nh-atom-logo-img' width='272', height='42')-->
         <svg width="100%" height="100%" viewBox="0 0 920 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" fill="currentColor">
           <g id="nirusu-logo" transform="matrix(1,0,0,1,-80.6043,-433.92)">
@@ -53,8 +48,18 @@
               </g>
             </g>
           </g>
+        </svg></a><a class="menubutton" href="#menuopen">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg></a>
-      <aside class="menu" id="menuopen">
+      <aside class="menu" id="menuopen"><a class="menubutton-close" href="#">
+          <svg class="feather feather-arrow-left-circle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 8 8 12 12 16"></polyline>
+            <line x1="16" y1="12" x2="8" y2="12"></line>
+          </svg></a>
         <nav><a href="index.html">Home</a>
           <details>
             <summary>Portraits</summary>
@@ -64,12 +69,12 @@
             <summary>Projects</summary>
             <nav><a href="lockdown-portraits.html">lockdown portraits</a><a href="zodiac-portraits.html">zodiac portraits</a></nav>
           </details><a href="blog.html">blog</a><a href="about.html">about</a><a href="contact.html">contact</a>
-        </nav><a class="menubutton-close" href="#">
-          <svg class="feather feather-arrow-left-circle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 8 8 12 12 16"></polyline>
-            <line x1="16" y1="12" x2="8" y2="12"></line>
-          </svg></a>
+        </nav>
+        <div class="lightswitch">
+          <button @click="toggleTheme" type="button" title="switch to opposite theme"><svg v-show="theme == 'light'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+<svg v-show="theme == 'dark'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+        </div>
       </aside>
       <script type="module">
         import { createApp } from 'https://unpkg.com/petite-vue?module'
@@ -116,11 +121,6 @@
           }
         }).mount()
       </script>
-      <div class="lightswitch">
-        <button @click="toggleTheme" type="button" title="switch to opposite theme"><svg v-show="theme == 'light'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-<svg v-show="theme == 'dark'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </button>
-      </div>
     </div>
     <main class="nh-txt-baseline-offset">
       <div class="nh-l-grid-photos">

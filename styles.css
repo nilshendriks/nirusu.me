@@ -26,10 +26,19 @@
   --color-fg-theme-dark: #fff;
   --color-bg: var(--color-bg-theme-dark);
   --color-fg: var(--color-fg-theme-dark);
-  --color-primary: #A82F24;
+  /*--color-primary: #A82F24;*/
   --color-link-default: var(--color-primary);
-  --color-link-hover: #d75045;
+  /*--color-link-hover: #d75045;*/
   --color-nav-links: #fff;
+
+  /* orangered */
+  --color-primary: hsl(16deg 100% 50% / 100%);
+  /* darkorange */
+  --color-link-hover: hsl(33deg 100% 50% / 100%);
+  /*--color-nav-links: var(--color-primary, red);*/
+
+  -webkit-font-smoothing: antialiased;
+  --font-weight-body-text: 300;
 }
 
 .theme-jost {
@@ -45,7 +54,7 @@
     --color-primary: hsl(16deg 100% 50% / 100%);
     /* darkorange */
     --color-link-hover: hsl(33deg 100% 50% / 100%);
-    --color-nav-links: var(--color-primary, red);
+    /*--color-nav-links: var(--color-primary, red);*/
 
     -webkit-font-smoothing: antialiased;
     --font-weight-body-text: 300;
@@ -300,6 +309,7 @@ main > .content {
 @media only screen and (max-width: 767px) {
   .sidebar {
     display: flex;
+    justify-content: space-between;
     align-items: baseline;
     gap: 8px;
   }
@@ -798,17 +808,20 @@ footer a {
 
 /*}*/
 @media only screen and (max-width: 767px) {
+  .sidebar nav {
+    margin: 0;
+  }
   .menubutton {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: #fff;
+    /*background-color: #fff;*/
     border-radius: 100%;
-    border: 2px solid hsl(5, 65%, 40%);
-    /*color: var(--var-global-color-highlight, purple);*/
-    color: hsl(5, 65%, 40%);
+    /*border: 2px solid hsl(5, 65%, 40%);*/
+    /*color: hsl(5, 65%, 40%);*/
+    color: var(--color-fg);
     top: 60px;
     flex: 0 0 auto;
   }
@@ -828,18 +841,16 @@ footer a {
     left: calc(-90vw - 2rem);
     top: 0;
     z-index: 999;
-    /* border: 1px solid #000; */
-    background-color: #fff;
-    /*color: var(--var-global-color-highlight, purple);*/
+    background-color: var(--color-bg);
     border-radius: 0 8px 8px 0;
     height: 100%;
-    /*width: calc(92vw - 2rem);*/
     width: 100vw;
     padding: 1rem;
-    /* width: 100px; */
     transition: all 0.3s ease-in;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
   }
 
   :target {
@@ -848,12 +859,15 @@ footer a {
     left: 0;
   }
 
+  .menubutton-close {
+    align-self: flex-end;
+  }
+
   .menubutton-close,
   .menubutton-close svg {
     width: 40px;
     height: 40px;
-    /*color: var(--var-global-color-highlight, purple);*/
-    color: #d75045;
+    color: var(--color-fg);
   }
 }
 

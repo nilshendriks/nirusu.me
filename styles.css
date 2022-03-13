@@ -178,6 +178,11 @@ select {
   max-width: 760px;
   padding: 0 8px;
   outline: 0;
+  /*color: var(--color-fg);*/
+  color: #555;
+}
+
+label {
   color: var(--color-fg);
 }
 

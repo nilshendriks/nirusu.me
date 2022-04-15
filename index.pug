@@ -20,6 +20,24 @@ body
 
         .nh-l-grid__item
           div(class='lightbox')
+            input(type='radio' id='photo1on' name='photos' value='ph1' class='btn-radio photo-on')
+            input(type='radio' id='photo1off' name='photos' value='ph1off', class='btn-radio photo-off')
+            label(for='photo1on', class='lightbox__overlay')
+              img(src='assets/images/studio/barbnoodles-1-sq-1000.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
+              span Close
+            label(for='photo1off', class='btn-close')
+
+        .nh-l-grid__item
+          div(class='lightbox')
+            input(type='radio' id='photo1139on' name='photos' value='ph1139' class='btn-radio photo-on')
+            input(type='radio' id='photo1139off' name='photos' value='ph1139off', class='btn-radio photo-off')
+            label(for='photo1139on', class='lightbox__overlay')
+              img(src='assets/images/studio/barbnoodles-4-sq-1000.jpg' alt='portrait' loading='eager' class='nh-l-grid-photo', width='1000', height='1000')
+              span Close
+            label(for='photo1139off', class='btn-close')
+
+        .nh-l-grid__item
+          div(class='lightbox')
             input(type='radio' id='photo2on' name='photos' value='ph2' class='btn-radio photo-on')
             input(type='radio' id='photo2off' name='photos' value='ph2off', class='btn-radio photo-off')
             label(for='photo2on', class='lightbox__overlay')

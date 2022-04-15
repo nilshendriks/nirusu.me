@@ -8,7 +8,7 @@ function twigTask() {
   return gulp.src('./test.twig')
     .pipe(twig({
       data: {
-        title: 'Gulp and Twig',
+        title: 'test Gulp and Twig',
         benefits: [
           'Fast',
           'Flexible',

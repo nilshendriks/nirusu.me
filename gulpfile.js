@@ -13,6 +13,16 @@ function twigTask() {
           'Fast',
           'Flexible',
           'Secure'
+        ],
+        homephotos: [
+          {
+            'photoID': '001',
+            'photoSRC': 'assets/images/studio/20220420_13-27-37_DSCF3613_6.jpg'
+          },
+          {
+            'photoID': '002',
+            'photoSRC': 'assets/images/studio/20220420_13-54-39_DSCF3628_6.jpg'
+          }
         ]
       }
     }))

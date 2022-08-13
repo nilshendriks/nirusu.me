@@ -1,12 +1,13 @@
-  {
+{
   "name": "nirusu.me",
   "version": "1.0.0",
   "description": "nirusu.me website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "pug": "pug blog.pug",
     "watch:docs-pug": "pug docs --watch",
-    "watch:pug-all": "pug -b . --watch . -P",
+    "watch:pug": "pug *.pug --watch -P",
     "watch:scss": "watch -p 'source/scss/**/*.scss' -c 'npm run build'",
     "build": "npm run compileSass && npm run autoprefix",
     "compileSass": "sass source/scss/toolkit.scss source/css/toolkit-unprefixed.css --style=compressed",
@@ -29,6 +30,7 @@
     "postcss": "^8.3.6",
     "postcss-cli": "^9.1.0",
     "prettier": "^2.5.1",
+    "pug": "^3.0.2",
     "sass": "^1.49.7",
     "stylelint": "^14.5.1",
     "stylelint-config-prettier": "^9.0.3",
@@ -37,8 +39,5 @@
   },
   "browserslist": [
     "since 2020-01-01"
-  ],
-  "dependencies": {
-    "pug": "^3.0.2"
-  }
+  ]
 }

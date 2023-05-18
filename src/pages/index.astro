@@ -18,6 +18,40 @@ const pageTitleClass = "sr-only";
                 <input
                     class="btn-radio photo-on"
                     type="radio"
+                    id="photo3601on"
+                    name="photos"
+                    value="ph3601"
+                />
+                <input
+                    class="btn-radio photo-off"
+                    type="radio"
+                    id="photo3601off"
+                    name="photos"
+                    value="ph3601off"
+                />
+                <label class="lightbox__overlay" for="photo3601on">                    
+                    <picture>
+                        <source type="image/avif" srcset="/images/DSCF3601.avif" />
+                        <source type="image/webp" srcset="/images/DSCF3601.webp" />
+                        <img
+                            src="/images/DSCF3601.jpg"
+                            alt="Ooy posing like a top model"
+                            class="nh-l-grid-photo"
+                            loading="eager"
+                            width="1960"
+                            height="1960"
+                        />
+                    </picture>
+                    <span>Close</span>
+                </label>
+                <label class="btn-close" for="photo3601off"></label>
+            </div>
+        </div>
+        <div class="nh-l-grid__item">
+            <div class="lightbox">
+                <input
+                    class="btn-radio photo-on"
+                    type="radio"
                     id="photo3649on"
                     name="photos"
                     value="ph3649"
@@ -29,16 +63,21 @@ const pageTitleClass = "sr-only";
                     name="photos"
                     value="ph3649off"
                 />
-                <label class="lightbox__overlay" for="photo3649on"
-                    ><img
-                        class="nh-l-grid-photo"
-                        src="/images/studio/20220420_14-43-16_DSCF3649_6.jpg"
-                        alt="portrait"
-                        loading="eager"
-                        width="1000"
-                        height="1000"
-                    /><span>Close</span></label
-                >
+                <label class="lightbox__overlay" for="photo3649on">                    
+                    <picture>
+                        <source type="image/avif" srcset="/images/studio/ooy-1_1960.avif" />
+                        <source type="image/webp" srcset="/images/studio/ooy-1_1960.webp" />
+                        <img
+                            src="/images/studio/ooy-1_1960.jpg"
+                            alt="Ooy posing like a top model"
+                            class="nh-l-grid-photo"
+                            loading="eager"
+                            width="1960"
+                            height="1960"
+                        />
+                    </picture>
+                    <span>Close</span>
+                </label>
                 <label class="btn-close" for="photo3649off"></label>
             </div>
         </div>
@@ -58,20 +97,25 @@ const pageTitleClass = "sr-only";
                     name="photos"
                     value="ph3628off"
                 />
-                <label class="lightbox__overlay" for="photo3628on"
-                    ><img
-                        class="nh-l-grid-photo"
-                        src="/images/studio/20220420_13-54-39_DSCF3628_6.jpg"
-                        alt="portrait"
-                        loading="eager"
-                        width="1000"
-                        height="1000"
-                    /><span>Close</span></label
-                >
+                <label class="lightbox__overlay" for="photo3628on">                    
+                    <picture>
+                        <source type="image/avif" srcset="/images/studio/nils-balloon_1960.avif" />
+                        <source type="image/webp" srcset="/images/studio/nils-balloon_1960.webp" />
+                        <img
+                            src="/images/studio/nils-balloon_1960.jpg"
+                            alt="Nils Blue balloon"
+                            class="nh-l-grid-photo"
+                            loading="eager"
+                            width="1960"
+                            height="1960"
+                        />
+                    </picture>
+                    <span>Close</span>
+                </label>
                 <label class="btn-close" for="photo3628off"></label>
             </div>
         </div>
-        <div class="nh-l-grid__item">
+        <!-- <div class="nh-l-grid__item">
             <div class="lightbox">
                 <input
                     class="btn-radio photo-on"
@@ -99,7 +143,7 @@ const pageTitleClass = "sr-only";
                 >
                 <label class="btn-close" for="photo1off"></label>
             </div>
-        </div>
+        </div> -->
         <div class="nh-l-grid__item">
             <div class="lightbox">
                 <input
@@ -116,16 +160,21 @@ const pageTitleClass = "sr-only";
                     name="photos"
                     value="ph2off"
                 />
-                <label class="lightbox__overlay" for="photo2on"
-                    ><img
-                        class="nh-l-grid-photo"
-                        src="/images/shed-jacq-1.jpg"
-                        alt="portrait"
-                        loading="eager"
-                        width="1440"
-                        height="1440"
-                    /><span>Close</span></label
-                >
+                <label class="lightbox__overlay" for="photo2on">                    
+                    <picture>
+                        <source type="image/avif" srcset="/images/DSCF3174_1960.avif" />
+                        <source type="image/webp" srcset="/images/DSCF3174_1960.webp" />
+                        <img
+                            src="/images/DSCF3174_1960.jpg"
+                            alt="jacq jumping in a shed"
+                            class="nh-l-grid-photo"
+                            loading="eager"
+                            width="1960"
+                            height="1960"
+                        />
+                    </picture>
+                    <span>Close</span>
+                </label>
                 <label class="btn-close" for="photo2off"></label>
             </div>
         </div>
@@ -145,16 +194,29 @@ const pageTitleClass = "sr-only";
                     name="photos"
                     value="ph3off"
                 />
-                <label class="lightbox__overlay" for="photo3on"
-                    ><img
+                <label class="lightbox__overlay" for="photo3on">
+                    <!-- <img
                         class="nh-l-grid-photo"
                         src="/images/shed-pa-1.jpg"
                         alt="portrait"
                         loading="eager"
                         width="1440"
                         height="1440"
-                    /><span>Close</span></label
-                >
+                    /> -->
+                    <picture>
+                        <source type="image/avif" srcset="/images/shed-pa-1.avif" />
+                        <source type="image/webp" srcset="/images/shed-pa-1.webp" />
+                        <img
+                            src="/images/shed-pa-1.jpg"
+                            alt="dad in a shed"
+                            class="nh-l-grid-photo"
+                            loading="eager"
+                            width="1960"
+                            height="1960"
+                        />
+                    </picture>
+                    <span>Close</span>
+                </label>
                 <label class="btn-close" for="photo3off"></label>
             </div>
         </div>
@@ -174,16 +236,29 @@ const pageTitleClass = "sr-only";
                     name="photos"
                     value="ph4off"
                 />
-                <label class="lightbox__overlay" for="photo4on"
-                    ><img
+                <label class="lightbox__overlay" for="photo4on">
+                    <!-- <img
                         class="nh-l-grid-photo"
                         src="/images/bente1.jpg"
                         alt="portrait"
                         loading="eager"
                         width="1000"
                         height="1000"
-                    /><span>Close</span></label
-                >
+                    /> -->
+                    <picture>
+                        <source type="image/avif" srcset="/images/studio/bente1.avif" />
+                        <source type="image/webp" srcset="/images/studio/bente1.webp" />
+                        <img
+                            src="/images/studio/bente1.jpg"
+                            alt="Bente"
+                            class="nh-l-grid-photo"
+                            loading="eager"
+                            width="1960"
+                            height="1960"
+                        />
+                    </picture>
+                    <span>Close</span>
+                    </label>
                 <label class="btn-close" for="photo4off"></label>
             </div>
         </div>
@@ -204,14 +279,28 @@ const pageTitleClass = "sr-only";
                     value="ph5off"
                 />
                 <label class="lightbox__overlay" for="photo5on"
-                    ><img
+                    >
+                    <!-- <img
                         class="nh-l-grid-photo"
                         src="/images/bente2.jpg"
                         alt="portrait"
                         loading="eager"
                         width="1000"
                         height="1000"
-                    /><span>Close</span></label
+                    /> -->
+                    <picture>
+                        <source type="image/avif" srcset="/images/studio/bente2.avif" />
+                        <source type="image/webp" srcset="/images/studio/bente2.webp" />
+                        <img
+                            src="/images/studio/bente2.jpg"
+                            alt="Bente"
+                            class="nh-l-grid-photo"
+                            loading="eager"
+                            width="1960"
+                            height="1960"
+                        />
+                    </picture>
+                    <span>Close</span></label
                 >
                 <label class="btn-close" for="photo5off"></label>
             </div>
@@ -233,19 +322,33 @@ const pageTitleClass = "sr-only";
                     value="ph6off"
                 />
                 <label class="lightbox__overlay" for="photo6on"
-                    ><img
+                    >
+                    <!-- <img
                         class="nh-l-grid-photo"
                         src="/images/thefool-sq.jpg"
                         alt="portrait"
                         loading="eager"
                         width="1440"
                         height="1440"
-                    /><span>Close</span></label
+                    /> -->
+                    <picture>
+                        <source type="image/avif" srcset="/images/studio/thefool-sq.avif" />
+                        <source type="image/webp" srcset="/images/studio/thefool-sq.webp" />
+                        <img
+                            src="/images/studio/thefool-sq.jpg"
+                            alt="The Fool"
+                            class="nh-l-grid-photo"
+                            loading="eager"
+                            width="1960"
+                            height="1960"
+                        />
+                    </picture>
+                    <span>Close</span></label
                 >
                 <label class="btn-close" for="photo6off"></label>
             </div>
         </div>
-        <div class="nh-l-grid__item">
+        <!-- <div class="nh-l-grid__item">
             <div class="lightbox">
                 <input
                     class="btn-radio photo-on"
@@ -273,7 +376,7 @@ const pageTitleClass = "sr-only";
                 >
                 <label class="btn-close" for="photo7off"></label>
             </div>
-        </div>
+        </div> -->
         <div class="nh-l-grid__item">
             <div class="lightbox">
                 <input
@@ -291,14 +394,28 @@ const pageTitleClass = "sr-only";
                     value="ph10off"
                 />
                 <label class="lightbox__overlay" for="photo10on"
-                    ><img
+                    >
+                    <!-- <img
                         class="nh-l-grid-photo"
                         src="/images/niki-fuji-1.jpg"
                         alt="portrait"
                         loading="eager"
                         width="1000"
                         height="1000"
-                    /><span>Close</span></label
+                    /> -->
+                    <picture>
+                        <source type="image/avif" srcset="/images/studio/niki-fuji-1.avif" />
+                        <source type="image/webp" srcset="/images/studio/niki-fuji-1.webp" />
+                        <img
+                            src="/images/studio/niki-fuji-1.jpg"
+                            alt="Niki"
+                            class="nh-l-grid-photo"
+                            loading="eager"
+                            width="1960"
+                            height="1960"
+                        />
+                    </picture>
+                    <span>Close</span></label
                 >
                 <label class="btn-close" for="photo10off"></label>
             </div>

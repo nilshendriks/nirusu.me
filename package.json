@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "pug": "pug blog.pug",
     "watch:docs-pug": "pug docs --watch",
     "watch:pug": "pug *.pug --watch -P",
     "watch:scss": "watch -p 'source/scss/**/*.scss' -c 'npm run build'",
-    "build": "npm run compileSass && npm run autoprefix",
+    "zbuild": "npm run compileSass && npm run autoprefix",
     "compileSass": "sass source/scss/toolkit.scss source/css/toolkit-unprefixed.css --style=compressed",
     "autoprefix": "npx postcss source/css/toolkit-unprefixed.css --use autoprefixer --no-map -m -o web/static/std/assets/toolkit/styles/toolkit.css",
     "stylelint-check": "stylelint-config-prettier-check"
@@ -39,5 +43,8 @@
   },
   "browserslist": [
     "since 2020-01-01"
-  ]
+  ],
+  "dependencies": {
+    "astro": "^2.4.5"
+  }
 }

@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const siteTitle = "nirusu.me";
+const siteTitleClass = "sr-only";
+const pageTitle = "Contact";
+const pageTitleClass = "sr-only";
+---
+
+<BaseLayout
+    siteTitle={siteTitle}
+    siteTitleClass={pageTitleClass}
+    pageTitle={pageTitle}
+    pageTitleClass={pageTitleClass}
+>
+    <div class="content">
+        <h1>Contact me</h1>
+        <p>
+            Send me an email or fill out the form if you are interested in a
+            shoot.
+        </p>
+        <p>Nils Hendriks, <a href="mailto:info@nirusu.me">info@nirusu.me</a></p>
+        <section>
+            <h2>Be My Model</h2>
+            <p>
+                I love to shoot faces, so if you're up for a shoot, please let
+                me know!
+            </p>
+            <!--label(class='', for='your-name') Your name-->
+            <!--  span(class='') *-->
+            <!--input#your-name(type='text', class='', name='', placeholder='', maxlength='64' required='required')-->
+            <!--hr-->
+            <!--label(class='', for='your-email') Email Address-->
+            <!--  span(class='') *-->
+            <!--input#your-email(type='text', class='', name='', placeholder='', maxlength='64' required='required')-->
+            <!--hr-->
+            <!--textarea#message(type='textarea', class='', name='', placeholder='', maxlength='5000', rows='5')-->
+            <!--hr-->
+            <!--button(type='submit', class='')-->
+            <!--  span(class='')-->
+            <!--    | Send Message-->
+            <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                action="success"
+            >
+                <label
+                    >Your Name:
+                    <input type="text" name="name" required="required" />
+                </label>
+                <label
+                    >Your Email:
+                    <input type="email" name="email" required="required" />
+                </label>
+                <label>What type of session are you looking for?</label>
+                <!--fieldset(class='group-radios')-->
+                <input
+                    id="session-portrait"
+                    type="radio"
+                    name="session"
+                    value="Portrait"
+                />
+                <label for="session-portrait">Portrait</label><br />
+                <input
+                    id="session-event"
+                    type="radio"
+                    name="session"
+                    value="Event"
+                />
+                <label for="session-event">Event</label><br />
+                <input
+                    id="session-other"
+                    type="radio"
+                    name="session"
+                    value="Other"
+                />
+                <label for="session-other">Other</label>
+                <label
+                    >HOW DID YOU HEAR ABOUT ME?:
+                    <select name="how[]">
+                        <option value="friend">from a friend</option>
+                        <option value="insta">instagram</option>
+                        <option value="street"
+                            >ran into you on the street</option
+                        >
+                    </select>
+                </label>
+                <label
+                    >Message:
+                    <textarea name="message" maxlength="5000" rows="5"
+                    ></textarea>
+                </label>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+</BaseLayout>

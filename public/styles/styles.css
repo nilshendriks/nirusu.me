@@ -1,5 +1,18 @@
 @charset "utf-8";
 
+/* Hiding class, making content visible only to screen readers but not visually */
+/* "sr" meaning "screen-reader" */
+/* @TODO: check this */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 :root {
   --lineheight-px: 38;
   --font-size-root-px: 16;
@@ -696,14 +709,8 @@ footer a {
 .lightbox .photo-on:checked {}
 
 .lightbox .photo-on:checked ~ .lightbox__overlay {
-/*   background-color: #000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 99; */
-  background-color: rgba(0, 0, 0, .85);
+  /* background-color: rgba(0, 0, 0, .85); */
+  background-color: rgba(255, 255, 255, .98);
   position: fixed;
   top: 0;
   left: 0;
@@ -717,7 +724,7 @@ footer a {
 }
 
 
-.lightbox .photo-on:checked ~ label img {
+.lightbox .photo-on:checked ~ label picture img {
   z-index: 9999;
   position: fixed;
   left: 50%;
@@ -728,17 +735,26 @@ footer a {
   width: 86%;
 }
 
-.zodiac .lightbox .photo-on:checked ~ label img {
+@media screen and (min-width: 1036px) {
+  .lightbox .photo-on:checked ~ label picture img {
+    width: auto;
+    height: 90%;
+  }
+}
+
+
+
+.zodiac .lightbox .photo-on:checked ~ label picture img {
   width: 36vmax;
 }
 
-.lightbox label img + span {
+.lightbox label picture + span {
   display: none;
 }
 
-.lightbox .photo-on:checked ~ label img + span {
+.lightbox .photo-on:checked ~ label picture + span {
   display: block;
-  color: white;
+  /* color: white; */
   position: absolute;
   right: 40px;
   top: 40px;
@@ -748,10 +764,7 @@ footer a {
   display: block;
   z-index: 9999;
   position: fixed;
-  color: aliceblue;
-/*   right: 0;
-  top: 0;
-  width: auto; */
+  color: #000;
   right: 0;
   top: 0;
   width: 100vw;

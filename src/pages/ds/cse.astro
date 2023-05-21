@@ -1,0 +1,49 @@
+---
+import DsBaseLayout from "../../layouts/DsBaseLayout.astro";
+const siteTitle = "nirusu.me";
+const siteTitleClass = "sr-only";
+const pageTitle = "Content sectioning elements";
+const pageTitleClass = "sr-onlyx";
+---
+
+<DsBaseLayout
+  siteTitle={siteTitle}
+  siteTitleClass={pageTitleClass}
+  pageTitle={pageTitle}
+  pageTitleClass={pageTitleClass}
+>
+  <header>
+    <h1 class={siteTitleClass}>{siteTitle}: {pageTitle}</h1>
+  </header>
+  <main>
+    <h1>main: {pageTitle}</h1>
+    <p>The <code>address</code> element</p>
+    <address>address</address>
+    <p>The <code>article</code> element</p>
+    <article>article</article>
+    <p>The <code>aside</code> element</p>
+    <aside>aside</aside>
+    <p>The <code>footer</code> element</p>
+    <footer>footer</footer>
+    <p>The <code>header</code> element</p>
+    <header>header</header>
+    <p>The Heading elements: <code>h1-h6</code></p>
+    <section>
+    <h1>h1 element</h1>
+    <h2>h2 element</h2>
+    <h3>h3 element</h3>
+    <h4>h4 element</h4>
+    <h5>h5 element</h5>
+    <h6>h6 element</h6>
+    </section>
+    <p>The <code>main</code> element</p>
+    <main>main</main>
+    <p>The <code>nav</code> element</p>
+    <nav>nav</nav>
+    <p>The <code>section</code> element</p>
+    <section>section</section>
+  </main>
+  <footer>
+    <h1>footer</h1>
+  </footer>
+</DsBaseLayout>

@@ -779,7 +779,6 @@ footer a {
   width: 100vw;
   height: 100vh;
   max-width: none;
-  font-size: 0;
 }
 
 
@@ -861,7 +860,7 @@ footer a {
   }
 
   .menubutton[href="#menuopen"] {
-    font-size: 0;
+    /*position: fixed;*/
   }
 
   .menu {
@@ -897,7 +896,6 @@ footer a {
     width: 40px;
     height: 40px;
     color: var(--color-fg);
-    font-size: 0;
   }
 }
 
@@ -908,10 +906,11 @@ footer a {
   }
 }
 
+.lightswitch {}
+
 .lightswitch button {
   color: currentcolor;
   background-color: transparent;
   padding: 0;
   cursor: pointer;
-  font-size: 0;
 }

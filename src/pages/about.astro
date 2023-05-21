@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Picture } from '@astrojs/image/components';
+import myPic from '../images/nils-about-sq2.jpg';
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
 const pageTitle = "nirusu photography";
@@ -14,13 +16,26 @@ const pageTitleClass = "sr-only";
 >
     <div class="content">
         <h1>About me</h1>
-    </div><img
+    </div>
+    <!-- <img
         class="nh-post-hero"
         src="/images/nils-about-sq2.jpg"
         alt="portrait of me, nils hendriks, 2020"
-        loading="lazy"
+        loading="eager"
         width="1500"
         height="1500"
+    /> -->
+    <Picture 
+        src={myPic}
+        widths={[282, 912, 1824]} 
+        aspectRatio="1:1" 
+        sizes="(max-width: 912px) 100vw, 912px" 
+        alt="portrait of me, nils hendriks, 2020"
+        formats={["jpg", "webp", "avif"]}
+        width={1824}
+        height={1824}
+        loading="eager"
+        class="nh-post-hero"
     />
     <div class="content">
         <p>

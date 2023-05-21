@@ -1,0 +1,99 @@
+---
+import DsBaseLayout from "../../layouts/DsBaseLayout.astro";
+const siteTitle = "nirusu.me";
+const siteTitleClass = "sr-only";
+const pageTitle = "Container Query Test";
+const pageTitleClass = "sr-onlyx";
+---
+
+<DsBaseLayout
+  siteTitle={siteTitle}
+  siteTitleClass={pageTitleClass}
+  pageTitle={pageTitle}
+  pageTitleClass={pageTitleClass}
+>
+  <header role="banner">
+    <h1 class={siteTitleClass}>{siteTitle}: {pageTitle}</h1>
+  </header>
+  <main>
+    <div class="post">
+      <div class="card">
+        <!-- <h2>Card title</h2>
+        <p>Card content</p> -->
+        <!-- <p class="cqw">this text size is set with cqw</p>
+        <p class="cqh">this text size is set with cqh</p> -->
+        <p class="cqi">this text size is set with cqi</p>
+        <!-- <p class="cqb">this text size is set with cqb</p> -->
+        <p class="cqmin">this text size is set with cqmin</p>
+        <!-- <p class="cqmax">this text size is set with cqmax</p> -->
+        <p class="cqi16">this text is set with 10cgi as max and 16px as min</p>
+      </div>
+    </div>
+  </main>
+  <footer role="contentinfo">
+    <p>&copy; 2023 • nils hendriks</p>
+  </footer>
+</DsBaseLayout>
+<style>
+  .post {
+    container-type: inline-size;
+    container-name: card;
+    background-color: red;
+  }
+
+  /* .post > * {
+    margin: 0;
+  } */
+
+  .card {
+    background-color: aliceblue;
+  }
+
+  /* Default heading styles for the card title */
+  .card h2 {
+    font-size: 1em;
+    /* font-size: max(1.5em, 1.23em + 2cqi); */
+  }
+
+  .card .cqw {
+    font-size: 5cqw;
+  }
+
+  .card .cqh {
+    font-size: 5cqh;
+  }
+
+  .card .cqi {
+    font-size: 5cqi;
+  }
+
+  .card .cqb {
+    font-size: 5cqb;
+  }
+
+  .card .cqmin {
+    font-size: 5cqmin;
+  }
+
+  .card .cqmax {
+    font-size: 5cqmax;
+  }
+
+  .card .cqi16 {
+    /* font-size: max(10cqi, 16px); */
+    /* font-size: max(min(0.5vw, 0.5em), 1rem); */
+    font-size: max(5cqi, 1em, 1rem);
+  }
+
+  /* If the container is larger than 700px */
+  @container card (min-width: 700px) {
+
+    .card {
+      background-color: aqua;
+    }
+    
+    .card h2 {
+      font-size: 2em;
+    }
+  }
+</style>

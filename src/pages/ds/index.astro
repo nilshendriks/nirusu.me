@@ -1,0 +1,25 @@
+---
+import DsBaseLayout from "../../layouts/DsBaseLayout.astro";
+const siteTitle = "nirusu.me";
+const siteTitleClass = "sr-only";
+const pageTitle = "Design System";
+const pageTitleClass = "sr-only";
+---
+
+<DsBaseLayout
+  siteTitle={siteTitle}
+  siteTitleClass={pageTitleClass}
+  pageTitle={pageTitle}
+  pageTitleClass={pageTitleClass}
+>
+  <p>Building layer by layer</p>
+  <ol>
+    <li>no CSS</li>
+    <li>reset CSS</li>
+    <li>Styled</li>
+  </ol>
+  <ol>
+    <li><a href="/ds/elements">page showing all HTML elements without CSS</a></li>
+    <li>page showing all HTML elements with reset CSS</li>
+  </ol>
+</DsBaseLayout>

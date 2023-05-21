@@ -1,0 +1,31 @@
+---
+// import Header from '../components/Header.astro';
+// import TheFooter from "../components/TheFooter.astro";
+// import SideBar from "../components/SideBar.astro";
+const { siteTitle } = Astro.props;
+const { siteTitleClass } = Astro.props;
+const { pageTitle } = Astro.props;
+const { pageTitleClass } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="nirusu is a Amsterdam based portrait and event photographer"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <link rel="stylesheet" href="../styles/ds.css" />
+  </head>
+  <body>    
+    <div class="wrapper">
+      <slot />      
+    </div>    
+  </body>
+</html>

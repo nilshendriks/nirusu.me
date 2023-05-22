@@ -104,3 +104,6 @@ typings/
 /.idea/modules.xml
 /.idea/nilshendriks.com.iml
 /.idea/vcs.xml
+
+# Astro dist folder
+dist

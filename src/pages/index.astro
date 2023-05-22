@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Picture } from '@astrojs/image/components';
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
 const pageTitle = "nirusu photography";
@@ -14,7 +15,8 @@ import photos from "../data/data-home-photos.json";
     pageTitleClass={pageTitleClass}
 >
     <div class="nh-l-grid-photos">
-        {photos.map((photo, index) => (
+
+        {photos.map((photo) => (
           <div class="nh-l-grid__item">
             <div class="lightbox">
               <input
@@ -35,9 +37,19 @@ import photos from "../data/data-home-photos.json";
                 class="lightbox__overlay"
                 for={`photo_${photo.id}_on`}
               >
-                <picture>
-                    <source type="image/avif" srcset={`/images/${photo.filepath}.avif`} />
-                    <source type="image/webp" srcset={`/images/${photo.filepath}.webp`} />
+                <Picture
+                    src={`/images/${photo.filepath}.jpg`}
+                    widths={[280, 560, 900, 1076, 1476]}
+                    aspectRatio="1:1"
+                    sizes="(max-width: 767px) calc(100vw - 38px), (max-width: 1035px) 71.30434783vw, 24vw"
+                    alt={photo.alt}
+                    formats={["avif", "webp", "jpg"]}
+                    width={1960}
+                    height={1960}
+                    loading={photo.loading}
+                    class="nh-l-grid-photo"
+                />
+                <!-- <picture>
                     <img
                         src={`/images/${photo.filepath}.jpg`}
                         alt={photo.alt}
@@ -46,7 +58,7 @@ import photos from "../data/data-home-photos.json";
                         width="1960"
                         height="1960"
                     />
-                </picture>
+                </picture> -->
                 <span>Close</span>
               </label>
               <label class="btn-close" for={`photo_${photo.id}_off`}>off</label>

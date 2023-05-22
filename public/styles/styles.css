@@ -59,20 +59,16 @@
   --font-family-body-text: var(--font-family-serif);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #222;
     --color-fg: #fff;
-    /* orangered */
     --color-primary: hsl(16deg 100% 50% / 100%);
-    /* darkorange */
     --color-link-hover: hsl(33deg 100% 50% / 100%);
-    /*--color-nav-links: var(--color-primary, red);*/
-
     -webkit-font-smoothing: antialiased;
     --font-weight-body-text: 300;
   }
-}
+} */
 
 abbr {
   font-variant: all-small-caps;

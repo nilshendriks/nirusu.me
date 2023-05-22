@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "alt": "Boy from Indische Buurt posing",
+    "filepath": "DSCF3601",
+    "loading": "eager"
+  },
+  {
+    "id": 2,
+    "alt": "Boy from Indische Buurt posing",
+    "filepath": "studio/ooy-1_1960",
+    "loading": "eager"
+  },
+  {
+    "id": 3,
+    "alt": "Me with a blue balloon",
+    "filepath": "studio/nils-balloon_1960",
+    "loading": "eager"
+  },
+  {
+    "id": 4,
+    "alt": "Jumping Jacqueline",
+    "filepath": "DSCF3174_1960",
+    "loading": "eager"
+  },
+  {
+    "id": 5,
+    "alt": "Dad in a shed",
+    "filepath": "shed-pa-1",
+    "loading": "eager"
+  },
+  {
+    "id": 6,
+    "alt": "Bente",
+    "filepath": "studio/bente1",
+    "loading": "eager"
+  },
+  {
+    "id": 7,
+    "alt": "Bente 2",
+    "filepath": "studio/bente2",
+    "loading": "lazy"
+  },
+  {
+    "id": 8,
+    "alt": "Me as The Fool",
+    "filepath": "studio/thefool-sq",
+    "loading": "lazy"
+  },
+  {
+    "id": 9,
+    "alt": "Niki",
+    "filepath": "studio/niki-fuji-1",
+    "loading": "lazy"
+  }
+]

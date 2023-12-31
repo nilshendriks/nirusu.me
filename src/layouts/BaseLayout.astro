@@ -20,12 +20,12 @@ const { pageTitleClass } = Astro.props;
       content="nirusu is a Amsterdam based portrait and event photographer"
     />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <link rel="stylesheet" href="/styles/styles.css" />
     <!-- <link
       id="theme"
@@ -57,14 +57,14 @@ const { pageTitleClass } = Astro.props;
     <!-- <script is:inline>
       // Get the theme switcher button
       var themeSwitcher = document.getElementById("themeSwitcher");
-      
+
       // Get the theme link element
       var themeLink = document.getElementById("theme");
-      
+
       // Add an event listener to the theme switcher button
-      themeSwitcher.addEventListener("click", function() {    
-      
-        // Check the current theme and switch the CSS file accordingly  
+      themeSwitcher.addEventListener("click", function() {
+
+        // Check the current theme and switch the CSS file accordingly
         if (!document.body.classList.contains("ebook")) {
           themeLink.href = "/styles/themes/_theme-ebook.css";
           // Toggle the class on the body

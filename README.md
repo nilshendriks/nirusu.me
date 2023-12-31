@@ -12,7 +12,7 @@ nirusu website
   - on my screen the lightbox version is displayed at: 980 x 980 = 1960px 2x 
   - someone suggests to use these standard sizes: 320w, 640w, 960w, 1280w, 1920w, and 2560w
   - first do jpg only: 450, 900, 980, 1960?
-- host google fonts
+- host google fonts ✅
 
 ## Images
 

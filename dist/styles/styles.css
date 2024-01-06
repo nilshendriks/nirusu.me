@@ -402,10 +402,6 @@ main > .content {
   /*text-indent: 1rem;*/
 }
 
-/*.sidebar nav details > summary:hover::after {*/
-/*  text-indent: 0;*/
-/*}*/
-
 .sidebar nav details {
   /* padding for the content to show */
   /* padding: 1rem; */
@@ -586,7 +582,7 @@ h1 + .nh-txt-tag {
 }
 
 main img {
-  margin-top: 38px;
+  /* margin-top: 38px; */
 }
 
 main img.nh-img {

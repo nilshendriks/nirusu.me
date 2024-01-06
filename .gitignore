@@ -106,4 +106,4 @@ typings/
 /.idea/vcs.xml
 
 # Astro dist folder
-dist
+dist/

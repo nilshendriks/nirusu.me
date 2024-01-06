@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { Picture } from 'astro:assets';
+import myPic from '../../../assets/images/lockdown/thara-1.jpg';
+import LightboxImage from "../../../components/LightboxImage.astro";
+const siteTitle = "nirusu.me";
+const siteTitleClass = "sr-only";
+const pageTitle = "Lockdown Portraits Five";
+const pageTitleClass = "sr-only";
+---
+
+<BaseLayout
+    siteTitle={siteTitle}
+    siteTitleClass={pageTitleClass}
+    pageTitle={pageTitle}
+    pageTitleClass={pageTitleClass}
+>
+  <div class="intro-block">
+    <h1 class="intro-block__title">Lockdown Portraits Session Five</h1>
+    <h2 class="centered">Space • Thara</h2>
+    <p class="nh-txt-date">May 9, 2020</p>
+    <p class="intro-block__first-paragraph">Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a personal
+      mini project that became a testament to resilience: Lockdown Portraits. These are not just photos; they are
+      glimpses into the lives of real people—individuals navigating the challenges and triumphs that isolation
+      brings.</p>
+    <p>Each portrait tells a story, not of models, but of everyday heroes facing the ordeals of lockdown with courage
+      and grace. To add depth to the visual narrative, I posed two questions to each participant, unearthing personal
+      insights that accompany their portraits.</p>
+  </div>
+  <div class="grid-5050">
+    <div class="grid__item">
+      <Picture
+        src={myPic}
+        widths={[282, 912]}
+        sizes="(max-width: 912px) 100vw, 912px"
+        alt="portrait of Thara, 2020"
+        formats={["webp", "avif"]}
+        loading="eager"
+        class="nh-post-hero"
+      />
+      <blockquote>
+        <p>Our society and our life is so much focused on 'doing', through the lockdown we learn to distance ourselves and just let it 'happen'. I think that is a great development.</p>
+      </blockquote>
+    </div>
+    <div class="grid__item grid__item-content">
+      <p class=""><strong>Can you describe to what extent the lockdown has affected your life and how? both on a personal and professional level?</strong></p>
+      <p class="nh-txt-quote"><q>Suddenly everything was frozen and with it a flurry of anxious, confused and angry emotions ("I want to be able to decide what I do myself"), but soon I also noticed a feeling of resignation. It felt like more breathing space and space to reflect. A certain excitement, a rush and a pressure to want to do as many things as possible in one day, I saw in myself from before the time of the lockdown.</q></p>
+      <p>My days were filled with social interactions with people, from the beginning to the end of the day I was surrounded with colleagues, customers, friends, people at the gym. I am a social person, but I actually felt less social by seeing and talking to so many people in one day.</p>
+      <p>During the time of the lockdown I started to withdraw and now I spend much more time alone in my room, so I can recharge myself. If I then go outside and meet people again, that changes the way I experience everything. I am fresher and more open to everything, which means that I can enjoy my environment and contacts more.</p>
+      <p>At the same time, it is deep in me to want to develop further and to commit myself to something that makes me feel satisfied. Before the lockdown, I had recently graduated and I started looking for the next step. Corona has taken this in a different direction, because there are simply fewer options with regard to jobs and studying. I started applying to several aid agencies, also for voluntary work, I even sent a message to the UMC because I would like to dedicate myself to aftercare for ex-corona patients, but I get almost no response. I find that difficult.</p>
+      <p class="nh-txt-question"><strong>If anything, what do you think will you take away from all this.any lessons learned?</strong></p>
+      <p class="nh-txt-quote">
+        <q>That rest is a very important element for a balanced and happy life. And that I can also allow myself those me-time moments. Our society and our life is so much focused on 'doing', through the lockdown we learn to distance ourselves and just let it 'happen'. I think that is a great development.</q>
+      </p>
+      <p>I hope it teaches us and myself to take a different perspective of the world, that we are not as important as we think, and that there are no differences between us. We are all victims and that creates more connection with each other and hopefully also with the world.</p>
+    </div>
+  </div>
+  <div class="masonry-grid">
+    <LightboxImage
+      id="1"
+      imagePath="/src/assets/images/lockdown/thara-2.jpg"
+      altText="Thara"
+    />
+    <LightboxImage
+      id="2"
+      imagePath="/src/assets/images/lockdown/thara-3.jpg"
+      altText="Thara"
+    />
+    <LightboxImage
+      id="3"
+      imagePath="/src/assets/images/lockdown/thara-4.jpg"
+      altText="Thara"
+    />
+  </div>
+</BaseLayout>
+<style>
+
+</style>

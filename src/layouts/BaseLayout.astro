@@ -1,14 +1,18 @@
 ---
-// import Header from '../components/Header.astro';
+// Supports weights 100-900
+import '@fontsource-variable/jost';
+import "../styles/main.css";
+import TheHeader from '../components/TheHeader.astro';
 import TheFooter from "../components/TheFooter.astro";
 import SideBar from "../components/SideBar.astro";
+
 const { siteTitle } = Astro.props;
 const { siteTitleClass } = Astro.props;
 const { pageTitle } = Astro.props;
 const { pageTitleClass } = Astro.props;
 ---
 
-<html lang="en" v-scope v-cloak @vue:mounted="console.log('mounted on: ', $el); setTheme()">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -20,58 +24,18 @@ const { pageTitleClass } = Astro.props;
       content="nirusu is a Amsterdam based portrait and event photographer"
     />
     <meta name="generator" content={Astro.generator} />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400&display=swap"
-      rel="stylesheet"
-    /> -->
-    <link rel="stylesheet" href="/styles/styles.css" />
-    <!-- <link
-      id="theme"
-      href="/styles/_tokens-colors.css"
-      rel="stylesheet"
-    /> -->
-    <!-- <link
-      href="/styles/common.css"
-      rel="stylesheet"
-    /> -->
-    <!-- <link href="/styles/print.css" rel="stylesheet" media="print" />     -->
     <title>{pageTitle}</title>
   </head>
   <body>
-    <h1 class={siteTitleClass}>{siteTitle}</h1>
+    <!--<h1 class={siteTitleClass}>{siteTitle}</h1>-->
     <div class="wrapper">
-      <SideBar />
-      <!-- <Header /> -->
-      <main class="nh-txt-baseline-offset">
-        <h1 class={pageTitleClass}>{pageTitle}</h1>
-        <!-- <button id="themeSwitcher">e-book Theme</button> -->
+      <!--<SideBar />-->
+      <TheHeader />
+      <main class="main-content">
+        <!--<h1 class={pageTitleClass}>{pageTitle}</h1>-->
         <slot />
-        <TheFooter />
       </main>
+      <TheFooter />
     </div>
-    <!-- <script>
-      import "../scripts/menu.js";
-    </script> -->
-    <!-- <script is:inline>
-      // Get the theme switcher button
-      var themeSwitcher = document.getElementById("themeSwitcher");
-
-      // Get the theme link element
-      var themeLink = document.getElementById("theme");
-
-      // Add an event listener to the theme switcher button
-      themeSwitcher.addEventListener("click", function() {
-
-        // Check the current theme and switch the CSS file accordingly
-        if (!document.body.classList.contains("ebook")) {
-          themeLink.href = "/styles/themes/_theme-ebook.css";
-          // Toggle the class on the body
-          document.body.classList.toggle("ebook");
-          themeSwitcher.setAttribute("disabled", "disabled");
-        }
-      });
-      </script> -->
   </body>
 </html>

@@ -1,14 +1,65 @@
 ---
-import IgLogo from "./igLogo.astro";
-
----
+// import IgLogo from "./igLogo.astro";
+import {Icon} from "astro-icon/components";---
 
 <footer class="org-footer">
-    <p>
+  <p>Copyright © 2024 • nils hendriks</p>
+  <button type="button" aria-label="Open Mobile Navigation" id="btn-mobile">
+    <Icon
+      name="hamburger"
+      aria-hidden="true"
+      alt=""
+      width="44"
+      height="44"
+    />
+  </button>
+    <!--<p>
         Copyright © 2022 nirusu.me • nils hendriks •<a
             href="https://www.instagram.com/nirususan"
         >
-        <IgLogo />
+        &lt;!&ndash;<IgLogo />&ndash;&gt;
             Follow me on instagram</a>
-    </p>
+    </p>-->
 </footer>
+<style>
+  footer.org-footer {
+    text-align: center;
+    padding: 2rem 0;
+    /* position: fixed; */
+    bottom: 0;
+    background-color: #f8f8f8;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    footer.org-footer {
+      display: none;
+    }
+  }
+
+
+  footer.org-footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.875em;
+    font-weight: 300;
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 0;
+    appearance: none;
+    border: 0;
+    background: none;
+  }
+
+  @media only screen and (min-width: 768px) {
+    #btn-mobile {
+      display: none;
+    }
+  }
+</style>

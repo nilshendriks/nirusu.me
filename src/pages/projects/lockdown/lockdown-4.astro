@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { Picture } from 'astro:assets';
+import myPic from '../../../assets/images/lockdown/remko-1.jpg';
+import LightboxImage from "../../../components/LightboxImage.astro";
+const siteTitle = "nirusu.me";
+const siteTitleClass = "sr-only";
+const pageTitle = "Lockdown Portraits Four";
+const pageTitleClass = "sr-only";
+---
+
+<BaseLayout
+    siteTitle={siteTitle}
+    siteTitleClass={pageTitleClass}
+    pageTitle={pageTitle}
+    pageTitleClass={pageTitleClass}
+>
+  <div class="intro-block">
+    <h1 class="intro-block__title">Lockdown Portraits Session Four</h1>
+    <h2 class="centered">Sappy & Grateful • Remko</h2>
+    <p class="nh-txt-date">May 3, 2020</p>
+    <p class="intro-block__first-paragraph">Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a personal
+      mini project that became a testament to resilience: Lockdown Portraits. These are not just photos; they are
+      glimpses into the lives of real people—individuals navigating the challenges and triumphs that isolation
+      brings.</p>
+    <p>Each portrait tells a story, not of models, but of everyday heroes facing the ordeals of lockdown with courage
+      and grace. To add depth to the visual narrative, I posed two questions to each participant, unearthing personal
+      insights that accompany their portraits.</p>
+  </div>
+  <div class="grid-5050">
+    <div class="grid__item">
+      <Picture
+        src={myPic}
+        widths={[282, 912]}
+        sizes="(max-width: 912px) 100vw, 912px"
+        alt="portrait of niki, 2020"
+        formats={["webp", "avif"]}
+        loading="eager"
+        class="nh-post-hero"
+      />
+      <blockquote>
+        <p>Anderhalve meter is five foot something, you dumbass...!!</p>
+      </blockquote>
+    </div>
+    <div class="grid__item grid__item-content">
+      <p class=""><strong>Can you describe to what extent the lockdown has affected your life and how? both on a personal and professional level?</strong></p>
+      <p class="nh-txt-quote"><q>In these times you cherish what you have been given in life. This may sound sappy and rest assured, it is. I am grateful that I still can go to work and come home to my family.</q></p>
+      <p class="nh-txt-question"><strong>If anything, what do you think will you take away from all this.any lessons learned?</strong></p>
+      <p class="nh-txt-quote">
+        <q>Anderhalve meter is five foot something, you dumbass...!!</q>
+      </p>
+    </div>
+  </div>
+  <div class="masonry-grid">
+    <LightboxImage
+      id="1"
+      imagePath="/src/assets/images/lockdown/remko-2.jpg"
+      altText="Remko"
+    />
+    <LightboxImage
+      id="2"
+      imagePath="/src/assets/images/lockdown/remko-3.jpg"
+      altText="Remko"
+    />
+    <LightboxImage
+      id="3"
+      imagePath="/src/assets/images/lockdown/remko-4.jpg"
+      altText="Remko"
+    />
+  </div>
+</BaseLayout>
+<style>
+
+</style>

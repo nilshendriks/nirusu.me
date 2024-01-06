@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { Picture } from 'astro:assets';
+import myPic from '../../../assets/images/lockdown/nils1.jpg';
+import LightboxImage from "../../../components/LightboxImage.astro";
+const siteTitle = "nirusu.me";
+const siteTitleClass = "sr-only";
+const pageTitle = "Lockdown Portraits One";
+const pageTitleClass = "sr-only";
+---
+
+<BaseLayout
+    siteTitle={siteTitle}
+    siteTitleClass={pageTitleClass}
+    pageTitle={pageTitle}
+    pageTitleClass={pageTitleClass}
+>
+  <div class="intro-block">
+    <h1 class="intro-block__title">Lockdown Portraits Session One</h1>
+    <h2 class="centered">Biting The Bullet • Nils</h2>
+    <p class="nh-txt-date">March 25, 2020</p>
+    <p class="intro-block__first-paragraph">Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a personal
+      mini project that became a testament to resilience: Lockdown Portraits. These are not just photos; they are
+      glimpses into the lives of real people—individuals navigating the challenges and triumphs that isolation
+      brings.</p>
+    <p>Each portrait tells a story, not of models, but of everyday heroes facing the ordeals of lockdown with courage
+      and grace. To add depth to the visual narrative, I posed two questions to each participant, unearthing personal
+      insights that accompany their portraits.</p>
+    <p>To start the project off I was up first.</p>
+  </div>
+  <div class="grid-5050">
+    <div class="grid__item">
+      <Picture
+        src={myPic}
+        widths={[282, 912]}
+        sizes="(max-width: 912px) 100vw, 912px"
+        alt="portrait of me, nils hendriks, 2020"
+        formats={["webp", "avif"]}
+        loading="eager"
+        class="nh-post-hero"
+      />
+      <blockquote>
+        <p>I’m fascinated by how the mind works. And I think I’ve learned that I’m perfectly capable of directing my mind to which way it should go</p>
+      </blockquote>
+    </div>
+    <div class="grid__item grid__item-content">
+      <p class=""><strong>Can you describe to what extent the lockdown has affected your life and how? both on a personal and professional level?</strong></p>
+      <p class="nh-txt-quote"><q>Professionally it has put me back at home. Working remotely is something I’m quite familiar with as I’ve freelanced before for quite some time. Of course then I could go out and take my laptop to a cafe or co-work place, something which isn’t an option now.</q></p>
+      <p class="nh-txt-quote"><q>On a personal level I’d say that for me it hasn’t had a big impact yet as I feel I’ve lived in a less strict sort of lockdown for close to a year now due to various reasons. On the other hand now it is much more strict of course and also more out of my control. Ironically that last part can also be very liberating as there’s no point in fighting it so you might as well just go with it. For me that comes down to forcing myself to come up with new ways of doing things, keeping busy, distracted sometimes even.</q></p>
+      <p class="nh-txt-question"><strong>If anything, what do you think will you take away from all this.any lessons learned?</strong></p>
+      <p class="nh-txt-quote">
+        <q>Yes. Living on your own isn’t always easy or fun under normal circumstances but now with all the restrictions it somehow intensifies everything. Not speaking to anyone face to face for more than a week is - in my humble opinion - rather unhealthy. Technology helps but it’s not the same thing.</q>
+      </p>
+      <p><q>I’m fascinated by how the mind works. And I think I’ve learned that I’m perfectly capable of directing my mind to which way it should go. Not all the time maybe but the better part of it. It’s also from this that this idea of Lockdown Portraits came from: most if not all people go through this right now at the exact same moment in the whole world. Think about all the stories that are there. So if anyone’s up for a rooftopshoot: let me know!</q></p>
+    </div>
+  </div>
+  <div class="masonry-grid">
+    <LightboxImage
+      id="1"
+      imagePath="/src/assets/images/lockdown/nils2.jpg"
+      altText="Me"
+      position="top"
+    />
+    <LightboxImage
+      id="2"
+      imagePath="/src/assets/images/lockdown/nils3.jpg"
+      altText="Me"
+      position="top"
+    />
+    <LightboxImage
+      id="3"
+      imagePath="/src/assets/images/lockdown/nils4.jpg"
+      altText="Me"
+      position="top"
+    />
+  </div>
+</BaseLayout>
+<style>
+
+</style>

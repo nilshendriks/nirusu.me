@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Picture } from '@astrojs/image/components';
-import myPic from '../images/nils-about-sq2.jpg';
+import { Picture } from 'astro:assets';
+import myPic from '../assets/images/about/nils-about-sq.jpg';
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
 const pageTitle = "nirusu photography";
@@ -14,32 +14,41 @@ const pageTitleClass = "sr-only";
     pageTitle={pageTitle}
     pageTitleClass={pageTitleClass}
 >
-    <div class="content">
-        <h1>About me</h1>
-    </div>
-    <Picture
+  <div class="grid-5050">
+    <div class="grid__item">
+      <Picture
         src={myPic}
-        widths={[282, 912, 1824]}
-        aspectRatio="1:1"
+        widths={[282, 912]}
         sizes="(max-width: 912px) 100vw, 912px"
         alt="portrait of me, nils hendriks, 2020"
-        formats={["jpg", "webp", "avif"]}
-        width={1824}
-        height={1824}
+        formats={["webp", "avif"]}
         loading="eager"
         class="nh-post-hero"
-    />
-    <div class="content">
-        <p>
-            Hello! I'm nirusu aka Nils. I have been taking photos as long as I
-            can remember. And remembering brings back the smell of chemicals
-            developing film at the attic. Now digital, I focus on photographing
-            people. On the streets of wherever and in a pop-up studio.
-        </p>
-        <p>
+      />
+    </div>
+    <div class="grid__item grid__item-content">
+      <h1>About me</h1>
+      <p class="justified">Greetings! I'm Nirusu, also known as Nils, and my love affair with photography began in the captivating world of film, where the scent of developing chemicals lingered in the attic of my memories. Transitioning into the digital era, my lens found its true passion: capturing the essence of people.</p>
+
+      <p class="justified">Primarily a storyteller through images, my focus revolves around the dynamic interplay of street
+        photography and portraits. Whether weaving tales on the bustling streets of various locales or crafting intimate narratives
+        in a pop-up studio, each frame encapsulates a moment, a story, a slice of life frozen in time.</p>
+
+      <p class="justified">Having called Asia home for a significant part of my journey—three years in the vibrant cityscape of Singapore
+        and another three amidst the eclectic energy of Tokyo—my lens has been shaped by the rich tapestry of cultures,
+        people, and life experiences that this continent offers. This unique chapter in my life, which unfolded a decade
+        ago, has left an indelible mark on my work, infusing it with a diverse and vibrant energy.</p>
+
+      <p class="justified">Join me on this visual odyssey, where each photograph is a chapter, and every portrait tells a story waiting
+        to be discovered. Welcome to my world of visual storytelling.</p>
+    </div>
+        <!--<p>
             <a href="https://www.instagram.com/nirususan"
             >Follow me on Instagram</a
         >
-        </p>
-    </div>
+        </p>-->
+  </div>
 </BaseLayout>
+<style>
+
+</style>

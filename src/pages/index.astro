@@ -1,69 +1,84 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Picture } from '@astrojs/image/components';
+import {Image, Picture} from 'astro:assets';
+import LightboxImage from "../components/LightboxImage.astro";
+
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
 const pageTitle = "nirusu photography";
 const pageTitleClass = "sr-only";
-import photos from "../data/data-home-photos.json";
 ---
-
 <BaseLayout
-    siteTitle={siteTitle}
-    siteTitleClass={siteTitleClass}
-    pageTitle={pageTitle}
-    pageTitleClass={pageTitleClass}
+  siteTitle={siteTitle}
+  siteTitleClass={siteTitleClass}
+  pageTitle={pageTitle}
+  pageTitleClass={pageTitleClass}
 >
-    <div class="nh-l-grid-photos">
-
-        {photos.map((photo) => (
-          <div class="nh-l-grid__item">
-            <div class="lightbox">
-              <input
-                  class="btn-radio photo-on"
-                  type="radio"
-                  id={`photo_${photo.id}_on`}
-                  name="photos"
-                  value={`photo_${photo.id}`}
-              />
-              <input
-                  class="btn-radio photo-off"
-                  type="radio"
-                  id={`photo_${photo.id}_off`}
-                  name="photos"
-                  value={`photo_${photo.id}_off`}
-              />
-              <label
-                class="lightbox__overlay"
-                for={`photo_${photo.id}_on`}
-              >
-                <Picture
-                    src={`/images/${photo.filepath}.jpg`}
-                    widths={[280, 560, 900, 1076, 1476]}
-                    aspectRatio="1:1"
-                    sizes="(max-width: 767px) calc(100vw - 38px), (max-width: 1035px) 71.30434783vw, 24vw"
-                    alt={photo.alt}
-                    formats={["avif", "webp", "jpg"]}
-                    width={1960}
-                    height={1960}
-                    loading={photo.loading}
-                    class="nh-l-grid-photo"
-                />
-                <!-- <picture>
-                    <img
-                        src={`/images/${photo.filepath}.jpg`}
-                        alt={photo.alt}
-                        class="nh-l-grid-photo"
-                        loading={photo.loading}
-                        width="1960"
-                        height="1960"
-                    />
-                </picture> -->
-                <span>Close</span>
-              </label>
-              <label class="btn-close" for={`photo_${photo.id}_off`}>off</label>
-            </div>
-          </div>
-        ))}
-    </div>
+  <div class="masonry-grid">
+    <LightboxImage
+      id="10"
+      imagePath="/src/assets/images/studio/noodles-1.jpg"
+      altText="Noodles 💔"
+      position="top"
+    />
+    <LightboxImage
+      id="1"
+      imagePath="/src/assets/images/location/boy-1.jpg"
+      altText="Boy on the streets."
+    />
+    <LightboxImage
+      id="5"
+      imagePath="/src/assets/images/studio/marc.jpg"
+      altText="Marc"
+      position="top"
+    />
+    <!--<LightboxImage
+      id="2"
+      imagePath="/src/assets/images/location/nepal-1.jpg"
+      altText="Nepal"
+      position="right"
+    />-->
+    <LightboxImage
+      id="3"
+      imagePath="/src/assets/images/contact/nils-balloon_1960.jpg"
+      altText="Me"
+    />
+    <LightboxImage
+      id="4"
+      imagePath="/src/assets/images/location/jacq-caravan.jpg"
+      altText="Jacq"
+      position="left"
+    />
+    <LightboxImage
+      id="6"
+      imagePath="/src/assets/images/studio/niki-fuji-1.jpg"
+      altText="Niki"
+    />
+    <LightboxImage
+      id="12"
+      imagePath="/src/assets/images/studio/me-3.jpg"
+      altText="Me"
+    />
+    <LightboxImage
+      id="7"
+      imagePath="/src/assets/images/studio/thefool-sq.jpg"
+      altText="The Fool"
+    />
+    <LightboxImage
+      id="11"
+      imagePath="/src/assets/images/studio/me-1.jpg"
+      altText="Me"
+      position="top"
+    />
+    <LightboxImage
+      id="8"
+      imagePath="/src/assets/images/location/jacq-jump.jpg"
+      altText="Jump!"
+    />
+    <LightboxImage
+      id="9"
+      imagePath="/src/assets/images/location/shed-pa-1.jpg"
+      altText="Shed"
+    />
+  </div>
 </BaseLayout>

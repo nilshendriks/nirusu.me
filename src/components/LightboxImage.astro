@@ -1,0 +1,154 @@
+---
+import type { ImageMetadata } from 'astro';
+import {Picture} from "astro:assets";
+
+interface Props {
+  id: Number;
+  imagePath: string;
+  altText: string;
+  position: string;
+}
+
+const { id, imagePath, altText, position } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{jpeg,jpg,png,gif}');
+if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
+---
+<div class="lightbox lightbox-image">
+  <input
+    class="btn-radio photo-on lightbox-image__photo-on"
+    type="radio"
+    id={`photo_${id}_on`}
+    name="photos"
+    value={`photo_${id}`}
+  />
+  <input
+    class="btn-radio photo-off lightbox-image__photo-off"
+    type="radio"
+    id={`photo_${id}_off`}
+    name="photos"
+    value={`photo_${id}_off`}
+  />
+  <label
+    class="lightbox__overlay lightbox-image__label lightbox-image__overlay"
+    for={`photo_${id}_on`}
+  >
+    <Picture
+      src={images[imagePath]()}
+      alt={altText}
+      formats={['avif', 'webp']}
+      loading="eager"
+      pictureAttributes={{class: "masonry-grid__item nh-l-grid-photo lightbox-image__picture"}}
+      class:list={[ 'masonry-grid__item-image lightbox__img', { 'image-position': position } ]}
+      widths={[640, 896]}
+      sizes={`(max-width: 360px) 320px, (max-width: 1920px) 448px`}
+      style={{ objectPosition: position}}
+      title="Click to show larger version."
+    />
+    <span class="lightbox-image__span-close">Close</span>
+  </label>
+  <label class="btn-close" for={`photo_${id}_off`}>off</label>
+</div>
+<style>
+  .lightbox .btn-radio {
+    display: none;
+  }
+
+  .lightbox__overlay {
+    margin: 0;
+    transition: all .1s ease;
+  }
+
+  .lightbox input[type='radio'] + label {
+    display: block;
+    padding: 0;
+  }
+
+  .lightbox .btn-close {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lightbox__img {
+    cursor: pointer;
+  }
+
+  @media only screen and (min-width: 768px) {
+    /*noinspection CssInvalidPropertyValue*/
+    @supports not (grid-template-rows: masonry) {
+
+      /* .masonry-grid__item-image {
+        object-fit: cover;
+        aspect-ratio: 1;
+      } */
+      .lightbox__img {
+        object-fit: cover;
+        aspect-ratio: 1;
+      }
+    }
+  }
+
+  .lightbox .photo-on:checked ~ .lightbox__overlay {
+    background-color: rgba(255, 255, 255, .65);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    max-width: none;
+  }
+
+  .lightbox .photo-on:checked ~ label :global(.lightbox-image__picture) img {
+    z-index: 9999;
+    position: fixed;
+    left: 50%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    /* max-width: 1000px;
+    width: 86%; */
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    aspect-ratio: auto;
+    object-position: center !important;
+  }
+
+  @media screen and (min-width: 1036px) {
+    .lightbox .photo-on:checked ~ label :global(.lightbox-image__picture) img {
+      max-height: 90%;
+      object-fit: contain;
+    }
+  }
+
+  .lightbox .photo-on:checked ~ label :global(.lightbox-image__picture) + span {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  }
+
+  .lightbox .photo-on:checked ~ .btn-close {
+    display: block;
+    z-index: 9999;
+    position: fixed;
+    color: #000;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    font-size: 0;
+    cursor: pointer;
+  }
+
+  :global(.lightbox-image__picture) + .lightbox-image__span-close {
+    display: none;
+  }
+
+</style>

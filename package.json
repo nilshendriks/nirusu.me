@@ -8,15 +8,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "pug": "pug blog.pug",
-    "watch:docs-pug": "pug docs --watch",
-    "watch:pug": "pug *.pug --watch -P",
-    "watch:scss": "watch -p 'source/scss/**/*.scss' -c 'npm run build'",
-    "zbuild": "npm run compileSass && npm run autoprefix",
-    "compileSass": "sass source/scss/toolkit.scss source/css/toolkit-unprefixed.css --style=compressed",
-    "autoprefix": "npx postcss source/css/toolkit-unprefixed.css --use autoprefixer --no-map -m -o web/static/std/assets/toolkit/styles/toolkit.css",
-    "stylelint-check": "stylelint-config-prettier-check"
+    "preview": "astro preview"
   },
   "repository": {
     "type": "git",
@@ -28,25 +20,12 @@
     "url": "https://github.com/nilshendriks/nirusu.me/issues"
   },
   "homepage": "https://github.com/nilshendriks/nirusu.me#readme",
-  "devDependencies": {
-    "@prettier/plugin-pug": "^1.19.2",
-    "autoprefixer": "^10.3.1",
-    "postcss": "^8.3.6",
-    "postcss-cli": "^9.1.0",
-    "prettier": "^2.5.1",
-    "pug": "^3.0.2",
-    "sass": "^1.49.7",
-    "stylelint": "^14.5.1",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard": "^24.0.0",
-    "stylelint-config-standard-scss": "^3.0.0"
-  },
   "browserslist": [
-    "since 2020-01-01"
+    "since 2022-01-01"
   ],
   "dependencies": {
-    "@astrojs/image": "^0.16.9",
-    "astro": "^2.5.0",
-    "sharp": "^0.32.1"
+    "@fontsource-variable/jost": "^5.0.17",
+    "astro": "^4.0.8",
+    "astro-icon": "^1.0.1"
   }
 }

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { Picture } from 'astro:assets';
-import myPic from '../../../assets/images/lockdown/niki1.jpg';
+import { Picture } from "astro:assets";
+import myPic from "../../../assets/images/lockdown/niki1.jpg";
 import LightboxImage from "../../../components/LightboxImage.astro";
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
@@ -10,22 +10,28 @@ const pageTitleClass = "sr-only";
 ---
 
 <BaseLayout
-    siteTitle={siteTitle}
-    siteTitleClass={pageTitleClass}
-    pageTitle={pageTitle}
-    pageTitleClass={pageTitleClass}
+  siteTitle={siteTitle}
+  siteTitleClass={pageTitleClass}
+  pageTitle={pageTitle}
+  pageTitleClass={pageTitleClass}
 >
   <div class="intro-block">
     <h1 class="intro-block__title">Lockdown Portraits Session Two</h1>
     <h2 class="centered">Mind Game • Niki</h2>
     <p class="nh-txt-date">April 1, 2020</p>
-    <p class="intro-block__first-paragraph">Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a personal
-      mini project that became a testament to resilience: Lockdown Portraits. These are not just photos; they are
-      glimpses into the lives of real people—individuals navigating the challenges and triumphs that isolation
-      brings.</p>
-    <p>Each portrait tells a story, not of models, but of everyday heroes facing the ordeals of lockdown with courage
-      and grace. To add depth to the visual narrative, I posed two questions to each participant, unearthing personal
-      insights that accompany their portraits.</p>
+    <p class="intro-block__first-paragraph">
+      Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a personal
+      mini project that became a testament to resilience: Lockdown Portraits.
+      These are not just photos; they are glimpses into the lives of real
+      people—individuals navigating the challenges and triumphs that isolation
+      brings.
+    </p>
+    <p>
+      Each portrait tells a story, not of models, but of everyday heroes facing
+      the ordeals of lockdown with courage and grace. To add depth to the visual
+      narrative, I posed two questions to each participant, unearthing personal
+      insights that accompany their portraits.
+    </p>
     <p>Second in this series was Niki: entrepreneur and coach.</p>
   </div>
   <div class="grid-5050">
@@ -40,32 +46,56 @@ const pageTitleClass = "sr-only";
         class="nh-post-hero"
       />
       <blockquote>
-        <p>If we spend more quality time inwards with ourselves without crisis, we have more peace and balance as well in any crisis.</p>
+        <p>
+          If we spend more quality time inwards with ourselves without crisis,
+          we have more peace and balance as well in any crisis.
+        </p>
       </blockquote>
     </div>
     <div class="grid__item grid__item-content">
-      <p class=""><strong>Can you describe to what extent the lockdown has affected your life and how? both on a personal and professional level?</strong></p>
-      <p class="nh-txt-quote"><q>In terms of my professional life there has been some changes. All of my business and bodywork trainings and coaching sessions have been cancelled. I switched to online coaching and focusing on helping people to face challenges during crisis. On a personal level the biggest change is the lack of face to face contact with my friends, colleagues and clients. As I am a pretty active person and travel a lot, it has been a challenge first how to rearrange my life.</q></p>
-      <!--<p class="nh-txt-quote"><q>On a personal level I’d say that for me it hasn’t had a big impact yet as I feel I’ve lived in a less strict sort of lockdown for close to a year now due to various reasons. On the other hand now it is much more strict of course and also more out of my control. Ironically that last part can also be very liberating as there’s no point in fighting it so you might as well just go with it. For me that comes down to forcing myself to come up with new ways of doing things, keeping busy, distracted sometimes even.</q></p>-->
-      <p class="nh-txt-question"><strong>If anything, what do you think will you take away from all this.any lessons learned?</strong></p>
+      <p class="">
+        <strong
+          >Can you describe to what extent the lockdown has affected your life
+          and how? both on a personal and professional level?</strong>
+      </p>
       <p class="nh-txt-quote">
-        <q>There are many lessons learnt....as people spend more time alone or with their direct family they need(ed) to face certain issues, fears, values they tried to avoid through a busy life. If we spend more quality time inwards with ourselves without crisis, we have more peace and balance as well in any crisis. It’s a mind game 🧠</q>
+        <q
+          >In terms of my professional life there has been some changes. All of
+          my business and bodywork trainings and coaching sessions have been
+          cancelled. I switched to online coaching and focusing on helping
+          people to face challenges during crisis. On a personal level the
+          biggest change is the lack of face to face contact with my friends,
+          colleagues and clients. As I am a pretty active person and travel a
+          lot, it has been a challenge first how to rearrange my life.</q>
+      </p>
+      <!--<p class="nh-txt-quote"><q>On a personal level I’d say that for me it hasn’t had a big impact yet as I feel I’ve lived in a less strict sort of lockdown for close to a year now due to various reasons. On the other hand now it is much more strict of course and also more out of my control. Ironically that last part can also be very liberating as there’s no point in fighting it so you might as well just go with it. For me that comes down to forcing myself to come up with new ways of doing things, keeping busy, distracted sometimes even.</q></p>-->
+      <p class="nh-txt-question">
+        <strong
+          >If anything, what do you think will you take away from all this.any
+          lessons learned?</strong>
+      </p>
+      <p class="nh-txt-quote">
+        <q
+          >There are many lessons learnt....as people spend more time alone or
+          with their direct family they need(ed) to face certain issues, fears,
+          values they tried to avoid through a busy life. If we spend more
+          quality time inwards with ourselves without crisis, we have more peace
+          and balance as well in any crisis. It’s a mind game 🧠</q
+        >
       </p>
     </div>
   </div>
   <div class="masonry-grid">
     <LightboxImage
-      id="1"
+      id={1}
       imagePath="/src/assets/images/lockdown/niki2.jpg"
       altText="Niki"
     />
     <LightboxImage
-      id="2"
+      id={2}
       imagePath="/src/assets/images/lockdown/niki3.jpg"
       altText="Niki"
     />
   </div>
 </BaseLayout>
-<style>
-
-</style>
+<style></style>

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import {Image, Picture} from 'astro:assets';
+import { Image, Picture } from "astro:assets";
 import LightboxImage from "../../components/LightboxImage.astro";
 
 const siteTitle = "nirusu.me";
@@ -8,6 +8,7 @@ const siteTitleClass = "sr-only";
 const pageTitle = "Studio Portraits by nirusu";
 const pageTitleClass = "sr-only";
 ---
+
 <BaseLayout
   siteTitle={siteTitle}
   siteTitleClass={siteTitleClass}
@@ -19,61 +20,60 @@ const pageTitleClass = "sr-only";
   </div>
   <div class="masonry-grid">
     <LightboxImage
-      id="1"
+      id={1}
       imagePath="/src/assets/images/studio/bente1.jpg"
       altText="Bente"
     />
     <LightboxImage
-      id="6"
+      id={6}
       imagePath="/src/assets/images/studio/marc.jpg"
       altText="Marc"
     />
     <LightboxImage
-      id="2"
+      id={2}
       imagePath="/src/assets/images/studio/bente2.jpg"
       altText="Bente"
     />
     <LightboxImage
-      id="3"
+      id={3}
       imagePath="/src/assets/images/studio/krissy-dance-1.jpg"
       altText="Krissy"
     />
     <LightboxImage
-      id="4"
+      id={4}
       imagePath="/src/assets/images/studio/krissy-dance-2.jpg"
       altText="Krissy"
     />
     <LightboxImage
-      id="5"
+      id={5}
       imagePath="/src/assets/images/studio/krissy-zodiac-1.jpg"
       altText="Krissy"
     />
     <LightboxImage
-      id="9"
+      id={9}
       imagePath="/src/assets/images/studio/pt.jpg"
       altText="Remko"
     />
     <LightboxImage
-      id="7"
+      id={7}
       imagePath="/src/assets/images/studio/niki-fuji-1.jpg"
       altText="Niki"
     />
     <LightboxImage
-      id="8"
+      id={8}
       imagePath="/src/assets/images/studio/ooy-1_1960.jpg"
       altText="Ooy"
     />
     <LightboxImage
-      id="10"
+      id={10}
       imagePath="/src/assets/images/studio/thefool-sq.jpg"
       altText="The Fool"
     />
     <LightboxImage
-      id="11"
+      id={11}
       imagePath="/src/assets/images/studio/barb1.jpg"
       altText="Barbara"
     />
   </div>
 </BaseLayout>
-<style>
-</style>
+<style></style>

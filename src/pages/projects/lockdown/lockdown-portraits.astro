@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import {Image, Picture} from 'astro:assets';
+import { Image, Picture } from "astro:assets";
 import LightboxImage from "../../../components/LightboxImage.astro";
 
 const siteTitle = "nirusu.me";
@@ -8,6 +8,7 @@ const siteTitleClass = "sr-only";
 const pageTitle = "Lockdown Portraits by nirusu";
 const pageTitleClass = "sr-only";
 ---
+
 <BaseLayout
   siteTitle={siteTitle}
   siteTitleClass={siteTitleClass}
@@ -17,31 +18,42 @@ const pageTitleClass = "sr-only";
   <div class="intro-block">
     <h1 class="intro-block__title">Lockdown Chronicles:</h1>
     <h2 class="centered">Capturing Resilience in Isolation</h2>
-    <p class="intro-block__first-paragraph">Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a personal
-      mini project that became a testament to resilience: Lockdown Portraits. These are not just photos; they are
-      glimpses into the lives of real people—individuals navigating the challenges and triumphs that isolation
-      brings.</p>
-    <p>Each portrait tells a story, not of models, but of everyday heroes facing the ordeals of lockdown with courage
-      and grace. To add depth to the visual narrative, I posed two questions to each participant, unearthing personal
-      insights that accompany their portraits.</p>
-    <p>Over the span of a few months in 2020, I conducted these shoots, resulting in a collection of 9 compelling
-      portraits. The full stories, along with additional shots, reside in the blog section. Join me in exploring the
-      diverse tales of strength, vulnerability, and humanity in the face of adversity.</p>
+    <p class="intro-block__first-paragraph">
+      Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a personal
+      mini project that became a testament to resilience: Lockdown Portraits.
+      These are not just photos; they are glimpses into the lives of real
+      people—individuals navigating the challenges and triumphs that isolation
+      brings.
+    </p>
+    <p>
+      Each portrait tells a story, not of models, but of everyday heroes facing
+      the ordeals of lockdown with courage and grace. To add depth to the visual
+      narrative, I posed two questions to each participant, unearthing personal
+      insights that accompany their portraits.
+    </p>
+    <p>
+      Over the span of a few months in 2020, I conducted these shoots, resulting
+      in a collection of 9 compelling portraits. The full stories, along with
+      additional shots, reside in the blog section. Join me in exploring the
+      diverse tales of strength, vulnerability, and humanity in the face of
+      adversity.
+    </p>
   </div>
   <div class="masonry-grid grid-3x3">
     <div class="lb-container">
       <LightboxImage
-        id="1"
+        id={1}
         imagePath="/src/assets/images/lockdown/nils1.jpg"
         altText="A headshot of Priya against a brick wall background."
       />
       <div class="lb-caption">
-        LP1: <a href="/projects/lockdown/lockdown-1">Biting The Bullet • Nils</a>
+        LP1: <a href="/projects/lockdown/lockdown-1">Biting The Bullet • Nils</a
+        >
       </div>
     </div>
     <div class="lb-container">
       <LightboxImage
-        id="2"
+        id={2}
         imagePath="/src/assets/images/lockdown/niki1-sq.jpg"
         altText="landscape"
       />
@@ -51,7 +63,7 @@ const pageTitleClass = "sr-only";
     </div>
     <div class="lb-container">
       <LightboxImage
-        id="3"
+        id={3}
         imagePath="/src/assets/images/lockdown/krissy2-sq.jpg"
         altText="landscape"
       />
@@ -61,17 +73,18 @@ const pageTitleClass = "sr-only";
     </div>
     <div class="lb-container">
       <LightboxImage
-        id="4"
+        id={4}
         imagePath="/src/assets/images/lockdown/remko-1.jpg"
         altText="landscape"
       />
       <div class="lb-caption">
-        LP4: <a href="/projects/lockdown/lockdown-4">Sappy & Grateful • Remko</a>
+        LP4: <a href="/projects/lockdown/lockdown-4">Sappy & Grateful • Remko</a
+        >
       </div>
     </div>
     <div class="lb-container">
       <LightboxImage
-        id="5"
+        id={5}
         imagePath="/src/assets/images/lockdown/thara-1.jpg"
         altText="landscape"
       />
@@ -81,27 +94,31 @@ const pageTitleClass = "sr-only";
     </div>
     <div class="lb-container">
       <LightboxImage
-        id="6"
+        id={6}
         imagePath="/src/assets/images/lockdown/pajacq-1.jpg"
         altText="landscape"
       />
       <div class="lb-caption">
-        LP6: <a href="/projects/lockdown/lockdown-6">Lucky • Jacqueline & Matt</a>
+        LP6: <a href="/projects/lockdown/lockdown-6"
+          >Lucky • Jacqueline & Matt</a
+        >
       </div>
     </div>
     <div class="lb-container">
       <LightboxImage
-        id="7"
+        id={7}
         imagePath="/src/assets/images/lockdown/ld7-1.jpg"
         altText="landscape"
       />
       <div class="lb-caption">
-        LP7: <a href="/projects/lockdown/lockdown-7">Power of fear • Gyöngyi, Zalán, Benedek, & Mátyika</a>
+        LP7: <a href="/projects/lockdown/lockdown-7"
+          >Power of fear • Gyöngyi, Zalán, Benedek, & Mátyika</a
+        >
       </div>
     </div>
     <div class="lb-container">
       <LightboxImage
-        id="8"
+        id={8}
         imagePath="/src/assets/images/lockdown/barb-1.jpg"
         altText="landscape"
       />
@@ -111,7 +128,7 @@ const pageTitleClass = "sr-only";
     </div>
     <div class="lb-container">
       <LightboxImage
-        id="9"
+        id={9}
         imagePath="/src/assets/images/lockdown/bente-1.jpg"
         altText="landscape"
       />
@@ -123,7 +140,6 @@ const pageTitleClass = "sr-only";
 </BaseLayout>
 <style>
   .grid-3x3 {
-
   }
 
   @media only screen and (min-width: 768px) {

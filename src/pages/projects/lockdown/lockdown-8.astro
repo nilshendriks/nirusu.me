@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { Picture } from 'astro:assets';
-import myPic from '../../../assets/images/lockdown/barb-1.jpg';
+import { Picture } from "astro:assets";
+import myPic from "../../../assets/images/lockdown/barb-1.jpg";
 import LightboxImage from "../../../components/LightboxImage.astro";
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
@@ -10,22 +10,28 @@ const pageTitleClass = "sr-only";
 ---
 
 <BaseLayout
-    siteTitle={siteTitle}
-    siteTitleClass={pageTitleClass}
-    pageTitle={pageTitle}
-    pageTitleClass={pageTitleClass}
+  siteTitle={siteTitle}
+  siteTitleClass={pageTitleClass}
+  pageTitle={pageTitle}
+  pageTitleClass={pageTitleClass}
 >
   <div class="intro-block">
     <h1 class="intro-block__title">Lockdown Portraits Session Eight</h1>
     <h2 class="centered">Thankful • Barbara</h2>
     <p class="nh-txt-date">June 1, 2020</p>
-    <p class="intro-block__first-paragraph">Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a personal
-      mini project that became a testament to resilience: Lockdown Portraits. These are not just photos; they are
-      glimpses into the lives of real people—individuals navigating the challenges and triumphs that isolation
-      brings.</p>
-    <p>Each portrait tells a story, not of models, but of everyday heroes facing the ordeals of lockdown with courage
-      and grace. To add depth to the visual narrative, I posed two questions to each participant, unearthing personal
-      insights that accompany their portraits.</p>
+    <p class="intro-block__first-paragraph">
+      Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a personal
+      mini project that became a testament to resilience: Lockdown Portraits.
+      These are not just photos; they are glimpses into the lives of real
+      people—individuals navigating the challenges and triumphs that isolation
+      brings.
+    </p>
+    <p>
+      Each portrait tells a story, not of models, but of everyday heroes facing
+      the ordeals of lockdown with courage and grace. To add depth to the visual
+      narrative, I posed two questions to each participant, unearthing personal
+      insights that accompany their portraits.
+    </p>
   </div>
   <div class="grid-5050">
     <div class="grid__item">
@@ -43,37 +49,76 @@ const pageTitleClass = "sr-only";
       </blockquote>-->
     </div>
     <div class="grid__item grid__item-content">
-      <p class=""><strong>Can you describe to what extent the lockdown has affected your life and how? both on a personal and professional level?</strong></p>
-      <p class="nh-txt-quote"><q>Our 11-year old beloved dog Noodles was diagnosed with cancer and was operated on, early March. After that, she needed 12 radiation therapy sessions. Under these circumstances I was glad that we could be there for her 100% in stead of rushing to and from our jobs. I'm thankful for the time I get to spend with her now every day and am determined to make the most of every day with her.</q></p>
-      <p>Since I don't have a job at the moment, and I am quite relaxed about this for the first time in my life, I now have time to learn something new: I've started taking 2 Arabic courses which I really enjoy. My partner is working from home and most days we go for a walk together with Noodles and get a take-away coffee to support a friendly local business. Being together 24/7 is a lot, but we also enjoy these moments together.
+      <p class="">
+        <strong
+          >Can you describe to what extent the lockdown has affected your life
+          and how? both on a personal and professional level?</strong>
       </p>
-      <p>I have the feeling that people waiting in queues at the coffee take away, supermarket etc have more time than before and are more eager to have a conversation with strangers than ever before. In the lockdown people are stuck at home, sometimes alone, and really seem more open to talking to people in the street, which is actually quite nice in a city like Amsterdam, where you can live anonymously without ever talking to anyone.
-      </p>
-      <p>Professional: I lost my job in fashion business in March; I've been working in fashion since 22 years. I now finally have time to think about what I would like to do professionally, because I don't think I want to return to fashion business.</p>
-      <p class="nh-txt-question"><strong>If anything, what do you think will you take away from all this.any lessons learned?</strong></p>
       <p class="nh-txt-quote">
-        <q>Don't wait to do the things you want to do: for example I made some vague plans with a friend and an ex-colleague to go out for dinner/lunch "some day", but these plans didn't work out so far due to the lockdown and you never know when you'll be able to meet these people again.</q>
+        <q
+          >Our 11-year old beloved dog Noodles was diagnosed with cancer and was
+          operated on, early March. After that, she needed 12 radiation therapy
+          sessions. Under these circumstances I was glad that we could be there
+          for her 100% in stead of rushing to and from our jobs. I'm thankful
+          for the time I get to spend with her now every day and am determined
+          to make the most of every day with her.</q>
+      </p>
+      <p>
+        Since I don't have a job at the moment, and I am quite relaxed about
+        this for the first time in my life, I now have time to learn something
+        new: I've started taking 2 Arabic courses which I really enjoy. My
+        partner is working from home and most days we go for a walk together
+        with Noodles and get a take-away coffee to support a friendly local
+        business. Being together 24/7 is a lot, but we also enjoy these moments
+        together.
+      </p>
+      <p>
+        I have the feeling that people waiting in queues at the coffee take
+        away, supermarket etc have more time than before and are more eager to
+        have a conversation with strangers than ever before. In the lockdown
+        people are stuck at home, sometimes alone, and really seem more open to
+        talking to people in the street, which is actually quite nice in a city
+        like Amsterdam, where you can live anonymously without ever talking to
+        anyone.
+      </p>
+      <p>
+        Professional: I lost my job in fashion business in March; I've been
+        working in fashion since 22 years. I now finally have time to think
+        about what I would like to do professionally, because I don't think I
+        want to return to fashion business.
+      </p>
+      <p class="nh-txt-question">
+        <strong
+          >If anything, what do you think will you take away from all this.any
+          lessons learned?</strong>
+      </p>
+      <p class="nh-txt-quote">
+        <q
+          >Don't wait to do the things you want to do: for example I made some
+          vague plans with a friend and an ex-colleague to go out for
+          dinner/lunch "some day", but these plans didn't work out so far due to
+          the lockdown and you never know when you'll be able to meet these
+          people again.</q
+        >
       </p>
     </div>
   </div>
   <div class="masonry-grid">
     <LightboxImage
-      id="1"
+      id={1}
       imagePath="/src/assets/images/lockdown/barb-2.jpg"
       altText="barb"
     />
     <LightboxImage
-      id="2"
+      id={2}
       imagePath="/src/assets/images/lockdown/barb-3.jpg"
       altText="barb"
     />
     <LightboxImage
-      id="3"
+      id={3}
       imagePath="/src/assets/images/lockdown/barb-4.jpg"
       altText="barb"
     />
   </div>
 </BaseLayout>
-<style>
-
-</style>
+<style></style>

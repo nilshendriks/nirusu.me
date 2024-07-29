@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import {Image, Picture} from 'astro:assets';
+import { Image, Picture } from "astro:assets";
 import LightboxImage from "../components/LightboxImage.astro";
 
 const siteTitle = "nirusu.me";
@@ -8,6 +8,7 @@ const siteTitleClass = "sr-only";
 const pageTitle = "nirusu photography";
 const pageTitleClass = "sr-only";
 ---
+
 <BaseLayout
   siteTitle={siteTitle}
   siteTitleClass={siteTitleClass}
@@ -16,67 +17,73 @@ const pageTitleClass = "sr-only";
 >
   <div class="masonry-grid">
     <LightboxImage
-      id="10"
+      id={10}
       imagePath="/src/assets/images/studio/noodles-1.jpg"
       altText="Noodles 💔"
       position="top"
     />
     <LightboxImage
-      id="1"
+      id={1}
       imagePath="/src/assets/images/location/boy-1.jpg"
       altText="Boy on the streets."
     />
     <LightboxImage
-      id="5"
+      id={5}
       imagePath="/src/assets/images/studio/marc.jpg"
       altText="Marc"
       position="top"
     />
     <!--<LightboxImage
-      id="2"
-      imagePath="/src/assets/images/location/nepal-1.jpg"
-      altText="Nepal"
-      position="right"
+    id="2"
+    imagePath="/src/assets/images/location/nepal-1.jpg"
+    altText="Nepal"
+    position="right"
     />-->
     <LightboxImage
-      id="3"
+      id={3}
       imagePath="/src/assets/images/contact/nils-balloon_1960.jpg"
       altText="Me"
     />
     <LightboxImage
-      id="4"
+      id={4}
       imagePath="/src/assets/images/location/jacq-caravan.jpg"
       altText="Jacq"
       position="left"
     />
+    <!-- <LightboxImage
+    id={6}
+    imagePath="/src/assets/images/studio/niki-fuji-1.jpg"
+    altText="Niki"
+    /> -->
     <LightboxImage
-      id="6"
-      imagePath="/src/assets/images/studio/niki-fuji-1.jpg"
+      id={13}
+      imagePath="/src/assets/images/lockdown/niki1.jpg"
       altText="Niki"
+      position="top"
     />
     <LightboxImage
-      id="12"
+      id={12}
       imagePath="/src/assets/images/studio/me-3.jpg"
       altText="Me"
     />
     <LightboxImage
-      id="7"
+      id={7}
       imagePath="/src/assets/images/studio/thefool-sq.jpg"
       altText="The Fool"
     />
     <LightboxImage
-      id="11"
+      id={11}
       imagePath="/src/assets/images/studio/me-1.jpg"
       altText="Me"
       position="top"
     />
     <LightboxImage
-      id="8"
+      id={8}
       imagePath="/src/assets/images/location/jacq-jump.jpg"
       altText="Jump!"
     />
     <LightboxImage
-      id="9"
+      id={9}
       imagePath="/src/assets/images/location/shed-pa-1.jpg"
       altText="Shed"
     />

@@ -25,4 +25,11 @@ largest screen supported (may 2023): 1920px
 - lightbox? bigger?
   - mobile-> image 282 -> 564px
   - desktop-> 980px -> 1960px
-  
+ 
+# This is a Heading
+
+**This is bold text**
+
+*This is italic text*
+
+`inline code`

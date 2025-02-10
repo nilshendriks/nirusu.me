@@ -1,21 +1,25 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 const siteTitle = "Oops • nilshendriks.com";
 const pageTitle = "nilshendriks.com";
-const pageTitleClass = 'sr-only';
+const pageTitleClass = "sr-only";
 const pageID = "page-404";
 ---
+
 <BaseLayout
-  pageTitle={pageTitle}
-  pageTitleClass={pageTitleClass}
-  pageID={pageID}
-  siteTitle={siteTitle}
+    pageTitle={pageTitle}
+    pageTitleClass={pageTitleClass}
+    pageID={pageID}
+    siteTitle={siteTitle}
 >
     <div class="content" data-pagefind-ignore>
-  <h2 class={pageTitleClass}>{pageTitle}</h2>
-  <h3>Oops, Looks like something went horribly wrong…</h3>
-  <h2>Well, I don't think there is any question about it.<br>
-    It can only be attributable to human error.<br>
-    This sort of thing has cropped up before, and it has always been due to human error.</h2>
+        <h2 class={pageTitleClass}>{pageTitle}</h2>
+        <h3>Oops, Looks like something went horribly wrong…</h3>
+        <h2>
+            Well, I don't think there is any question about it.<br />
+            It can only be attributable to human error.<br />
+            This sort of thing has cropped up before, and it has always been due
+            to human error.
+        </h2>
     </div>
 </BaseLayout>

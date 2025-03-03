@@ -65,8 +65,11 @@ if (!images[imagePath])
                 "masonry-grid__item-image lightbox__img",
                 { "image-position": position },
             ]}
-            widths={[640, 896]}
-            sizes={`(max-width: 360px) 320px, (max-width: 1920px) 448px`}
+            widths={[640, 896, 1280, 2048]}
+            sizes={`(max-width: 360px) 320px, 
+                    (max-width: 1920px) 448px, 
+                    (max-width: 2500px) 1024px, 
+                    1280px`}
             style={{ objectPosition: position }}
             title="Click to show larger version."
         />
@@ -196,7 +199,11 @@ if (!images[imagePath])
         display: none;
     }
 
-    .lightbox-image__label:focus {
-        outline: 4px solid green;
+    /* .lightbox-image__label:focus { */
+    /*     outline: 4px solid green; */
+    /* } */
+
+    .lightbox-image__label:focus-visible {
+        outline: 4px solid var(--color-brand-primary);
     }
 </style>

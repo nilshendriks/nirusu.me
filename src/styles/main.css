@@ -1,3 +1,7 @@
+@view-transition {
+  navigation: auto;
+}
+
 :root {
   /* colors */
   --color-brand-primary: #089cec;
@@ -202,7 +206,7 @@ input[type="radio"]:checked {
   border: 6px solid var(--color-brand-primary);
 }
 
-input[type="radio"] + label {
+input[type="radio"]+label {
   display: inline;
 }
 

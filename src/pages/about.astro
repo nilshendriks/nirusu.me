@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Picture } from 'astro:assets';
-import myPic from '../assets/images/about/nils-about-sq.jpg';
+import { Picture } from "astro:assets";
+import myPic from "../assets/images/about/nils-about-sq.jpg";
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
 const pageTitle = "nirusu photography";
@@ -14,41 +14,47 @@ const pageTitleClass = "sr-only";
     pageTitle={pageTitle}
     pageTitleClass={pageTitleClass}
 >
-  <div class="grid-5050">
-    <div class="grid__item">
-      <Picture
-        src={myPic}
-        widths={[282, 912]}
-        sizes="(max-width: 912px) 100vw, 912px"
-        alt="portrait of me, nils hendriks, 2020"
-        formats={["webp", "avif"]}
-        loading="eager"
-        class="nh-post-hero"
-      />
+    <div class="grid-5050">
+        <div class="grid__item">
+            <Picture
+                src={myPic}
+                widths={[282, 912]}
+                sizes="(max-width: 912px) 100vw, 912px"
+                alt="portrait of me, nils hendriks, 2020"
+                formats={["webp", "avif"]}
+                loading="eager"
+                class="nh-post-hero"
+            />
+        </div>
+        <div class="grid__item grid__item-content">
+            <h1>About me</h1>
+
+            <p class="justified">
+                Hi, I’m Nirusu, also known as Nils. I started out with film
+                photography back when developing photos in the attic was part of
+                the process. Since then, I’ve moved to digital, and I mostly
+                focus on capturing people.
+            </p>
+
+            <p>
+                I like telling stories through my photos, especially with street
+                photography and portraits. Whether I’m shooting on the streets
+                or in a small studio, I try to capture real moments and everyday
+                life.
+            </p>
+
+            <p>
+                I’ve spent a good part of my life in Asia — three years in
+                Singapore and three years in Tokyo — and those experiences have
+                influenced how I see and shoot the world around me.
+            </p>
+
+            <p>Thanks for stopping by and checking out my work.</p>
+            <p>
+                <a href="https://www.instagram.com/nirususan"
+                    >Follow me on Instagram</a
+                >
+            </p>
+        </div>
     </div>
-    <div class="grid__item grid__item-content">
-      <h1>About me</h1>
-      <p class="justified">Greetings! I'm Nirusu, also known as Nils, and my love affair with photography began in the captivating world of film, where the scent of developing chemicals lingered in the attic of my memories. Transitioning into the digital era, my lens found its true passion: capturing the essence of people.</p>
-
-      <p class="justified">Primarily a storyteller through images, my focus revolves around the dynamic interplay of street
-        photography and portraits. Whether weaving tales on the bustling streets of various locales or crafting intimate narratives
-        in a pop-up studio, each frame encapsulates a moment, a story, a slice of life frozen in time.</p>
-
-      <p class="justified">Having called Asia home for a significant part of my journey—three years in the vibrant cityscape of Singapore
-        and another three amidst the eclectic energy of Tokyo—my lens has been shaped by the rich tapestry of cultures,
-        people, and life experiences that this continent offers. This unique chapter in my life, which unfolded a decade
-        ago, has left an indelible mark on my work, infusing it with a diverse and vibrant energy.</p>
-
-      <p class="justified">Join me on this visual odyssey, where each photograph is a chapter, and every portrait tells a story waiting
-        to be discovered. Welcome to my world of visual storytelling.</p>
-    </div>
-        <!--<p>
-            <a href="https://www.instagram.com/nirususan"
-            >Follow me on Instagram</a
-        >
-        </p>-->
-  </div>
 </BaseLayout>
-<style>
-
-</style>

@@ -367,6 +367,10 @@ button {
   .menu {
     width: 25vw;
   }
+
+  :target .masthead__nav {
+    padding: 0 !important;
+  }
 }
 
 :target {

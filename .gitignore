@@ -107,3 +107,6 @@ typings/
 
 # Astro dist folder
 dist/
+
+# Macos DS_Store
+.DS_Store

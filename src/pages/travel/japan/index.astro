@@ -1,0 +1,49 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import LightboxImage from "@components/LightboxImage.astro";
+
+const siteTitle = "nirusu.me";
+const siteTitleClass = "sr-only";
+const pageTitle = "Japan";
+const pageTitleClass = "sr-only";
+---
+
+<BaseLayout
+    siteTitle={siteTitle}
+    siteTitleClass={siteTitleClass}
+    pageTitle={pageTitle}
+    pageTitleClass={pageTitleClass}
+>
+    <div class="intro-block">
+        <h1 class="intro-block__title">{pageTitle}</h1>
+    </div>
+    <div class="masonry-grid">
+        <LightboxImage
+            id={1}
+            imagePath="/src/assets/images/travel/japan/DSCF0020_v1.jpg"
+            altText="Tokyo"
+        />
+        <LightboxImage
+            id={2}
+            imagePath="/src/assets/images/travel/japan/DSCF0019_v1.jpg"
+            altText="Tokyo"
+        />
+        <LightboxImage
+            id={3}
+            imagePath="/src/assets/images/travel/japan/DSCF0078_v1.jpg"
+            altText="Tokyo"
+        />
+        <LightboxImage
+            id={4}
+            imagePath="/src/assets/images/travel/japan/DSCF0254.jpg"
+            altText="Tokyo"
+        />
+
+        <LightboxImage
+            id={5}
+            imagePath="/src/assets/images/travel/japan/20120415_DSCF0690_sendai.jpg"
+            altText="Tokyo"
+        />
+    </div>
+</BaseLayout>
+<style></style>

@@ -1,0 +1,50 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import LightboxImage from "@components/LightboxImage.astro";
+
+const siteTitle = "nirusu.me";
+const siteTitleClass = "sr-only";
+const pageTitle = "Cambodia";
+const pageTitleClass = "sr-only";
+---
+
+<BaseLayout
+    siteTitle={siteTitle}
+    siteTitleClass={siteTitleClass}
+    pageTitle={pageTitle}
+    pageTitleClass={pageTitleClass}
+>
+    <div class="intro-block">
+        <h1 class="intro-block__title">{pageTitle}</h1>
+    </div>
+    <div class="masonry-grid">
+        <LightboxImage
+            id={1}
+            imagePath="/src/assets/images/travel/cambodia/L1010015_v3_K64+.jpg"
+            altText="Mother and child"
+            position="top"
+        />
+        <LightboxImage
+            id={2}
+            imagePath="/src/assets/images/travel/cambodia/L1010096_v1.jpg"
+            altText="Mother and child"
+            position="right"
+        />
+        <LightboxImage
+            id={3}
+            imagePath="/src/assets/images/travel/cambodia/_DSC6260_v1.jpg"
+            altText="Child at market"
+        />
+        <LightboxImage
+            id={4}
+            imagePath="/src/assets/images/travel/cambodia/_DSC6276_v1.jpg"
+            altText="Father and child"
+        />
+        <LightboxImage
+            id={5}
+            imagePath="/src/assets/images/travel/cambodia/_DSC6284_v1.jpg"
+            altText="Men playing a board game."
+        />
+    </div>
+</BaseLayout>
+<style></style>

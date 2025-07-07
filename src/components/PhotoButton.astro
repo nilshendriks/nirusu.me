@@ -59,11 +59,6 @@ const hasSlotContent = Astro.slots.default;
                 class: "masonry-grid__item nh-l-grid-photo photo-button__picture",
             }}
             class:list={["masonry-grid__item-image photo-button__img"]}
-            widths={[640, 896, 1280, 2048]}
-            sizes={`(max-width: 360px) 320px, 
-                    (max-width: 1920px) 448px, 
-                    (max-width: 2500px) 1024px, 
-                    1280px`}
             position="center"
             fit="contain"
         />
@@ -175,14 +170,18 @@ const hasSlotContent = Astro.slots.default;
     }
 
     dialog.dialog:modal {
-        /* border: 1px solid var(--color-ui-border-default, #ccc); */
-        /* border-radius: 12px; */
-        border-color: #fff;
-        border-width: 16px;
+        border-color: #000;
+        border-width: 1px;
+        /* max-width: 46%; */
+        /* max-height: 90vh; */
+        /* aspect-ratio: 1; */
+        aspect-ratio: 1;
+        max-width: 90vmin;
+        height: 90vmin;
     }
 
     dialog.dialog:modal:has(.caption) {
-        border-bottom-width: 0px;
+        /* border-bottom-width: 0px; */
     }
 
     dialog.dialog .dialog__header {
@@ -213,21 +212,36 @@ const hasSlotContent = Astro.slots.default;
 
     .dialog__content {
         /* padding: 16px; */
-        overflow: auto;
-        max-height: 90svh;
+        /* overflow: auto; */
+        /* max-height: 90svh; */
+        height: 100%;
     }
 
     .dialog__content :global(*:last-child) {
         margin-bottom: 0;
     }
 
+    .dialog__content .photo-button__picture {
+        display: block;
+        height: 100%;
+        background-color: #fff;
+        padding: 1rem;
+    }
     .dialog__content .photo-button__picture .photo-button__img {
-        width: auto;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
     }
 
     .caption {
         font-size: 10px;
-        line-height: 20px;
+        line-height: 16px;
+        text-align: center;
+        max-width: none;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 
     body:has(dialog[open]) {

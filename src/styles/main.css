@@ -82,6 +82,7 @@ body {
   }
 }
 
+
 /* LVHA-order */
 a:link {
   color: var(--color-text-action);
@@ -141,11 +142,13 @@ em {
 }
 
 img {
+  background-repeat: no-repeat;
+  background-size: cover;
   display: block;
-  max-width: 100%;
-  height: auto;
-  shape-margin: 1rem;
   font-style: italic;
+  height: auto;
+  max-width: 100%;
+  shape-margin: 1rem;
 }
 
 svg {

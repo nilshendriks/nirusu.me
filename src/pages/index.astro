@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import LightboxImage from "../components/LightboxImage.astro";
+import PhotoButton from "@components/PhotoButton.astro";
 
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
@@ -15,92 +15,78 @@ const pageTitleClass = "sr-only";
     pageTitleClass={pageTitleClass}
 >
     <div class="masonry-grid">
-        <LightboxImage
-            id={1}
+        <PhotoButton
             imagePath="/src/assets/images/studio/brothers.jpg"
             altText="Brothers"
             position="top"
-        />
-        <LightboxImage
-            id={2}
+        >
+            The Hendriks Brothers, Amsterdam 2024
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/studio/bente2.jpg"
             altText="Bente"
             position="top"
-        />
-        <LightboxImage
-            id={14}
-            imagePath="/src/assets/images/studio/studio-zodiac-kris-2.jpg"
-            altText="Bente"
+        >
+            Lockdown 9, Bente, Amsterdam 2020
+        </PhotoButton>
+        <PhotoButton
+            imagePath="/src/assets/images/travel/cambodia/L1010015_v3_K64+.jpg"
+            altText="Mother and child"
             position="top"
-        />
-        <LightboxImage
-            id={3}
+            >Mother & child, Cambodia 2009
+        </PhotoButton>
+        <PhotoButton
+            imagePath="/src/assets/images/studio/studio-zodiac-kris-2.jpg"
+            altText="Zodiac"
+            position="top">Zodiac 4: Pisces, Amsterdam 2020</PhotoButton
+        >
+        <PhotoButton
             imagePath="/src/assets/images/studio/noodles-1.jpg"
             altText="Noodles 💔"
-            position="top"
-        />
-        <LightboxImage
-            id={4}
+            position="top">Noodles 💔, Amsterdam 2019</PhotoButton
+        >
+        <PhotoButton
             imagePath="/src/assets/images/location/boy-1.jpg"
             altText="Boy on the streets."
-        />
-        <LightboxImage
-            id={5}
+            >Youth of Today, Amsterdam 2022</PhotoButton
+        >
+        <PhotoButton
             imagePath="/src/assets/images/studio/marc.jpg"
             altText="Marc"
-            position="top"
-        />
-        <!--<LightboxImage
-    id="2"
-    imagePath="/src/assets/images/location/nepal-1.jpg"
-    altText="Nepal"
-    position="right"
-    />-->
-        <LightboxImage
-            id={6}
+            position="top">Marc, Amsterdam 2019</PhotoButton
+        >
+        <PhotoButton
             imagePath="/src/assets/images/contact/nils-balloon_1960.jpg"
-            altText="Me"
-        />
-        <LightboxImage
-            id={7}
+            altText="Me">Me, Color of The Year, Amsterdam 2021</PhotoButton
+        >
+        <PhotoButton
             imagePath="/src/assets/images/location/jacq-caravan.jpg"
             altText="Jacq"
-            position="left"
-        />
-        <!-- <LightboxImage
-    id={6}
-    imagePath="/src/assets/images/studio/niki-fuji-1.jpg"
-    altText="Niki"
-    /> -->
-        <LightboxImage
-            id={8}
+            position="left">Killing Miss Piggy, Etten-Leur 2021</PhotoButton
+        >
+        <PhotoButton
             imagePath="/src/assets/images/lockdown/niki1.jpg"
             altText="Niki"
-            position="top"
-        />
-        <LightboxImage
-            id={9}
+            position="top">Lockdown 2: Niki, Amsterdam 2020</PhotoButton
+        >
+        <PhotoButton
             imagePath="/src/assets/images/studio/me-3.jpg"
             altText="Me"
         />
-        <LightboxImage
-            id={10}
+        <PhotoButton
             imagePath="/src/assets/images/studio/thefool-sq.jpg"
             altText="The Fool"
         />
-        <LightboxImage
-            id={11}
+        <PhotoButton
             imagePath="/src/assets/images/studio/me-1.jpg"
             altText="Me"
             position="top"
         />
-        <LightboxImage
-            id={12}
+        <PhotoButton
             imagePath="/src/assets/images/location/jacq-jump.jpg"
             altText="Jump!"
         />
-        <LightboxImage
-            id={13}
+        <PhotoButton
             imagePath="/src/assets/images/location/shed-pa-1.jpg"
             altText="Shed"
         />

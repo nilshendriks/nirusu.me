@@ -4,6 +4,7 @@ import "@fontsource-variable/jost";
 import "../styles/main.css";
 import TheHeader from "../components/TheHeader.astro";
 import TheFooter from "../components/TheFooter.astro";
+import { ClientRouter, fade, slide } from "astro:transitions";
 // import SideBar from "../components/SideBar.astro";
 
 // const { siteTitle } = Astro.props;
@@ -25,6 +26,7 @@ const { pageTitle } = Astro.props;
         />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
+        <ClientRouter />
     </head>
     <body>
         <div class="wrapper">
@@ -36,4 +38,3 @@ const { pageTitle } = Astro.props;
         </div>
     </body>
 </html>
-

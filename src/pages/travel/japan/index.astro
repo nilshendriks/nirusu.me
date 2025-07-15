@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import LightboxImage from "@components/LightboxImage.astro";
+import PhotoButton from "@components/PhotoButton.astro";
 
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
@@ -18,66 +19,139 @@ const pageTitleClass = "sr-only";
         <h1 class="intro-block__title">{pageTitle}</h1>
     </div>
     <div class="masonry-grid">
-        <LightboxImage
-            id={1}
+        <PhotoButton
             imagePath="/src/assets/images/travel/japan/DSCF0020_v1.jpg"
             altText="Tokyo"
-        />
-        <LightboxImage
-            id={2}
+        >
+            Tokyo, Japan - 2012
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/japan/DSCF0019_v1.jpg"
             altText="Tokyo"
-        />
-        <LightboxImage
-            id={3}
+        >
+            Tokyo
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/japan/DSCF0078_v1.jpg"
             altText="Tokyo restaurant"
-        />
-        <LightboxImage
-            id={4}
+        >
+            Tokyo restaurant
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/japan/DSCF0254.jpg"
             altText="Tokyo Rockabillies"
-        />
-        <LightboxImage
-            id={5}
+        >
+            Tokyo Rockabillies
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/japan/DSCF0690_v1.jpg"
             altText="Tokyo Suit Men"
-        />
-        <LightboxImage
-            id={6}
+        >
+            Tokyo Suit Men
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/japan/trees.jpg"
             altText="Tokyo tree"
-        />
-        <LightboxImage
-            id={7}
+        >
+            Tokyo tree
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/japan/DSCF0198_v1.jpg"
             altText="Japanese craftsman"
-        />
-        <LightboxImage
-            id={8}
+        >
+            Tatami craftsman - (畳屋)
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/japan/DSCF0269_v1.jpg"
             altText="Japan landscape"
-        />
-        <LightboxImage
-            id={9}
+        >
+            Japan landscape
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/japan/DSCF0318_v1.jpg"
             altText="Snow Monkeys"
-        />
-        <LightboxImage
-            id={10}
+        >
+            Snow Monkeys
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/japan/DSCF0427_v1.jpg"
             altText="craftsman in Japan"
-        />
-        <LightboxImage
-            id={11}
+        >
+            Japanese craftsman
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/japan/DSCF0463_v1.jpg"
             altText="Restaurant"
-        />
-        <LightboxImage
-            id={12}
+        >
+            Restaurant
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/japan/DSCF0645_v1.jpg"
             altText="Penguins"
-        />
+        >
+            Penguins at Osaka Aquarium Kaiyukan (海遊館) - 2012
+        </PhotoButton>
+
+        <!-- <LightboxImage -->
+        <!--     id={1} -->
+        <!--     imagePath="/src/assets/images/travel/japan/DSCF0020_v1.jpg" -->
+        <!--     altText="Tokyo" -->
+        <!-- /> -->
+        <!-- <LightboxImage -->
+        <!--     id={2} -->
+        <!--     imagePath="/src/assets/images/travel/japan/DSCF0019_v1.jpg" -->
+        <!--     altText="Tokyo" -->
+        <!-- /> -->
+        <!-- <LightboxImage -->
+        <!--     id={3} -->
+        <!--     imagePath="/src/assets/images/travel/japan/DSCF0078_v1.jpg" -->
+        <!--     altText="Tokyo restaurant" -->
+        <!-- /> -->
+        <!-- <LightboxImage -->
+        <!--     id={4} -->
+        <!--     imagePath="/src/assets/images/travel/japan/DSCF0254.jpg" -->
+        <!--     altText="Tokyo Rockabillies" -->
+        <!-- /> -->
+        <!-- <LightboxImage -->
+        <!--     id={5} -->
+        <!--     imagePath="/src/assets/images/travel/japan/DSCF0690_v1.jpg" -->
+        <!--     altText="Tokyo Suit Men" -->
+        <!-- /> -->
+        <!-- <LightboxImage -->
+        <!--     id={6} -->
+        <!--     imagePath="/src/assets/images/travel/japan/trees.jpg" -->
+        <!--     altText="Tokyo tree" -->
+        <!-- /> -->
+        <!-- <LightboxImage -->
+        <!--     id={7} -->
+        <!--     imagePath="/src/assets/images/travel/japan/DSCF0198_v1.jpg" -->
+        <!--     altText="Japanese craftsman" -->
+        <!-- /> -->
+        <!-- <LightboxImage -->
+        <!--     id={8} -->
+        <!--     imagePath="/src/assets/images/travel/japan/DSCF0269_v1.jpg" -->
+        <!--     altText="Japan landscape" -->
+        <!-- /> -->
+        <!-- <LightboxImage -->
+        <!--     id={9} -->
+        <!--     imagePath="/src/assets/images/travel/japan/DSCF0318_v1.jpg" -->
+        <!--     altText="Snow Monkeys" -->
+        <!-- /> -->
+        <!-- <LightboxImage -->
+        <!--     id={10} -->
+        <!--     imagePath="/src/assets/images/travel/japan/DSCF0427_v1.jpg" -->
+        <!--     altText="craftsman in Japan" -->
+        <!-- /> -->
+        <!-- <LightboxImage -->
+        <!--     id={11} -->
+        <!--     imagePath="/src/assets/images/travel/japan/DSCF0463_v1.jpg" -->
+        <!--     altText="Restaurant" -->
+        <!-- /> -->
+        <!-- <LightboxImage -->
+        <!--     id={12} -->
+        <!--     imagePath="/src/assets/images/travel/japan/DSCF0645_v1.jpg" -->
+        <!--     altText="Penguins" -->
+        <!-- /> -->
     </div>
 </BaseLayout>
 <style></style>

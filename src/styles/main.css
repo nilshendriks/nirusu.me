@@ -26,6 +26,8 @@
   --color-background-overlay: var(--color-neutral-100);
 
   --color-text-body: var(--color-neutral-0);
+  --color-text-base: var(--color-neutral-0);
+  --color-text-base-invert: var(--color-neutral-100);
   --color-text-primary: var(--color-primary);
   --color-text-button: var(--color-neutral-100);
 
@@ -38,6 +40,8 @@
     --color-background-body: var(--color-neutral-0);
     --color-background-overlay: var(--color-neutral-0);
     --color-text-body: var(--color-neutral-100);
+    --color-text-base: var(--color-neutral-100);
+    --color-text-base-invert: var(--color-neutral-0);
   }
 }
 

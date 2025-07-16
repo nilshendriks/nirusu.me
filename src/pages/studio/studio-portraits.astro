@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import LightboxImage from "../../components/LightboxImage.astro";
+import PhotoButton from "@components/PhotoButton.astro";
 
 const siteTitle = "nirusu.me";
 // const siteTitleClass = "sr-only";
@@ -17,67 +17,79 @@ const pageTitleClass = "sr-only";
         <h1 class="intro-block__title">Studio Portraits</h1>
     </div>
     <div class="masonry-grid">
-        <LightboxImage
-            id={12}
+        <PhotoButton
             imagePath="/src/assets/images/studio/brothers.jpg"
             altText="Brothers"
             position="top"
-        />
-        <LightboxImage
-            id={1}
+        >
+            Brothers
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/studio/bente1.jpg"
             altText="Bente"
-        />
-        <LightboxImage
-            id={6}
+        >
+            Bente
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/studio/marc.jpg"
             altText="Marc"
-        />
-        <LightboxImage
-            id={2}
+        >
+            Marc
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/studio/bente2.jpg"
             altText="Bente"
-        />
-        <LightboxImage
-            id={3}
+        >
+            Bente
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/studio/krissy-dance-1.jpg"
             altText="Krissy"
-        />
-        <LightboxImage
-            id={4}
+        >
+            Krissy
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/studio/krissy-dance-2.jpg"
             altText="Krissy"
-        />
-        <LightboxImage
-            id={5}
+        >
+            Krissy
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/studio/krissy-zodiac-1.jpg"
             altText="Krissy"
-        />
-        <LightboxImage
-            id={9}
+        >
+            Krissy
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/studio/pt.jpg"
             altText="Remko"
-        />
-        <LightboxImage
-            id={7}
+        >
+            Remko
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/studio/niki-fuji-1.jpg"
             altText="Niki"
-        />
-        <LightboxImage
-            id={8}
+        >
+            Niki
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/studio/ooy-1_1960.jpg"
             altText="Ooy"
-        />
-        <LightboxImage
-            id={10}
+        >
+            Ooy
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/studio/thefool-sq.jpg"
             altText="The Fool"
-        />
-        <LightboxImage
-            id={11}
+        >
+            The Fool
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/studio/barb1.jpg"
             altText="Barbara"
-        />
+        >
+            Barbara
+        </PhotoButton>
     </div>
 </BaseLayout>
 <style></style>

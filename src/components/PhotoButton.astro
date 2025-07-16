@@ -82,9 +82,9 @@ const hasSlotContent = Astro.slots.default;
         }}
         class:list={["masonry-grid__item-image lightbox__img"]}
         widths={[640, 896, 1280, 2048]}
-        sizes={`(max-width: 360px) 320px, 
-                    (max-width: 1920px) 448px, 
-                    (max-width: 2500px) 1024px, 
+        sizes={`(max-width: 360px) 320px,
+                    (max-width: 1920px) 448px,
+                    (max-width: 2500px) 1024px,
                     1280px`}
         title="Click to show larger version."
         layout="constrained"
@@ -235,7 +235,7 @@ const hasSlotContent = Astro.slots.default;
     }
 
     .caption {
-        color: var(--color-text-base-invert);
+        color: var(--color-text-base-static, #000);
         font-size: 10px;
         line-height: 16px;
         text-align: center;

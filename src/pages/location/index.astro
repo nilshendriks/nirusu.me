@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import LightboxImage from "../../components/LightboxImage.astro";
+import PhotoButton from "@components/PhotoButton.astro";
 
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
@@ -18,92 +18,96 @@ const pageTitleClass = "sr-only";
         <h1 class="intro-block__title">Location Portraits</h1>
     </div>
     <div class="masonry-grid">
-        <LightboxImage
-            id={2}
+        <PhotoButton
             imagePath="/src/assets/images/location/boy-1.jpg"
             altText="Boy"
-        />
-        <LightboxImage
-            id={14}
+        >
+            Boy
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/wahid_IMG_6289.jpg"
             altText="Wahid"
             position="left"
-        />
-        <LightboxImage
-            id={15}
+        >
+            Wahid
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/wahid_IMG_6279.jpg"
             altText="Wahid"
-        />
-        <LightboxImage
-            id={16}
+        >
+            Wahid
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/lockdown_DSCF2197.jpg"
             altText="After Lockdown press conference"
-        />
-        <LightboxImage
-            id={1}
+        >
+            After Lockdown press conference
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/care.jpg"
             altText="Care"
-        />
-        <LightboxImage
-            id={6}
+        >
+            Care
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/care-2.jpg"
             altText="Care"
             position="top"
-        />
-        <LightboxImage
-            id={3}
+        >
+            Care
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/jacq-1.jpg"
             altText="Jacq"
-        />
-        <LightboxImage
-            id={4}
+        >
+            Jacq
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/jacq-caravan.jpg"
             altText="Miss Piggy"
             position="left"
-        />
-        <LightboxImage
-            id={5}
+        >
+            Miss Piggy
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/jacq-jump.jpg"
             altText="Jump!"
-        />
-        <!-- <LightboxImage -->
-        <!--     id={9} -->
-        <!--     imagePath="/src/assets/images/location/kitchen.jpg" -->
-        <!--     altText="Kitchen" -->
-        <!-- /> -->
-        <LightboxImage
-            id={7}
+        >
+            Jump!
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/matt-1.jpg"
             altText="Matt"
-        />
-        <!-- <LightboxImage -->
-        <!--     id={8} -->
-        <!--     imagePath="/src/assets/images/location/nepal-1.jpg" -->
-        <!--     altText="Nepal" -->
-        <!-- /> -->
-        <LightboxImage
-            id={10}
+        >
+            Matt
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/shed-pa-1.jpg"
             altText="Shed"
-        />
-        <LightboxImage
-            id={11}
+        >
+            Shed
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/ww1.jpg"
             altText="Warm Welcome Cafe BKK"
             position="top"
-        />
-        <LightboxImage
-            id={12}
+        >
+            Warm Welcome Cafe BKK
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/ww2.jpg"
             altText="Warm Welcome Cafe BKK"
             position="top"
-        />
-        <LightboxImage
-            id={13}
+        >
+            Warm Welcome Cafe BKK
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/location/ww3.jpg"
             altText="Warm Welcome Cafe BKK"
             position="top"
-        />
+        >
+            Warm Welcome Cafe BKK
+        </PhotoButton>
     </div>
 </BaseLayout>
 <style></style>

@@ -53,10 +53,10 @@ const hasSlotContent = Astro.slots.default;
         <Picture
             src={images[imagePath]()}
             alt={altText}
-            formats={["avif", "webp"]}
+            formats={["avif"]}
             loading="eager"
             pictureAttributes={{
-                class: "masonry-grid__item nh-l-grid-photo photo-button__picture",
+                class: `masonry-grid__item nh-l-grid-photo photo-button__picture${position ? ` position-${position}` : ""}`,
             }}
             class:list={["masonry-grid__item-image photo-button__img"]}
             position="center"
@@ -75,33 +75,30 @@ const hasSlotContent = Astro.slots.default;
     <Picture
         src={images[imagePath]()}
         alt={altText}
-        formats={["avif", "webp"]}
+        formats={["avif"]}
         loading="eager"
         pictureAttributes={{
-            class: "masonry-grid__item nh-l-grid-photo lightbox-image__picture",
+            class: `masonry-grid__item nh-l-grid-photo photo-button__picture${position ? ` position-${position}` : ""}`,
         }}
         class:list={["masonry-grid__item-image lightbox__img"]}
-        widths={[640, 896, 1280, 2048]}
-        sizes={`(max-width: 360px) 320px,
-                    (max-width: 1920px) 448px,
-                    (max-width: 2500px) 1024px,
-                    1280px`}
         title="Click to show larger version."
-        layout="constrained"
+        layout="none"
         position={position}
     />
 </button>
+
+<!-- layout="constrained" -->
 <style>
-    :where([data-astro-image]) {
-        object-fit: var(--fit);
-        object-position: var(--pos);
-    }
-    :where([data-astro-image="full-width"]) {
-        width: 100%;
-    }
-    :where([data-astro-image="constrained"]) {
-        max-width: 100%;
-    }
+    /* :where([data-astro-image]) { */
+    /*     object-fit: var(--fit); */
+    /*     object-position: var(--pos); */
+    /* } */
+    /* :where([data-astro-image="full-width"]) { */
+    /*     width: 100%; */
+    /* } */
+    /* :where([data-astro-image="constrained"]) { */
+    /*     max-width: 100%; */
+    /* } */
     button {
         background-color: transparent;
         color: inherit;
@@ -118,9 +115,26 @@ const hasSlotContent = Astro.slots.default;
     @supports not (grid-template-rows: masonry) {
         .photo-button__open picture img {
             aspect-ratio: 1;
+            object-fit: cover;
+            object-position: center;
         }
     }
 
+    .photo-button__open picture.position-top img {
+        object-position: top;
+    }
+
+    .photo-button__open picture.position-bottom img {
+        object-position: bottom;
+    }
+
+    .photo-button__open picture.position-left img {
+        object-position: left;
+    }
+
+    .photo-button__open picture.position-right img {
+        object-position: right;
+    }
     .photo-button__close {
         /* border: 1px solid #000; */
         /* border-radius: 50px; */

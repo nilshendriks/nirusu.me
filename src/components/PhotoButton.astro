@@ -54,6 +54,9 @@ const hasSlotContent = Astro.slots.default;
             src={images[imagePath]()}
             alt={altText}
             formats={["avif"]}
+            quality={60}
+            widths={[1126]}
+            width={1126}
             loading="eager"
             pictureAttributes={{
                 class: `masonry-grid__item nh-l-grid-photo photo-button__picture${position ? ` position-${position}` : ""}`,
@@ -76,6 +79,9 @@ const hasSlotContent = Astro.slots.default;
         src={images[imagePath]()}
         alt={altText}
         formats={["avif"]}
+        quality={60}
+        widths={[1126]}
+        width={1126}
         loading="eager"
         pictureAttributes={{
             class: `masonry-grid__item nh-l-grid-photo photo-button__picture${position ? ` position-${position}` : ""}`,

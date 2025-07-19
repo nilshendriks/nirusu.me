@@ -187,7 +187,6 @@ h6 {
 
 .masonry-grid {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(270px, clamp(270px, 100%, 446px))); */
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 1.5rem;
   width: min(1920px, 100% - 3rem);
@@ -196,7 +195,6 @@ h6 {
 
 @media screen and (min-width: 1215px) {
   .masonry-grid {
-    /* grid-template-columns: repeat(auto-fit, minmax(446px, 1fr)); */
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -204,14 +202,12 @@ h6 {
 
 @supports (grid-template-rows: masonry) {
   .masonry-grid {
-    background-color: green;
     grid-template-rows: masonry;
   }
 }
 
 @supports not (grid-template-rows: masonry) {
   .masonry-grid {
-    background-color: pink;
     grid-template-rows: auto;
   }
 }

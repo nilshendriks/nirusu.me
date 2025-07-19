@@ -5,8 +5,3 @@
 [build.environment]
   ASTRO_CACHE_DIR = ".astro/cache"
 
-[[plugins]]
-  package = "@netlify/plugin-cache"
-
-  [plugins.inputs]
-  paths = [".astro/cache"]

@@ -1,8 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { Image, Picture } from "astro:assets";
-import LightboxImage from "../../../components/LightboxImage.astro";
 import PhotoButton from "@components/PhotoButton.astro";
+import IntroBlock from "@components/IntroBlock.astro";
 
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
@@ -16,10 +15,11 @@ const pageTitleClass = "sr-only";
     pageTitle={pageTitle}
     pageTitleClass={pageTitleClass}
 >
-    <div class="intro-block">
-        <h1 class="intro-block__title">Lockdown Chronicles:</h1>
-        <h2 class="centered">Capturing Resilience in Isolation</h2>
-        <p class="intro-block__first-paragraph">
+    <IntroBlock
+        title="Lockdown Chronicles:"
+        subtitle="Capturing resilience in isolation."
+    >
+        <p>
             Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a
             personal mini project that became a testament to resilience:
             Lockdown Portraits. These are not just photos; they are glimpses
@@ -39,7 +39,7 @@ const pageTitleClass = "sr-only";
             Join me in exploring the diverse tales of strength, vulnerability,
             and humanity in the face of adversity.
         </p>
-    </div>
+    </IntroBlock>
     <div class="masonry-grid grid-3x3">
         <div class="lb-container">
             <PhotoButton
@@ -121,12 +121,10 @@ const pageTitleClass = "sr-only";
                 imagePath="/src/assets/images/lockdown/ld7-1.jpg"
                 altText="Lockdown portrait number 7"
             >
-                LD7
+                Power of fear • Gyöngyi, Zalán, Benedek, & Mátyika
             </PhotoButton>
             <div class="lb-caption">
-                LP7: <a href="/projects/lockdown/lockdown-7"
-                    >Power of fear • Gyöngyi, Zalán, Benedek, & Mátyika</a
-                >
+                LP7: <a href="/projects/lockdown/lockdown-7">Power of fear </a>
             </div>
         </div>
         <div class="lb-container">

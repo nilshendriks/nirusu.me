@@ -1,8 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { Image, Picture } from "astro:assets";
-import LightboxImage from "../../../components/LightboxImage.astro";
 import PhotoButton from "@components/PhotoButton.astro";
+import IntroBlock from "@components/IntroBlock.astro";
 
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
@@ -16,14 +15,12 @@ const pageTitleClass = "sr-only";
     pageTitle={pageTitle}
     pageTitleClass={pageTitleClass}
 >
-    <div class="intro-block">
-        <h1 class="intro-block__title">Color of The Year Portraits</h1>
-        <!--<h2 class="centered">Pantone each year announces their Color of The Year and it is a good way to be inspired and experiment.</h2>-->
-        <p class="intro-block__first-paragraph">
+    <IntroBlock title="Colour of The Year Portraits">
+        <p>
             Pantone each year announces their Color of The Year and it is a good
             way to be inspired and experiment.
         </p>
-    </div>
+    </IntroBlock>
     <div class="masonry-grid">
         <div class="lb-container">
             <PhotoButton

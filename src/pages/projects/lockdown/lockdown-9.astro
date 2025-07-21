@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import IntroBlock from "@components/IntroBlock.astro";
 import { Picture } from "astro:assets";
 import myPic from "../../../assets/images/lockdown/bente-1.jpg";
 import LightboxImage from "../../../components/LightboxImage.astro";
@@ -15,9 +16,10 @@ const pageTitleClass = "sr-only";
   pageTitle={pageTitle}
   pageTitleClass={pageTitleClass}
 >
-  <div class="intro-block">
-    <h1 class="intro-block__title">Lockdown Portraits Session Nine</h1>
-    <h2 class="centered">No expectations • Bente</h2>
+    <IntroBlock
+        title="Lockdown Portraits Session Nine"
+        subtitle="No expectations • Bente"
+    >
     <p class="nh-txt-date">August 15, 2020</p>
     <p class="intro-block__first-paragraph">
       Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a personal
@@ -32,7 +34,7 @@ const pageTitleClass = "sr-only";
       narrative, I posed two questions to each participant, unearthing personal
       insights that accompany their portraits.
     </p>
-  </div>
+    </IntroBlock>
   <div class="grid-5050">
     <div class="grid__item">
       <Picture
@@ -89,7 +91,7 @@ const pageTitleClass = "sr-only";
       </p>
       <p class="nh-txt-question">
         <strong
-          >If anything, what do you think will you take away from all this.any
+          >If anything, what do you think will you take away from all this. Any
           lessons learned?</strong>
       </p>
       <p class="nh-txt-quote">

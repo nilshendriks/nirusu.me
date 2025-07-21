@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import IntroBlock from "@components/IntroBlock.astro";
 import { Picture } from "astro:assets";
 import myPic from "../../../assets/images/lockdown/krissy2.jpg";
 import LightboxImage from "../../../components/LightboxImage.astro";
@@ -10,127 +11,139 @@ const pageTitleClass = "sr-only";
 ---
 
 <BaseLayout
-  siteTitle={siteTitle}
-  siteTitleClass={pageTitleClass}
-  pageTitle={pageTitle}
-  pageTitleClass={pageTitleClass}
+    siteTitle={siteTitle}
+    siteTitleClass={pageTitleClass}
+    pageTitle={pageTitle}
+    pageTitleClass={pageTitleClass}
 >
-  <div class="intro-block">
-    <h1 class="intro-block__title">Lockdown Portraits Session Three</h1>
-    <h2 class="centered">Balancing Act • Krissy</h2>
-    <p class="nh-txt-date">April 8, 2020</p>
-    <p class="intro-block__first-paragraph">
-      Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a personal
-      mini project that became a testament to resilience: Lockdown Portraits.
-      These are not just photos; they are glimpses into the lives of real
-      people—individuals navigating the challenges and triumphs that isolation
-      brings.
-    </p>
-    <p>
-      Each portrait tells a story, not of models, but of everyday heroes facing
-      the ordeals of lockdown with courage and grace. To add depth to the visual
-      narrative, I posed two questions to each participant, unearthing personal
-      insights that accompany their portraits.
-    </p>
-    <p>
-      Third-up was Kristel Molly: Entrepreneur, Mom, Thinker, Dancer, Model, and
-      Sparkling Banana Girl.
-    </p>
-  </div>
-  <div class="grid-5050">
-    <div class="grid__item">
-      <Picture
-        src={myPic}
-        widths={[282, 912]}
-        sizes="(max-width: 912px) 100vw, 912px"
-        alt="portrait of niki, 2020"
-        formats={["webp", "avif"]}
-        loading="eager"
-        class="nh-post-hero"
-      />
-      <blockquote>
-        <p>
-          Lockdown has pushed me to take things a bit slower, to re-prioritize
-          my life and choices.
+    <IntroBlock
+        title="Lockdown Portraits Session Three"
+        subtitle="Balancing Act • Krissy"
+    >
+        <p class="nh-txt-date">April 8, 2020</p>
+        <p class="intro-block__first-paragraph">
+            Amidst the upheaval of the 2020 Corona Lockdown, I embarked on a
+            personal mini project that became a testament to resilience:
+            Lockdown Portraits. These are not just photos; they are glimpses
+            into the lives of real people—individuals navigating the challenges
+            and triumphs that isolation brings.
         </p>
-      </blockquote>
+        <p>
+            Each portrait tells a story, not of models, but of everyday heroes
+            facing the ordeals of lockdown with courage and grace. To add depth
+            to the visual narrative, I posed two questions to each participant,
+            unearthing personal insights that accompany their portraits.
+        </p>
+        <p>
+            Third-up was Kristel Molly: Entrepreneur, Mom, Thinker, Dancer,
+            Model, and Sparkling Banana Girl.
+        </p>
+    </IntroBlock>
+    <div class="grid-5050">
+        <div class="grid__item">
+            <Picture
+                src={myPic}
+                widths={[282, 912]}
+                sizes="(max-width: 912px) 100vw, 912px"
+                alt="portrait of niki, 2020"
+                formats={["webp", "avif"]}
+                loading="eager"
+                class="nh-post-hero"
+            />
+            <blockquote>
+                <p>
+                    Lockdown has pushed me to take things a bit slower, to
+                    re-prioritize my life and choices.
+                </p>
+            </blockquote>
+        </div>
+        <div class="grid__item grid__item-content">
+            <p class="">
+                <strong
+                    >Can you describe to what extent the lockdown has affected
+                    your life and how? both on a personal and professional
+                    level?</strong
+                >
+            </p>
+            <p class="nh-txt-quote">
+                <q
+                    >Professionally, I need to balance my working time more than
+                    ever with taking care of my 5 year old kid, which is quite a
+                    challenge. I’m co-parent and have my kid 50% of the time.
+                    After 3 weeks of lockdown, I’ve noticed that I can’t work
+                    and take care simultaneously and maintain my sanity, which
+                    requires flexibility from my employer in terms of
+                    expectations and from myself. Luckily, my job already
+                    allowed me to work remotely, so in that sense little has
+                    changed.</q
+                >
+            </p>
+            <p class="nh-txt-quote">
+                <q
+                    >In a personal sense, it has affected my craving to
+                    socialize with other people in the real, outside world.
+                    Thank God for making phone calls and FaceTime, but it’s not
+                    the same. Being forced to stay inside and limiting contact,
+                    can draw me inward from time to time, which is not always
+                    good. I’m a thinker and my thoughts can cause my braincells
+                    to work overtime. Luckily, most of my thoughts are positive
+                    and lockdown has pushed me to take things a bit slower, to
+                    re-prioritize my life and choices and to work on some
+                    personal projects</q
+                >
+            </p>
+            <p class="nh-txt-question">
+                <strong
+                    >If anything, what do you think will you take away from all
+                    this. Any lessons learned?</strong
+                >
+            </p>
+            <p class="nh-txt-quote">
+                <q
+                    >Always lessons learned! Lockdown has sparked my creativity
+                    in the broadest sense, which allows me to do things
+                    alternatively or completely different. I love that! Also,
+                    I’ve become more conscious of my spending, health, body and
+                    life in general. I realize that I love spending time with my
+                    kid in different ways. For sure, I can’t wait for the school
+                    and day-care to open again, don’t get me wrong; I’m not the
+                    stay-at-home-mom kinda type. But I’m sort of happy that I
+                    have this time to qualitatively spend with her.</q
+                >
+            </p>
+            <p class="nh-txt-quote">
+                <q
+                    >This whole situation is a mental waiting game and I’m glad
+                    to say that my outlook is quite positive (thank God for
+                    music too, I couldn’t live without that). It takes a lot to
+                    push me of my positivity pedestal. And although I also have
+                    my down days, I’ll be damned to get beaten by Corona 😊 (🎧
+                    on Spotify: “Kith” – Hilary Woods)</q
+                >
+            </p>
+        </div>
     </div>
-    <div class="grid__item grid__item-content">
-      <p class="">
-        <strong
-          >Can you describe to what extent the lockdown has affected your life
-          and how? both on a personal and professional level?</strong>
-      </p>
-      <p class="nh-txt-quote">
-        <q
-          >Professionally, I need to balance my working time more than ever with
-          taking care of my 5 year old kid, which is quite a challenge. I’m
-          co-parent and have my kid 50% of the time. After 3 weeks of lockdown,
-          I’ve noticed that I can’t work and take care simultaneously and
-          maintain my sanity, which requires flexibility from my employer in
-          terms of expectations and from myself. Luckily, my job already allowed
-          me to work remotely, so in that sense little has changed.</q>
-      </p>
-      <p class="nh-txt-quote">
-        <q
-          >In a personal sense, it has affected my craving to socialize with
-          other people in the real, outside world. Thank God for making phone
-          calls and FaceTime, but it’s not the same. Being forced to stay inside
-          and limiting contact, can draw me inward from time to time, which is
-          not always good. I’m a thinker and my thoughts can cause my braincells
-          to work overtime. Luckily, most of my thoughts are positive and
-          lockdown has pushed me to take things a bit slower, to re-prioritize
-          my life and choices and to work on some personal projects</q>
-      </p>
-      <p class="nh-txt-question">
-        <strong
-          >If anything, what do you think will you take away from all this.any
-          lessons learned?</strong>
-      </p>
-      <p class="nh-txt-quote">
-        <q
-          >Always lessons learned! Lockdown has sparked my creativity in the
-          broadest sense, which allows me to do things alternatively or
-          completely different. I love that! Also, I’ve become more conscious of
-          my spending, health, body and life in general. I realize that I love
-          spending time with my kid in different ways. For sure, I can’t wait
-          for the school and day-care to open again, don’t get me wrong; I’m not
-          the stay-at-home-mom kinda type. But I’m sort of happy that I have
-          this time to qualitatively spend with her.</q
-        >
-      </p>
-      <p class="nh-txt-quote">
-        <q
-          >This whole situation is a mental waiting game and I’m glad to say
-          that my outlook is quite positive (thank God for music too, I couldn’t
-          live without that). It takes a lot to push me of my positivity
-          pedestal. And although I also have my down days, I’ll be damned to get
-          beaten by Corona 😊 (🎧 on Spotify: “Kith” – Hilary Woods)</q
-        >
-      </p>
+    <div class="masonry-grid">
+        <LightboxImage
+            id={1}
+            imagePath="/src/assets/images/lockdown/krissy1-sq.jpg"
+            altText="Krissy"
+        />
+        <LightboxImage
+            id={2}
+            imagePath="/src/assets/images/lockdown/krissy3.jpg"
+            altText="Krissy"
+        />
+        <LightboxImage
+            id={3}
+            imagePath="/src/assets/images/lockdown/krissy4.jpg"
+            altText="Krissy"
+        />
+        <LightboxImage
+            id={4}
+            imagePath="/src/assets/images/lockdown/krissy5.jpg"
+            altText="Krissy"
+        />
     </div>
-  </div>
-  <div class="masonry-grid">
-    <LightboxImage
-      id={1}
-      imagePath="/src/assets/images/lockdown/krissy1-sq.jpg"
-      altText="Krissy"
-    />
-    <LightboxImage
-      id={2}
-      imagePath="/src/assets/images/lockdown/krissy3.jpg"
-      altText="Krissy"
-    />
-    <LightboxImage
-      id={3}
-      imagePath="/src/assets/images/lockdown/krissy4.jpg"
-      altText="Krissy"
-    />
-    <LightboxImage
-      id={4}
-      imagePath="/src/assets/images/lockdown/krissy5.jpg"
-      altText="Krissy"
-    />
-  </div>
 </BaseLayout>
 <style></style>

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import myPic from "../assets/images/contact/nils-balloon_1960.jpg";
-import {Picture} from "astro:assets";
+import { Picture } from "astro:assets";
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
 const pageTitle = "Contact";
@@ -14,86 +14,94 @@ const pageTitleClass = "sr-only";
     pageTitle={pageTitle}
     pageTitleClass={pageTitleClass}
 >
-  <div class="grid-5050">
-    <div class="grid__item-content">
-        <h1>Contact me</h1>
-        <p>
-            Send me an email or fill out the form if you are interested in a
-            shoot.
-        </p>
-        <p>Nils Hendriks, <a href="mailto:info@nirusu.me">info@nirusu.me</a></p>
-        <section>
-            <h2>Be My Model</h2>
+    <div class="grid-5050">
+        <div class="grid__item-content">
+            <h1>Contact me</h1>
             <p>
-                I love to shoot faces, so if you're up for a shoot, please let
-                me know!
+                Send me an email or fill out the form if you are interested in a
+                shoot.
             </p>
-            <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                action="success"
-            >
-                <label
-                    >Your Name:
-                    <input type="text" name="name" required="required" />
-                </label>
-                <label
-                    >Your Email:
-                    <input type="email" name="email" required="required" />
-                </label>
-                <label>What type of session are you looking for?</label>
-                <!--fieldset(class='group-radios')-->
-                <input
-                    id="session-portrait"
-                    type="radio"
-                    name="session"
-                    value="Portrait"
-                />
-                <label for="session-portrait">Portrait</label><br />
-                <input
-                    id="session-event"
-                    type="radio"
-                    name="session"
-                    value="Event"
-                />
-                <label for="session-event">Event</label><br />
-                <input
-                    id="session-other"
-                    type="radio"
-                    name="session"
-                    value="Other"
-                />
-                <label for="session-other">Other</label>
-                <label
-                    >HOW DID YOU HEAR ABOUT ME?:
-                    <select name="how[]">
-                        <option value="friend">from a friend</option>
-                        <option value="insta">instagram</option>
-                        <option value="street"
-                            >ran into you on the street</option
-                        >
-                    </select>
-                </label>
-                <label
-                    >Message:
-                    <textarea name="message" maxlength="5000" rows="5"
-                    ></textarea>
-                </label>
-                <button type="submit">Send</button>
-            </form>
-        </section>
+            <p>
+                Nils Hendriks, <a href="mailto:info@nirusu.me">info@nirusu.me</a
+                >
+            </p>
+            <section class="n-form">
+                <h2>Be My Model</h2>
+                <p>
+                    I love to shoot faces, so if you're up for a shoot, please
+                    let me know!
+                </p>
+                <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    action="success"
+                >
+                    <label
+                        >Your Name:
+                        <input type="text" name="name" required="required" />
+                    </label>
+                    <label
+                        >Your Email:
+                        <input type="email" name="email" required="required" />
+                    </label>
+                    <label>What type of session are you looking for?</label>
+                    <!--fieldset(class='group-radios')-->
+                    <input
+                        id="session-portrait"
+                        type="radio"
+                        name="session"
+                        value="Portrait"
+                    />
+                    <label for="session-portrait">Portrait</label><br />
+                    <input
+                        id="session-event"
+                        type="radio"
+                        name="session"
+                        value="Event"
+                    />
+                    <label for="session-event">Event</label><br />
+                    <input
+                        id="session-other"
+                        type="radio"
+                        name="session"
+                        value="Other"
+                    />
+                    <label for="session-other">Other</label>
+                    <label
+                        >HOW DID YOU HEAR ABOUT ME?:
+                        <select name="how[]">
+                            <option value="friend">from a friend</option>
+                            <option value="insta">instagram</option>
+                            <option value="street"
+                                >ran into you on the street</option
+                            >
+                        </select>
+                    </label>
+                    <label
+                        >Message:
+                        <textarea name="message" maxlength="5000" rows="5"
+                        ></textarea>
+                    </label>
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+        </div>
+        <div class="grid__item">
+            <Picture
+                src={myPic}
+                widths={[282, 912]}
+                sizes="(max-width: 912px) 100vw, 912px"
+                alt="portrait of me, nils hendriks, 2020"
+                formats={["webp", "avif"]}
+                loading="eager"
+                class="nh-post-hero"
+            />
+        </div>
     </div>
-    <div class="grid__item">
-      <Picture
-        src={myPic}
-        widths={[282, 912]}
-        sizes="(max-width: 912px) 100vw, 912px"
-        alt="portrait of me, nils hendriks, 2020"
-        formats={["webp", "avif"]}
-        loading="eager"
-        class="nh-post-hero"
-      />
-    </div>
-  </div>
 </BaseLayout>
+<style>
+    .n-form button {
+        margin-block: 1lh;
+    }
+</style>

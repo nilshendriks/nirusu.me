@@ -1,0 +1,45 @@
+---
+interface Props {
+    title: string;
+    subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props as Props;
+---
+
+<div class="intro-block">
+    <div class="intro-block__inner">
+        <div class="intro-block__content">
+            <h1 class="intro-block__title">{title}</h1>
+            {subtitle && <h2 class="intro-block__subtitle">{subtitle}</h2>}
+            <slot />
+        </div>
+    </div>
+</div>
+<style>
+    .intro-block {
+        margin-block: 1lh;
+    }
+
+    .intro-block__inner {
+        width: min(1140px, 100% - 3rem);
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .intro-block__content {
+        width: min(480px, 100%);
+    }
+
+    .intro-block__title,
+    .intro-block__subtitle {
+        align-self: center;
+        text-align: center;
+        text-wrap: pretty;
+    }
+</style>

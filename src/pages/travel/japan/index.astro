@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PhotoButton from "@components/PhotoButton.astro";
+import IntroBlock from "@components/IntroBlock.astro";
 
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
@@ -14,9 +15,7 @@ const pageTitleClass = "sr-only";
     pageTitle={pageTitle}
     pageTitleClass={pageTitleClass}
 >
-    <div class="intro-block">
-        <h1 class="intro-block__title">{pageTitle}</h1>
-    </div>
+    <IntroBlock title="Japan" />
     <div class="masonry-grid">
         <PhotoButton
             imagePath="/src/assets/images/travel/japan/DSCF0020_v1.jpg"

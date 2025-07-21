@@ -112,8 +112,8 @@ a:active {
 }
 
 p {
-  max-width: 30em;
   text-align: left;
+  margin-block: 1lh;
 }
 
 p.justified {
@@ -352,6 +352,10 @@ button:hover {
   align-items: center;
 }
 
+.grid__item-content * {
+  margin: 0;
+}
+
 @media only screen and (min-width: 768px) {
   .grid-5050 {
     grid-template-columns: 1fr 1fr;
@@ -363,28 +367,6 @@ button:hover {
   .grid-5050 .grid__item blockquote {
     padding: 0 1rem;
   }
-}
-
-.intro-block {
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-start;
-  margin: 32px;
-  text-align: left;
-  align-content: center;
-  flex-wrap: wrap;
-}
-
-.intro-block__title {
-  align-self: center;
-  text-align: center;
-  text-wrap: pretty;
-}
-
-.intro-block__first-paragraph {
-  font-weight: 400;
 }
 
 .lb-container {

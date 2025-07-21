@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import LightboxImage from "@components/LightboxImage.astro";
+import PhotoButton from "@components/PhotoButton.astro";
 
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
@@ -18,33 +19,38 @@ const pageTitleClass = "sr-only";
         <h1 class="intro-block__title">{pageTitle}</h1>
     </div>
     <div class="masonry-grid">
-        <LightboxImage
-            id={1}
+        <PhotoButton
             imagePath="/src/assets/images/travel/cambodia/L1010015_v3_K64+.jpg"
-            altText="Mother and child"
+            altText="Mother and child portrait"
             position="top"
-        />
-        <LightboxImage
-            id={2}
+        >
+            Mother and child
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/cambodia/L1010096_v1.jpg"
-            altText="Mother and child"
+            altText="Mother and child, side view"
             position="right"
-        />
-        <LightboxImage
-            id={3}
+        >
+            Mother and child
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/cambodia/_DSC6260_v1.jpg"
             altText="Child at market"
-        />
-        <LightboxImage
-            id={4}
+        >
+            Child at market
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/cambodia/_DSC6276_v1.jpg"
-            altText="Father and child"
-        />
-        <LightboxImage
-            id={5}
+            altText="Father and child together"
+        >
+            Father and child
+        </PhotoButton>
+        <PhotoButton
             imagePath="/src/assets/images/travel/cambodia/_DSC6284_v1.jpg"
-            altText="Men playing a board game."
-        />
+            altText="Men playing a board game"
+        >
+            Men playing a board game
+        </PhotoButton>
     </div>
 </BaseLayout>
 <style></style>

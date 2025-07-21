@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { Image, Picture } from "astro:assets";
 import LightboxImage from "../../../components/LightboxImage.astro";
+import PhotoButton from "@components/PhotoButton.astro";
 
 const siteTitle = "nirusu.me";
 const siteTitleClass = "sr-only";
@@ -10,39 +11,41 @@ const pageTitleClass = "sr-only";
 ---
 
 <BaseLayout
-  siteTitle={siteTitle}
-  siteTitleClass={siteTitleClass}
-  pageTitle={pageTitle}
-  pageTitleClass={pageTitleClass}
+    siteTitle={siteTitle}
+    siteTitleClass={siteTitleClass}
+    pageTitle={pageTitle}
+    pageTitleClass={pageTitleClass}
 >
-  <div class="intro-block">
-    <h1 class="intro-block__title">Color of The Year Portraits</h1>
-    <!--<h2 class="centered">Pantone each year announces their Color of The Year and it is a good way to be inspired and experiment.</h2>-->
-    <p class="intro-block__first-paragraph">
-      Pantone each year announces their Color of The Year and it is a good way
-      to be inspired and experiment.
-    </p>
-  </div>
-  <div class="masonry-grid">
-    <div class="lb-container">
-      <LightboxImage
-        id={2}
-        imagePath="/src/assets/images/projects/color/pcoty-2020.jpg"
-        altText="2020"
-      />
-      <div class="lb-caption">
-        Classic Blue - Pantone colour of the year 2020
-      </div>
+    <div class="intro-block">
+        <h1 class="intro-block__title">Color of The Year Portraits</h1>
+        <!--<h2 class="centered">Pantone each year announces their Color of The Year and it is a good way to be inspired and experiment.</h2>-->
+        <p class="intro-block__first-paragraph">
+            Pantone each year announces their Color of The Year and it is a good
+            way to be inspired and experiment.
+        </p>
     </div>
-    <div class="lb-container">
-      <LightboxImage
-        id={1}
-        imagePath="/src/assets/images/projects/color/barb1.jpg"
-        altText="2019"
-      />
-      <div class="lb-caption">
-        Living Coral - Pantone colour of the year 2019
-      </div>
+    <div class="masonry-grid">
+        <div class="lb-container">
+            <PhotoButton
+                imagePath="/src/assets/images/projects/color/pcoty-2020.jpg"
+                altText="Photo of the 2020 Project Color of the Year"
+            >
+                2020
+            </PhotoButton>
+            <div class="lb-caption">
+                Classic Blue - Pantone colour of the year 2020
+            </div>
+        </div>
+        <div class="lb-container">
+            <PhotoButton
+                imagePath="/src/assets/images/projects/color/barb1.jpg"
+                altText="Photo from the 2019 Project Color of the Year"
+            >
+                2019
+            </PhotoButton>
+            <div class="lb-caption">
+                Living Coral - Pantone colour of the year 2019
+            </div>
+        </div>
     </div>
-  </div>
 </BaseLayout>

@@ -10,6 +10,7 @@ const PropsSchema = z.object({
     imagePath: z.string(),
     altText: z.string(),
     position: z.string().optional(),
+    orientation: z.enum(["portrait", "landscape", "square"]).optional(),
 });
 
 // Infer the TypeScript type from the schema
@@ -24,7 +25,7 @@ if (!result.success) {
     );
 }
 
-const { imagePath, altText, position, title } = Astro.props;
+const { imagePath, altText, position, title, orientation } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
     "/src/assets/images/**/*.{jpeg,jpg,png,gif}",
 );
@@ -49,7 +50,10 @@ const hasSlotContent = Astro.slots.default;
             </header>
         )
     }
-    <div class="dialog__content">
+    <div
+        class="dialog__content"
+        class:list={[orientation && `is-${orientation}`]}
+    >
         <Picture
             src={images[imagePath]()}
             alt={altText}
@@ -93,18 +97,7 @@ const hasSlotContent = Astro.slots.default;
     />
 </button>
 
-<!-- layout="constrained" -->
 <style>
-    /* :where([data-astro-image]) { */
-    /*     object-fit: var(--fit); */
-    /*     object-position: var(--pos); */
-    /* } */
-    /* :where([data-astro-image="full-width"]) { */
-    /*     width: 100%; */
-    /* } */
-    /* :where([data-astro-image="constrained"]) { */
-    /*     max-width: 100%; */
-    /* } */
     button {
         background-color: transparent;
         color: inherit;
@@ -112,10 +105,6 @@ const hasSlotContent = Astro.slots.default;
         padding: 0;
         border-radius: 0;
         cursor: pointer;
-    }
-
-    .photo-button__open {
-        /* cursor: pointer; */
     }
 
     @supports not (grid-template-rows: masonry) {
@@ -142,8 +131,6 @@ const hasSlotContent = Astro.slots.default;
         object-position: right;
     }
     .photo-button__close {
-        /* border: 1px solid #000; */
-        /* border-radius: 50px; */
         width: 20px;
         aspect-ratio: 1;
         display: flex;
@@ -154,9 +141,6 @@ const hasSlotContent = Astro.slots.default;
 
     dialog.dialog {
         padding: 0;
-        /* min-width: 33vw; */
-        /* width: 80%; */
-        /* max-height: 90%; */
         transition-property: display, opacity;
         transition-duration: 0.3s;
         transition-behavior: allow-discrete;
@@ -175,7 +159,6 @@ const hasSlotContent = Astro.slots.default;
     }
 
     dialog.dialog[open] {
-        /* display: fixed; */
         opacity: 1;
 
         @starting-style {
@@ -192,16 +175,9 @@ const hasSlotContent = Astro.slots.default;
     dialog.dialog:modal {
         border-color: #000;
         border-width: 1px;
-        /* max-width: 46%; */
-        /* max-height: 90vh; */
-        /* aspect-ratio: 1; */
         aspect-ratio: 1;
         max-width: 90vmin;
         height: 90vmin;
-    }
-
-    dialog.dialog:modal:has(.caption) {
-        /* border-bottom-width: 0px; */
     }
 
     dialog.dialog .dialog__header {
@@ -231,9 +207,6 @@ const hasSlotContent = Astro.slots.default;
     }
 
     .dialog__content {
-        /* padding: 16px; */
-        /* overflow: auto; */
-        /* max-height: 90svh; */
         height: 100%;
     }
 
@@ -243,10 +216,12 @@ const hasSlotContent = Astro.slots.default;
 
     .dialog__content .photo-button__picture {
         display: block;
-        height: 100%;
+        /* height: 100%; */
+        height: calc(100% - 32px);
         background-color: #fff;
-        padding: 1rem;
+        padding: 1rem 1rem 0;
     }
+
     .dialog__content .photo-button__picture .photo-button__img {
         height: 100%;
         width: 100%;
@@ -254,15 +229,24 @@ const hasSlotContent = Astro.slots.default;
         object-position: center;
     }
 
+    .dialog__content.is-square .photo-button__picture .photo-button__img {
+        object-fit: cover;
+    }
+
     .caption {
         color: var(--color-text-base-static, #000);
         font-size: 10px;
-        line-height: 16px;
-        text-align: center;
         max-width: none;
-        position: absolute;
-        bottom: 0;
+        /* position: absolute; */
+        /* bottom: 0; */
         width: 100%;
+        line-height: 32px;
+        text-align: left;
+        padding: 0px 1rem 0rem 16px;
+        display: inline-flex;
+        margin: 0;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     body:has(dialog[open]) {

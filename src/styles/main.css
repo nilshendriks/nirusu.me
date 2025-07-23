@@ -23,6 +23,8 @@
   --color-secondary: hsl(30 100% 50%);
 
   --color-background-body: var(--color-neutral-100);
+  --color-background-base: var(--color-neutral-100);
+  --color-background-base-static: var(--color-neutral-100);
   --color-background-overlay: var(--color-neutral-100);
 
   --color-text-body: var(--color-neutral-0);
@@ -42,6 +44,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background-body: var(--color-neutral-0);
+    --color-background-base: var(--color-neutral-0);
     --color-background-overlay: var(--color-neutral-0);
     --color-text-body: var(--color-neutral-100);
     --color-text-base: var(--color-neutral-100);

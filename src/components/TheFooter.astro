@@ -1,20 +1,11 @@
 ---
-// import IgLogo from "./igLogo.astro";
 import { Icon } from "astro-icon/components";
+import HamburgerButton from "@components/HamburgerButton.astro";
 ---
 
 <footer class="org-footer">
     <p>Copyright © 2025 • nils hendriks</p>
-    <a id="btn-menu" class="menu-button" href="#menuopen">
-        <Icon name="hamburger" aria-hidden="true" width={44} height={44} />
-    </a>
-    <!--<p>
-        Copyright © 2022 nirusu.me • nils hendriks •<a
-            href="https://www.instagram.com/nirususan"
-        >
-        &lt;!&ndash;<IgLogo />&ndash;&gt;
-            Follow me on instagram</a>
-    </p>-->
+    <HamburgerButton />
 </footer>
 <style>
     footer.org-footer {
@@ -51,4 +42,3 @@ import { Icon } from "astro-icon/components";
         }
     }
 </style>
-

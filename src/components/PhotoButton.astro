@@ -54,7 +54,7 @@ const hasSlotContent = Astro.slots.default;
         class="dialog__content"
         class:list={[orientation && `is-${orientation}`]}
     >
-        <figure>
+        <figure class="dialog__figure">
             <Picture
                 src={images[imagePath]()}
                 alt={altText}
@@ -155,6 +155,16 @@ const hasSlotContent = Astro.slots.default;
         background-color: #fff;
     }
 
+    body:has(dialog[open]) {
+        overflow: hidden;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        dialog.dialog::backdrop {
+            background-color: var(--color-ui-background-dark-alpha);
+        }
+    }
+
     dialog.dialog:not([open]) {
         display: none;
         opacity: 0;
@@ -170,6 +180,10 @@ const hasSlotContent = Astro.slots.default;
         }
     }
 
+    dialog.dialog[open]:focus-visible {
+        outline: none;
+    }
+
     dialog.dialog::backdrop {
         background-color: var(--color-ui-background-light-alpha);
         backdrop-filter: blur(8px);
@@ -183,102 +197,58 @@ const hasSlotContent = Astro.slots.default;
         height: 90vmin;
     }
 
-    dialog.dialog .dialog__header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 4px;
-        border-bottom: 1px solid var(--color-ui-border-default, #ccc);
-    }
-
-    .dialog__button-group {
-        position: absolute;
-        top: 6px;
-        right: 4px;
-    }
-
-    .dialog__button-group :global(.button) {
-        margin: 0;
-        width: 20px;
-        height: 20px;
-        outline-width: 2px;
-    }
-
-    dialog.dialog .dialog__title {
-        font-size: 16px;
-        font-weight: 500;
-    }
-
     .dialog__content {
         height: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         flex-direction: column;
+        padding: 1rem;
     }
 
     .dialog__content :global(*:last-child) {
         margin-bottom: 0;
     }
 
-    .dialog__content figure {
-        height: calc(100% - 32px);
-        width: fit-content;
-        color: black;
-        font-size: 10px;
-        line-height: 32px;
-        padding-inline: 16px;
+    .dialog__content figure.dialog__figure {
+        height: calc(100% - 1rem);
+    }
+
+    .dialog__content.is-square figure.dialog__figure {
+        /* width: calc(100% - 32px); */
+        width: 100%;
     }
 
     .dialog__content .photo-button__picture {
-        display: block;
-        /* height: 100%; */
-        height: calc(100% - 16px);
-        background-color: #fff;
-        /* padding: 1rem 1rem 0; */
+        /* height: calc(100% - 16px); */
+        height: 100%;
     }
 
     .dialog__content .photo-button__picture .photo-button__img {
         height: 100%;
-        width: 100%;
+        width: auto;
         object-fit: contain;
         object-position: center;
     }
 
-    .dialog__content.is-square figure {
-        width: calc(100% - 32px);
-        padding-inline: 0;
-    }
-
     .dialog__content.is-square .photo-button__picture .photo-button__img {
         object-fit: cover;
+        width: 100%;
     }
 
-    .caption {
+    .dialog__content figcaption.caption {
         background-color: var(--color-background-base-static, #f00);
         color: var(--color-text-base-static, #000);
         font-size: 10px;
         max-width: none;
-        /* position: absolute; */
-        /* bottom: 0; */
-        width: 100%;
-        line-height: 32px;
+        /* width: 100%; */
+        line-height: 16px;
         text-align: left;
-        /* padding: 0px 1rem 0rem 16px; */
-        display: inline-flex;
+        /* display: inline-flex; */
         margin: 0;
         align-items: center;
         justify-content: flex-start;
-    }
-
-    body:has(dialog[open]) {
-        overflow: hidden;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        dialog.dialog::backdrop {
-            background-color: var(--color-ui-background-dark-alpha);
-        }
+        /* border: 1px solid red; */
     }
 </style>
 <script define:vars={{ id }} is:inline>

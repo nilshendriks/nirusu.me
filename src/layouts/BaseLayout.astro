@@ -49,12 +49,12 @@ const { pageTitle } = Astro.props;
     </head>
     <body id="top">
         <div class="wrapper">
-            <TheMenu />
             <TheHeader />
             <main class="main-content">
                 <slot />
             </main>
             <TheFooter />
+            <TheMenu />
         </div>
     </body>
 </html>

@@ -1,11 +1,17 @@
 ---
 import { Icon } from "astro-icon/components";
+
+interface Props {
+    href?: string;
+}
+
+const { href = "#menuopen" } = Astro.props;
 ---
 
 <a
     id="btn-menu"
     class="menu-button"
-    href="#menuopen"
+    href={href}
     aria-label="Menu button"
     title="Open menu"
 >

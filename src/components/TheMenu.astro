@@ -1,0 +1,196 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<aside class="menu" id="menuopen">
+    <a
+        class="menubutton-close"
+        href="#top"
+        aria-label="Close menu"
+        title="Close menu"
+    >
+        <Icon name="close" aria-hidden="true" width={44} height={44} />
+        close menu
+    </a>
+    <nav class="masthead__nav">
+        <a href="/">Home</a>
+        <a href="/studio/studio-portraits">studio</a>
+        <a href="/location">location</a>
+        <details name="masthead__nav-details">
+            <summary>Projects</summary>
+            <nav>
+                <a href="/projects/lockdown/lockdown-portraits"
+                    >lockdown portraits</a
+                >
+                <a href="/projects/color">Color of The Year portraits</a>
+            </nav>
+        </details>
+        <details name="masthead__nav-details">
+            <summary>Travel</summary>
+            <nav>
+                <a href="/travel/japan">japan</a>
+                <a href="/travel/cambodia">cambodia</a>
+                <!-- <a href="/travel/singapore">singapore</a> -->
+            </nav>
+        </details>
+        <a href="/about">about</a>
+        <a href="/contact">contact</a>
+    </nav>
+</aside>
+<style>
+    /* .menubutton[href="#menuopen"] { */
+    /*     font-size: 0; */
+    /* } */
+
+    .menu {
+        font-family:
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Oxygen,
+            Ubuntu,
+            Cantarell,
+            "Open Sans",
+            "Helvetica Neue",
+            sans-serif;
+        visibility: hidden;
+        position: fixed;
+        right: -100vw;
+        top: 0;
+        z-index: 999;
+        background-color: var(--color-background-body);
+        border-radius: 0 8px 8px 0;
+        height: 100%;
+        width: 100vw;
+        padding: 1rem;
+        transition: all 0.3s ease-in;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .menu {
+            width: 25vw;
+        }
+
+        :target .masthead__nav {
+            padding: 0 !important;
+        }
+    }
+
+    /* :target { */
+    /*     visibility: visible; */
+    /*     right: 0; */
+    /* } */
+
+    #menuopen:target {
+        visibility: visible;
+        right: 0;
+    }
+
+    /* :global(#menuopen-bottom:target ~ #menuopen) { */
+    /*     visibility: visible; */
+    /*     right: 0; */
+    /* } */
+    /**/
+    /* #menuopen-bottom:target ~ #menuopen { */
+    /*     visibility: visible; */
+    /*     right: 0; */
+    /* } */
+
+    .menubutton-close {
+        align-self: flex-end;
+    }
+
+    .menubutton-close,
+    .menubutton-close svg {
+        width: 40px;
+        height: 40px;
+        font-size: 0;
+    }
+    .masthead__nav {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        padding: 4rem 2rem;
+    }
+
+    .masthead__nav a,
+    .masthead__nav summary {
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: capitalize;
+        font-size: 24px;
+        line-height: 64px;
+        letter-spacing: -0.02em;
+        transition: color 0.3s ease;
+        color: var(--color-text-action);
+    }
+
+    .masthead__nav a:hover,
+    .masthead__nav details > summary:hover {
+        color: var(--color-text-action-hover);
+        /*text-indent: 1rem;*/
+    }
+
+    .masthead__nav details {
+        /* padding for the content to show */
+        /* padding: 1rem; */
+        /* non-standard! sets bgc on top to transparent, otherwise a flash */
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .masthead__nav summary:focus {
+        outline: 0;
+    }
+
+    .masthead__nav details > summary {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    .masthead__nav summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .masthead__nav summary::after {
+        content: "+";
+        width: 20px;
+    }
+
+    .masthead__nav details[open] summary {
+        color: var(--color-secondary);
+    }
+
+    .masthead__nav details[open] summary:after {
+        content: "–";
+        width: 20px;
+    }
+
+    .masthead__nav nav {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .masthead__nav details nav a {
+        font-size: 18px;
+        text-transform: capitalize;
+        line-height: 24px;
+        color: var(--color-secondary);
+    }
+
+    .masthead__nav details nav a:hover {
+        color: var(--color-text-action);
+    }
+</style>
